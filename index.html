@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- boxicon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- fontawsome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+   *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+   }
+        nav {
+            background-color: #000080;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .nav-links li {
+            list-style: none;
+            color: white;
+            /* padding:5px; */
+        }
+
+        .nav-links li a {
+            color: #FF007F;
+            font-family: sans-serif;
+            font-weight: bold;
+            padding: 25px;
+            font-size: 20px;
+            text-decoration: none;
+
+        }
+
+    
+.nav-links button{
+    background: none;
+   border: none;
+   cursor: pointer;
+}
+.nav-links button li{
+    color:#ee2a7b;
+    font-size: 18px;
+    font-weight: bold;
+}
+.nav-links button li i{
+    color:white;
+    font-size: 28px;
+}
+        .logo img{
+            width:150px;
+            border: 1px solid black;
+           
+        }
+
+        nav .container .nav-links {
+            display: flex;
+        }
+
+        .toggle-btn {
+            display: none;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 30px;
+            width: 90%;
+            margin: auto;
+            /* border: 1px solid black; */
+            margin-top: 20px;
+        }
+
+        .search-box input {
+            width: 70%;
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid darkblue;
+            box-shadow: 0px 3px 1px grey;
+        }
+
+        .search-box input::placeholder {
+            font-size: 25px;
+        }
+
+        .search-box button {
+            border-radius: 20px;
+            width: 23%;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #FF007F;
+            border: none;
+            padding: 10px;
+
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            margin: auto;
+            height: 70vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+            margin-top: 40px;
+        }
+
+        .carousel img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: transform 1s ease, opacity 1s ease;
+            transform: rotateY(20deg);
+        }
+
+        .carousel img.active {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+
+        .caption {
+            position: absolute;
+            text-align: center;
+            color: #000080;
+            /* font-size: 30px; */
+            font-family: sans-serif;
+            font-weight: bolder;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        .caption h2 {
+            font-size: 60px;
+            text-transform: uppercase;
+            width: 1000px;
+        }
+
+        .caption span {
+            display: block;
+            font-size: 2rem;
+            font-family: sans-serif;
+        }
+
+        .service {
+            width: 90%;
+            margin: auto
+        }
+        .service{
+            margin-top: 30px;
+        }
+
+        .service .serve {
+            text-align: center;
+            font-size: 25px;
+            font-family: sans-serif;
+
+        }
+        .service .serve img{
+            width:200px;
+            margin-top: 0;
+        }
+
+        .service .service-events {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .service .service-events-list {
+            text-align: center;
+            border: 1.5px solid #000080;
+            box-shadow: 0px 3px 1px rgba(147, 146, 146, 0.8);
+            
+        }
+        .service-events-list-content{
+            padding:30px;
+        }
+        .service-events-list-content h2{
+            font-family: sans-serif;
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+        .service-events-list-content p{
+            font-family: sans-serif;
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        .service-events-list-content a{
+            text-decoration: none;
+            background-color: #000080;
+            color:#FF007F;
+            padding:18px;
+            font-family: sans-serif;
+            font-size: 18px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+
+        }
+
+        .service .service-events-list img {
+            width: 100%;
+        }
+
+        .two-column-layout {
+            display: flex;
+            width: 90%;
+            margin: auto;
+
+        }
+
+        .two-column-layout {
+            margin-top: 60px;
+            margin-bottom: 50px;
+        }
+
+        .column1 {
+            flex-grow: 1;
+            text-align: center;
+            border: 1px solid black;
+            padding:20px;
+        }
+        .column1 h2{
+            font-family: sans-serif;
+            font-size: 40px;
+        }
+        .column1 img{
+            margin-bottom: 8px;
+        }
+        .column1 p{
+            font-family: sans-serif;
+            font-size: 25px;
+            font-weight: bolder;
+        }
+
+        .column2 {
+            flex-grow: 1;
+        }
+
+        .column2 img {
+            width: 100%;
+            height:450px;
+
+        }
+
+        footer {
+            background-color: #000080;
+            padding-top:50px;
+        }
+
+        .footer-container {
+            display: flex;
+            width: 95%;
+            margin: auto;
+            gap: 20px;
+        }
+
+        .footer {
+            flex-grow: 1;
+        }
+
+        .footer a {
+            display: block;
+            text-decoration: none;
+            color: #FF007F;
+            padding: 5px;
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: bolder;
+
+        }
+        .footer1{
+          
+            text-align: center;
+        }
+        .footer1 img{
+            width:150px;
+            transform:translateY(150px);
+            
+        }
+
+        .footer h2 {
+            color: #FF007F;
+            font-family: sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .footer4 p {
+            color: #FF007F;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+        .footer4 p i{
+            color:white;
+            padding-right: 10px;
+        }
+
+        .footer5 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer5 h3 {
+            color: #FF007F;
+            font-family: sans-serif;
+            font-size: 25px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+
+        }
+
+        .footer5 p {
+            color: #FF007F;
+            font-family: sans-serif;
+            font-size: 20px;
+
+        }
+        .footer5 .youtube i{
+            color:white;
+            background-color: red;
+            padding:5px;
+            border-radius: 20px;
+            margin-left: 20px;
+        }
+        .footer5 .WhatsApp i{
+            color:white;
+           background-color: lightgreen;
+            padding:5px;
+            border-radius: 20px;
+            margin-left: 20px;
+        }
+        .footer5 .instagram i{
+            color:white;
+           background:linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+            padding:5px;
+            border-radius: 20px;
+            margin-left: 20px;
+        }
+        .footer5 .facebook i{
+            color:white;
+           background-color:  rgb(1, 101, 225);
+            padding:5px;
+            border-radius: 20px;
+            margin-left: 20px;
+        }
+        .footer5 .twitter i{
+            color:white;
+           background-color:  rgb(29, 155, 240);
+            padding:5px;
+            border-radius: 20px;
+            margin-left: 20px;
+        }
+        
+
+
+
+
+
+        @media(max-width:426px) {
+
+            nav .container .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color:#000080;
+                position: absolute;
+                width: 100%;
+                top: 50px;
+                left: 0;
+                z-index: 2;
+            }
+
+            nav .container .nav-links li {
+                border-bottom: 1px solid white;
+                width: 70%;
+                margin:auto;
+                padding:10px;
+            }
+
+            nav .container ul li a {
+
+                padding: 10px;
+                border: none;
+                text-align: left;
+
+            }
+
+            nav .container .nav-links.active {
+                display: flex;
+
+            }
+
+            .toggle-btn {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <img src="assets/images/indexpage-images/WhatsApp Image 2025-03-09 at 1.11.51 PM.jpeg">
+                </div>
+                <button class="toggle-btn " id="toggle-btn">&#9776 </button>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">DESTINATION</a></li>
+                    <li><a href="weddingplans.html">WEDDING PLANS</a></li>
+                    <li><a href="corporateevent.html">CORPORATE EVENTS</a></li>
+                    <li><a href="#">VLOGS</a></li>
+                    <li><a href="#">WHO WE ARE </a></li>
+                    <li><a href="#">DROP US A LINE</a></li>
+                    <button><li class="icon"><i class="fa-solid fa-user"></i><br>LOGIN/<br><span>REGISTER</span></li></button>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- ----------------search section---- -->
+
+    <section class="search-box">
+        <input type="text" placeholder="search">
+        <button type="submit">BOOK AN APPOINTMENT</button>
+    </section>
+    <!-- ----end search section--- -->
+
+    <!-- banner carosal -->
+    <div class="carousel">
+        <div class="caption">
+            <h2>Professional Event Planner</h2>
+            <span>Crafting Moments Creating Memories</span>
+        </div>
+        <img src="assets/images/indexpage-images/carosal1 (1).png" class="active">
+        <img src="assets/images/indexpage-images/carosal1 (2).png">
+        <img src="assets/images/indexpage-images/carosal1 (3).png">
+        <img src="assets/images/indexpage-images/carosal1 (4).png">
+    </div>
+    <!-- end banner carosal -->
+    <!-- service section -->
+    <section class="service">
+        <div class="serve">
+            <h2> OUR SERVICES</h2>
+            <img src="assets/images/indexpage-images/singlelineborder.png">
+        </div>
+        <div class="service-events">
+            <div class="service-events-list">
+                <div>
+                    <img src="assets/images/indexpage-images/1.png">
+                </div>
+                <div class="service-events-list-content">
+                    <h2>MICE Events</h2>
+                    <p>Meetings, Incentives, Conferences Meetings, Meetings, Incentives, Conferences Meetings,</p>
+                    <a href="eventDetails.html?event=mice">SPECIFICS</a>
+                </div>
+            </div>
+            <div class="service-events-list">
+                <div>
+                    <img src="assets/images/indexpage-images/11.png">
+                </div>
+                <div class="service-events-list-content">
+                    <h2>Product Launching Events</h2>
+                    <p>Launching a new product is a crucial moment for every business. This requires a combination of strategic planning</p>
+                    <a href="eventDetails.html?event=productLaunching">SPECIFICS</a>
+                </div>
+            </div>
+            <div class="service-events-list">
+                <div>
+                    <img src="assets/images/indexpage-images/12.png">
+                </div>
+                <div class="service-events-list-content">
+                    <h2>Company Gathering</h2>
+                    <p>MN Event Organizer is a specialist in organizing memorable and impactful corporate meetings</p>
+                    <a href="eventDetails.html?event=companyGathering">SPECIFICS</a>
+                </div>
+            </div>
+            <div class="service-events-list">
+                <div>
+                    <img src="assets/images/indexpage-images/2.png">
+                </div>
+                <div class="service-events-list-content">
+                    <h2>Team Building</h2>
+                    <p>Organizing a team-building event can be a highly rewarding experience, offering numerous benefits to both the organizer and the participants</p>
+                    <a href="eventDetails.html?event=teamBuilding">SPECIFICS</a>
+                </div>
+            </div>
+            <div class="service-events-list">
+                <div>
+                    <img src="assets/images/indexpage-images/9.png">
+                </div>
+                <div class="service-events-list-content">
+                    <h2>Themed Catering</h2>
+                    <p>Each of these themes offers a unique dining experience, transporting guests to a different time or place, and making the evening truly unforgettable.</p>
+                    <a href="eventDetails.html?event=themedCatering">SPECIFICS</a>
+                </div>
+            </div>
+            <div class="service-events-list">
+                <div>
+                    <img src="assets/images/indexpage-images/10.png">
+                </div>
+                <div class="service-events-list-content">
+                    <h2>Tour Organizer</h2>
+                    <p>Our passion is curating unforgettable journeys, bringing together like-minded adventurers, and revealing the hidden gems of our planet</p>
+                   <a href="eventDetails.html?event=tourOrganizer">SPECIFICS</a>
+                </div>
+            </div>
+            <div class="service-events-list">
+                <div>
+                    <img src="assets/images/indexpage-images/3.png">
+                </div>
+                <div class="service-events-list-content">
+                    <h2>Sound System</h2>
+                    <p>We are a provider of sound system rental services with various package options ranging from speakers, wireless mic, cable mic, mixer, etc.</p>
+                    <a href="eventDetails.html?event=soundSystem">SPECIFICS</a>
+                </div>
+            </div>
+            <div class="service-events-list">
+                <div>
+                    <img src="assets/images/indexpage-images/4.png">
+                </div>
+                <div class="service-events-list-content">
+                    <h2>Lighting</h2>
+                    <p>We are a provider of event lighting rental services with various package options ranging from par LED, moving head, halogen, smoke machine, etc.</p>
+                    <a href="eventDetails.html?event=lighting">SPECIFICS</a>
+                </div>
+            </div>
+            <div class="service-events-list">
+                <div>
+                    <img src="assets/images/indexpage-images/5.png">
+                </div>
+                <div class="service-events-list-content">
+                    <h2>Entertainment</h2>
+                    <p>We also provide various entertainment such as dance (traditional & modern), music, event MC, usher, and SPG</p>
+                    <a href="eventDetails.html?event=entertainment">SPECIFICS</a>
+                </div>
+            </div>
+            <div class="service-events-list">
+                <div>
+                    <img src="assets/images/indexpage-images/6.png">
+                </div>
+                <div class="service-events-list-content">
+                    <h2>Photography</h2>
+                    <p>We also provide various Photography Services such as Candid, Videography, Albums.</p>
+                    <a href="eventDetails.html?event=photography">SPECIFICS</a>
+                </div>
+            </div>
+            <div class="service-events-list">
+                <div>
+                    <img src="assets/images/indexpage-images/7.png">
+                </div>
+                <div class="service-events-list-content">
+                    <h2>Stage Decoration</h2>
+                    <p>We provide various types of stages for your events such as weddings, gala dinners, awards nights, etc.</p>
+                    <a href="eventDetails.html?event=stageDecoration">SPECIFICS</a>
+                </div>
+            </div>
+            <div class="service-events-list">
+                <div>
+                    <img src="assets/images/indexpage-images/8.png">
+                </div>
+                <div class="service-events-list-content">
+                    <h2>Multimedia</h2>
+                    <p>We are a provider of multimedia rental services for event/meeting needs such as projectors, laptops, computers (PCs), printers, Drone Camera, etc.</p>
+                    <a href="eventDetails.html?event=multimedia">SPECIFICS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="two-column-layout">
+        <div class="column1">
+            <h2>Why Should You Choose Us</h2>
+            <img src="assets/images/indexpage-images/singlelineborder.png">
+            <p>Official Company</p>
+            <p>Professional Teamwork</p>
+            <p>Best Price</p>
+            <p>Event Consulting</p>
+            <p>Multimedia Support</p>
+            <p>Generator Support</p>
+            <p>Stage Rental</p>
+        </div>
+        <div class="column2">
+            <img src="assets/images/indexpage-images/corporate-events-3.jpg">
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer footer1">
+                <img src="assets/images/indexpage-images/logo.jpeg">
+            </div>
+            <div class="footer footer2">
+                <h2>QUICK LINKS</h2>
+                <a href="#">About Us</a>
+                <a href="#">All Events</a>
+                <a href="#">Our Work</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Blog</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer footer3">
+                <h2>EVENT SERVICES</h2>
+                <a href="#">MIC Events</a>
+                <a href="#">Product Launching Events</a>
+                <a href="#">Company Gathering</a>
+                <a href="#">Team Building</a>
+                <a href="#">Themed Dinner</a>
+                <a href="#">Tour Organizer</a>
+                <a href="#">Sound System</a>
+                <a href="#">Lighting & Entertainment</a>
+            </div>
+            <div class="footer footer4">
+               <h2>ADDRESS</h2>
+               <p><i class="fa-solid fa-location-dot"></i>  XYZ,ABC Street,Chennai,India</p>
+               <p> <i class='bx bx-phone-call'></i>+91 9123456789</p>
+              <p><i class='bx bx-envelope' ></i> connect@mneventplanner.com</p>
+            </div>
+        </div>
+        <div class="footer5">
+            <h3>FOLLOW US @  <span class="youtube"><i class="fa-brands fa-youtube"></i></span><span class="WhatsApp"><i class='bx bxl-whatsapp'></i></span><span class="instagram"><i class='bx bxl-instagram' ></i></span><span class="facebook"><i class='bx bxl-facebook' ></i></span><span class="twitter"><i class='bx bxl-twitter' ></i></span></h3>
+            <p> 2025 MN Event Planner. <span>All Rights Reserved</span></p>
+        </div>
+    </footer>
+    <script>
+        const images = document.querySelectorAll('.carousel img');
+        let currentIndex = 0;
+
+        function getRandomIndex() {
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * images.length);
+            } while (randomIndex === currentIndex);
+            return randomIndex;
+        }
+
+        function showImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = getRandomIndex();
+            images[currentIndex].classList.add('active');
+        }
+
+        setInterval(showImage, 3000);
+
+
+        const btn = document.getElementById('toggle-btn')
+        const navlinks = document.getElementById('nav-links')
+        btn.addEventListener('click', () => {
+            navlinks.classList.toggle('active')
+        })
+        
+
+    </script>
+</body>
+
+</html>

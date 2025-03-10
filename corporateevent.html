@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- boxicon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- fontawsome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: #000080;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .nav-links li {
+            list-style: none;
+            color: white;
+            /* padding:5px; */
+        }
+
+        .nav-links li a {
+            color: #FF007F;
+            font-family: sans-serif;
+            font-weight: bold;
+            padding: 25px;
+            font-size: 20px;
+            text-decoration: none;
+
+        }
+
+
+        .nav-links button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-links button li {
+            color: #ee2a7b;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .nav-links button li i {
+            color: white;
+            font-size: 28px;
+        }
+
+        .logo img {
+            width: 150px;
+            border: 1px solid black;
+
+        }
+
+        nav .container .nav-links {
+            display: flex;
+        }
+
+        .toggle-btn {
+            display: none;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .two-column-layout {
+            display: flex;
+            width: 90%;
+            margin: auto;
+            position: relative;
+
+        }
+
+        .two-column-layout {
+            margin-top: 60px;
+        }
+
+        .two-column-layout .banner-whatsapp {
+            width: 120px;
+            position: absolute;
+            top: 40%;
+            right: 5%;
+            animation: zoomInOut 2s infinite ease-in-out;
+        }
+
+        @keyframes zoomInOut {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.3);
+            }
+        }
+        .two-column-layout .para{
+            margin-left: 20px;
+        }
+
+        .two-column-layout .para p {
+            text-align: left;
+            font-size: 25px;
+            font-family: sans-serif;
+            width: 90%;
+            padding: 10px;
+            font-weight: lighter;
+        }
+
+        .two-column-layout .lastpara {
+            margin-top: 30px;
+        }
+
+        .service {
+            margin-top: 20px;
+        }
+
+        .service-heading {
+            text-align: center;
+        }
+
+        .service .service-heading h2 {
+            font-size: 40px;
+            font-family: sans-serif;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .service-heading img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .service-events {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+            justify-content: center;
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .service-item {
+            overflow: hidden;
+            text-align: center;
+
+        }
+
+        .service-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .service-item p {
+            background-color: #000080;
+            color: #FF007F;
+            font-size: 23px;
+            font-weight: bold;
+            font-family: sans-serif;
+            padding: 18px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+
+        }
+
+        .key-features {
+            margin-top: 20px;
+        }
+
+        .key-features-heading {
+            text-align: center;
+        }
+
+        .key-features .key-features-heading h2 {
+            font-size: 40px;
+            font-family: sans-serif;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .key-features-heading img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .key-features-events {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 50px;
+            justify-content: center;
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .key-features-events-list {
+            border: 3px solid #000080;
+            padding: 30px;
+            border-radius: 40px;
+            /* border-top: 10px solid #000080; */
+            position: relative;
+        }
+
+        .key-features-events-list::before {
+            content: "";
+            position: absolute;
+            top: -6px;
+            left: 20px;
+            height: 15px;
+            width: 90%;
+            margin: auto;
+            background-color: #000080;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+
+        }
+
+        .key-features-events-list h3 {
+            font-size: 22px;
+            font-family: sans-serif;
+            text-align: center;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+
+        .key-features-events-list ul li {
+            font-size: 20px;
+            font-family: sans-serif;
+            width: 85%;
+            margin: auto;
+            font-weight: 500;
+        }
+        .tech-ability {
+            margin-top: 20px;
+        }
+
+        .tech-ability-heading {
+            text-align: center;
+        }
+
+        .tech-ability .tech-ability-heading h2 {
+            font-size: 40px;
+            font-family: sans-serif;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .tech-ability-heading img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .tech-ability-two-column-layout{
+            display:flex;
+            width:80%;
+            margin:auto;
+        }
+        .column1 img{
+            width:200px;
+            height:200px;
+            margin-left: 20px;
+
+
+        }
+        .column2 {
+            margin-left: 20px;
+            
+        }
+        .column2 h3{
+            font-size: 20px;
+            font-family: sans-serif;
+            padding-bottom: 10px;
+
+        }
+        .column2 ul li{
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: 500;
+            width:90%;
+            margin:auto;
+        }
+        footer {
+            background-color: #000080;
+            padding-top:50px;
+            margin-top: 30px;
+        }
+
+        .footer-container {
+            display: flex;
+            width: 95%;
+            margin: auto;
+            gap: 20px;
+        }
+
+        .footer {
+            flex-grow: 1;
+        }
+
+        .footer a {
+            display: block;
+            text-decoration: none;
+            color: #FF007F;
+            padding: 5px;
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: bolder;
+
+        }
+        .footer1{
+          
+            text-align: center;
+        }
+        .footer1 img{
+            width:150px;
+            transform:translateY(150px);
+            
+        }
+
+        .footer h2 {
+            color: #FF007F;
+            font-family: sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .footer4 p {
+            color: #FF007F;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+        .footer4 p i{
+            color:white;
+            padding-right: 10px;
+        }
+
+        .footer5 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer5 h3 {
+            color: #FF007F;
+            font-family: sans-serif;
+            font-size: 25px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+
+        }
+
+        .footer5 p {
+            color: #FF007F;
+            font-family: sans-serif;
+            font-size: 20px;
+
+        }
+        .footer5 .youtube i{
+            color:white;
+            background-color: red;
+            padding:5px;
+            border-radius: 20px;
+            margin-left: 20px;
+        }
+        .footer5 .WhatsApp i{
+            color:white;
+           background-color: lightgreen;
+            padding:5px;
+            border-radius: 20px;
+            margin-left: 20px;
+        }
+        .footer5 .instagram i{
+            color:white;
+           background:linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+            padding:5px;
+            border-radius: 20px;
+            margin-left: 20px;
+        }
+        .footer5 .facebook i{
+            color:white;
+           background-color:  rgb(1, 101, 225);
+            padding:5px;
+            border-radius: 20px;
+            margin-left: 20px;
+        }
+        .footer5 .twitter i{
+            color:white;
+           background-color:  rgb(29, 155, 240);
+            padding:5px;
+            border-radius: 20px;
+            margin-left: 20px;
+        }
+        
+
+
+
+        @media(max-width:426px) {
+
+            nav .container .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #000080;
+                position: absolute;
+                width: 100%;
+                top: 50px;
+                left: 0;
+                z-index: 2;
+            }
+
+            nav .container .nav-links li {
+                border-bottom: 1px solid white;
+                width: 70%;
+                margin: auto;
+                padding: 10px;
+            }
+
+            nav .container ul li a {
+
+                padding: 10px;
+                border: none;
+                text-align: left;
+
+            }
+
+            nav .container .nav-links.active {
+                display: flex;
+
+            }
+
+            .toggle-btn {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <img src="assets/images/indexpage-images/WhatsApp Image 2025-03-09 at 1.11.51 PM.jpeg">
+                </div>
+                <button class="toggle-btn " id="toggle-btn">&#9776 </button>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">DESTINATION</a></li>
+                    <li><a href="weddingplans.html">WEDDING PLANS</a></li>
+                    <li><a href="corporateevent.html">CORPORATE EVENTS</a></li>
+                    <li><a href="#">VLOGS</a></li>
+                    <li><a href="#">WHO WE ARE </a></li>
+                    <li><a href="#">DROP US A LINE</a></li>
+                    <button>
+                        <li class="icon"><i class="fa-solid fa-user"></i><br>LOGIN/<br><span>REGISTER</span></li>
+                    </button>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- end navbar -->
+    <!-- two-column-layout start-->
+    <section class="two-column-layout">
+        <div class="image">
+            <img src="assets/images/corporateEvent-images/Crporate.png">
+        </div>
+        <div class="para">
+            <p>What’s the key to hosting a corporate event that truly represents your brand?</p>
+            <p>Corporate events are your chance to showcase your values, foster relationships, and make a lasting
+                impression. But with so many moving parts—venue selection, schedules, branding, and guest experience—how
+                do you ensure everything comes together seamlessly without losing sight of your goals?</p>
+            <p>What if we told you we have the answer?</p>
+            <p class="lastpara">At the core of every successful corporate event is a team that knows how to bring a
+                vision to life with
+                precision. Our Corporate Event Management services are designed</p>
+        </div>
+        <img src="assets/images/wedding-plans/image.svg.svg" class="banner-whatsapp">
+
+    </section>
+
+    <!-- two column layout end -->
+    <!-- service section -->
+    <section class="service">
+        <div class="service-heading">
+            <h2>OUR SERVICES</h2>
+            <img src="assets/images/wedding-plans/singlelineborder.png">
+        </div>
+
+        <div class="service-events">
+            <div class="service-item">
+                <img src="assets/images/wedding-plans/wedding.png">
+                <p style="padding:30px">Meetings & Conference</p>
+            </div>
+            <div class="service-item">
+                <img src="assets/images/wedding-plans/image.png">
+                <p style="padding:30px">Conferences & Summits</p>
+            </div>
+            <div class="service-item">
+                <img src="assets/images/wedding-plans/image-1.png">
+                <div>
+                    <p>Networkings & Relationship-Building Events</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- service section end -->
+    <!-- key features section -->
+    <section class="key-features">
+        <div class="key-features-heading">
+            <h2>KEY FEATURES</h2>
+            <img src="assets/images/wedding-plans/singlelineborder.png">
+        </div>
+
+        <div class="key-features-events">
+            <div class="key-features-events-list">
+                <h3>BUSINESS MEETINGS & CONFERENCES</h3>
+                <ul>
+                    <li>Board Meetings- High-Level Company Discussions For Executives.</li>
+                    <li>Stakeholder Meetings-Updates For Investors And Stakeholders. </li>
+                    <li>Annual General Meetings (AGM)-Company-Wide Review And Future Plans.</li>
+                    <li>Sales Meetings-Strategy Discussions For Sales Teams.</li>
+                </ul>
+            </div>
+            <div class="key-features-events-list">
+                <h3>CONFERENCES & SUMMITS</h3>
+                <ul>
+                    <li>Industry Conferences-Large-Scale Gatherings Focused On Industry Trends.</li>
+                    <li>Leadership Summits-Exclusive Events For Executives And Decision-Makers. </li>
+                    <li>Trade Conferences-Showcasing Innovations And Networking.</li>
+                    <li>Academic Or Research Conferences-Knowledge Sharing Within A Field.</li>
+                </ul>
+            </div>
+            <div class="key-features-events-list">
+                <h3>NETWORKING & RELATIONSHIP-BUILDING EVENTS</h3>
+                <ul>
+                    <li>Corporate Dinners & Galas-Formal Events For High-Profile Guests.</li>
+                    <li>Business Networking Mixers-Casual Networking Opportunities. </li>
+                    <li>Speed Networking Events-Quick Introductions Among Professionals.</li>
+                </ul>
+            </div>
+            <div class="key-features-events-list">
+                <h3>PRODUCT & BRAND EVENTS</h3>
+                <ul>
+                    <li>Product Launches-Introducing New Products Or Services.</li>
+                    <li>Brand Activations-Engaging Customers With Interactive Experiences. </li>
+                    <li>Press Conferences-Announcements To Media And Stakeholders.</li>
+                </ul>
+            </div>
+            <div class="key-features-events-list">
+                <h3>TEAM ENGAGEMENT & EMPLOYEE-CENTRIC EVENTS</h3>
+                <ul>
+                    <li>Team Building Retreats-Outdoor Or Adventure-Based Bonding Activities.</li>
+                    <li>Employee Appreciation Events-Recognizing Employee Contributions. </li>
+                    <li>Incentive Trips-Rewarding Top Performers With Travel Experiences.</li>
+                    <li>Corporate Family Days-Encouraging Work-Life Balance.</li>
+                </ul>
+            </div>
+            <div class="key-features-events-list">
+                <h3>TRAINING & DEVELOPMENT EVENTS</h3>
+                <ul>
+                    <li>Workshops & Seminars-Skill-Building Sessions.</li>
+                    <li>Onboarding & Orientation Events-Introducing New Employees. </li>
+                    <li>Leadership Training Programs-Developing Managerial Skills.</li>
+                    <li>Webinars & Virtual Training-Remote Learning Sessions.</li>
+                </ul>
+            </div>
+            <div class="key-features-events-list">
+                <h3>TRADE SHOWS & EXHIBITIONS</h3>
+                <ul>
+                    <li>Industry Trade Shows-Showcasing Products And Services.</li>
+                    <li>Expo & Fairs-Large-Scale Business Exhibitions. </li>
+                    <li>Virtual Conferences & Summits-Remote Professional Gatherings.</li>
+                    <li>Live Streaming Events- Broadcasting Events To Global Audiences.</li>
+                </ul>
+            </div>
+            <div class="key-features-events-list">
+                <h3>AWARD CEREMONIES & RECOGNITION EVENTS</h3>
+                <ul>
+                    <li>Corporate Award Nights-Recognizing Employee Achievements.</li>
+                    <li>Milestone Celebrations-Commemorating Company Anniversaries. </li>
+                </ul>
+            </div>
+            <div class="key-features-events-list">
+                <h3>CSR & CHARITY EVENTS</h3>
+                <ul>
+                    <li>Fundraising galas- Raising Funds For Causes</li>
+                    <li>Corporate Social Responsibility (CSR) Initiatives-Community Service Projects.</li>
+                    <li> Charity Runs & Sports Events-Promoting Social Causes.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- key-features -end -->
+     <!-- technical abilities section -->
+      <section class="tech-ability">
+        <div class="tech-ability-heading">
+            <h2>TECHNICAL ABILITIES</h2>
+            <img src="assets/images/wedding-plans/singlelineborder.png">
+        </div>
+        <div class="tech-ability-two-column-layout">
+            <div class="column1">
+                <img src="assets/images/corporateEvent-images/Home.png">
+            </div>
+            <div class="column2">
+                <h3>Harnessing Cutting-Edge Technology To Enhance Your Event Experience:</h3>
+                <ul>
+                    <li>Event Management Platforms For Real-Time Coordination: Stay Updated And Organized Throughout The Event.</li>
+                    <li>AV And Lighting Setups For Large-Scale Presentations: Captivate Your Audience With Professional Sound And Visuals.</li>
+                    <li>Live Streaming For Remote Participants: Expand Your Event's Reach And Engagement Through Seamless Virtual Access.</li>
+                </ul>
+            </div>
+        </div>
+
+      </section>
+      <!-- technical abilities end -->
+      <footer>
+        <div class="footer-container">
+            <div class="footer footer1">
+                <img src="assets/images/indexpage-images/logo.jpeg">
+            </div>
+            <div class="footer footer2">
+                <h2>QUICK LINKS</h2>
+                <a href="#">About Us</a>
+                <a href="#">All Events</a>
+                <a href="#">Our Work</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Blog</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer footer3">
+                <h2>EVENT SERVICES</h2>
+                <a href="#">MIC Events</a>
+                <a href="#">Product Launching Events</a>
+                <a href="#">Company Gathering</a>
+                <a href="#">Team Building</a>
+                <a href="#">Themed Dinner</a>
+                <a href="#">Tour Organizer</a>
+                <a href="#">Sound System</a>
+                <a href="#">Lighting & Entertainment</a>
+            </div>
+            <div class="footer footer4">
+               <h2>ADDRESS</h2>
+               <p><i class="fa-solid fa-location-dot"></i>  XYZ,ABC Street,Chennai,India</p>
+               <p> <i class='bx bx-phone-call'></i>+91 9123456789</p>
+              <p><i class='bx bx-envelope' ></i> connect@mneventplanner.com</p>
+            </div>
+        </div>
+        <div class="footer5">
+            <h3>FOLLOW US @  <span class="youtube"><i class="fa-brands fa-youtube"></i></span><span class="WhatsApp"><i class='bx bxl-whatsapp'></i></span><span class="instagram"><i class='bx bxl-instagram' ></i></span><span class="facebook"><i class='bx bxl-facebook' ></i></span><span class="twitter"><i class='bx bxl-twitter' ></i></span></h3>
+            <p> 2025 MN Event Planner. <span>All Rights Reserved</span></p>
+        </div>
+    </footer>
+
+
+    <script>
+        const btn = document.getElementById('toggle-btn')
+        const navlinks = document.getElementById('nav-links')
+        btn.addEventListener('click', () => {
+            navlinks.classList.toggle('active')
+        })
+    </script>
+</body>
+
+</html>
