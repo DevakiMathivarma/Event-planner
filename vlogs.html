@@ -86,44 +86,56 @@
             border: none;
         }
 
+        .behind-the-scenes {
+            margin-top: 40px;
+        }
 
-        .search-box {
-            display: flex;
-            gap: 30px;
-            width: 90%;
-            margin: auto;
-            /* border: 1px solid black; */
-            margin-top: 20px;
+        .behind-the-scenes-heading {
+            text-align: center;
+        }
+
+        .behind-the-scenes .behind-the-scenes-heading h2 {
+            font-size: 30px;
+            font-family: sans-serif;
+            font-weight: bold;
             margin-bottom: 20px;
         }
 
-        .search-box input {
-            width: 70%;
-            padding: 20px;
-            border-radius: 20px;
-            border: 1px solid darkblue;
-            box-shadow: 0px 3px 1px grey;
+        .behind-the-scenes-heading img {
+            width: 250px;
+            margin-bottom: 20px;
         }
 
-        .search-box input::placeholder {
-            font-size: 25px;
+        .behind-the-scenes h3 {
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 23px;
+            text-decoration: underline;
+            margin-bottom: 50px;
         }
-
-        .search-box button {
-            border-radius: 20px;
-            width: 15%;
-            margin: auto;
-            font-size: 20px;
-            font-weight: bold;
-            background-color: #FF007F;
-            border: none;
-            padding: 20px;
-
+        .coporate-events{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap:50px;
+            margin-bottom: 30px;
         }
-
+        .coporate-events .image1{
+            border-radius: 50px;
+            width:400px;
+            height:350px;
+        }
+        .wedding-day-disasters{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap:50px;
+            margin-bottom: 30px;
+        }
         footer {
             background-color: #000080;
             padding-top:50px;
+            margin-top: 30px;
         }
 
         .footer-container {
@@ -228,74 +240,6 @@
             border-radius: 20px;
             margin-left: 20px;
         }
-        
-
-        .event-content {
-            text-align: center;
-        
-
-        }
-
-        .event-content img {
-            width: 100%;
-            max-height: 500px;
-            object-fit: cover;
-        }
-
-        h1 {
-            font-size: 28px;
-            margin-top: 20px;
-
-        }
-
-        #event-description {
-            text-align: left;
-            width: 90%;
-            margin: auto;
-            font-size: 18px;
-            line-height: 1.6;
-            background-color: #FFF5E4;
-            border-radius: 20px;
-            padding: 50px;
-
-        }
-
-        #event-description {
-            margin-bottom: 20px;
-        }
-
-        #event-description p {
-            font-family: sans-serif;
-            font-size: 25px;
-        }
-
-        #event-description h2 {
-            font-family: sans-serif;
-            font-size: 35px;
-        }
-
-        #event-description h3 {
-            font-family: sans-serif;
-            font-size: 30px;
-        }
-
-        #event-description li {
-            font-family: sans-serif;
-            font-size: 25px;
-
-        }
-
-        #event-description .themedli li {
-            font-family: sans-serif;
-            font-size: 30px;
-            font-weight: bolder;
-            margin-left: 40px;
-        }
-
-        #event-description .tour li strong {
-            font-size: 30px;
-
-        }
 
         @media(max-width:426px) {
 
@@ -359,19 +303,45 @@
             </div>
         </nav>
     </header>
-    <section class="search-box">
-        <input type="text" placeholder="search">
-        <button type="submit">GET A QUOTE</button>
-    </section>
-    <section class="event-content">
-        <img id="event-banner" src="" alt="Event Banner">
-        <h1 id="event-title"></h1>
-        <div id="event-description">
 
+    <!-- header section end -->
+    <!-- Behind the scene scetion -->
+    <section class="behind-the-scenes">
+        <div class="behind-the-scenes-heading">
+            <h2>Behind-the-scenes</h2>
+            <img src="assets/images/wedding-plans/singlelineborder.png">
         </div>
-    </section>
 
-    <footer>
+        <h3>BEHIND THE SCENES: CORPORATE EVENTS</h3>
+        <div class="coporate-events">
+            <img src="assets/images/vlogs-images/Home.png" class="image1">
+            <img src="assets/images/vlogs-images/v1.png">
+            <img src="assets/images/vlogs-images/v2.png">
+        </div>
+        <h3>BEHIND THE SCENES: WEDDING DAY DISASTERS</h3>
+        <div class="wedding-day-disasters">
+            <img src="assets/images/vlogs-images/v3.png">
+            <img src="assets/images/vlogs-images/v4.png">
+            <img src="assets/images/vlogs-images/v5.png">
+        </div>
+        <h3>BEHIND THE SCENES: EVENT PLANNERS POINT</h3>
+        <div class="wedding-day-disasters">
+            <img src="assets/images/vlogs-images/v6.png">
+            <img src="assets/images/vlogs-images/v7.png">
+            <img src="assets/images/vlogs-images/v8.png">
+        </div>
+        <h3>BEHIND THE SCENES: LOOK BEHIND THE SCENES</h3>
+        <div class="wedding-day-disasters">
+            <img src="assets/images/vlogs-images/v9.png">
+            <img src="assets/images/vlogs-images/v10.png">
+            <img src="assets/images/vlogs-images/v11.png">
+        </div>
+
+
+    </section>
+    <!-- behind the scene end -->
+     <!-- footer -->
+     <footer>
         <div class="footer-container">
             <div class="footer footer1">
                 <img src="assets/images/indexpage-images/logo.jpeg">
@@ -408,8 +378,15 @@
             <p> 2025 MN Event Planner. <span>All Rights Reserved</span></p>
         </div>
     </footer>
-    
-    <script src="assets/js/script.js"></script>
+
+    <script>
+        const btn = document.getElementById('toggle-btn')
+        const navlinks = document.getElementById('nav-links')
+        btn.addEventListener('click', () => {
+            navlinks.classList.toggle('active')
+        })
+    </script>
+
 </body>
 
 </html>

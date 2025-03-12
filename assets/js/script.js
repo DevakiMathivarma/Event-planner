@@ -573,25 +573,6 @@ const eventData = {
 }
 
 
-// Duplicate "mice" event content for other categories
-// eventData["team-building"] = {
-//     title: "Team Building",
-//     description: eventData["mice"].description,
-//     image: "images/team-building-banner.jpg"
-// };
-
-// eventData["themed-catering"] = {
-//     title: "Themed Catering",
-//     description: eventData["mice"].description,
-//     image: "images/themed-catering-banner.jpg"
-// };
-
-// eventData["tour-organizing"] = {
-//     title: "Tour Organizing",
-//     description: eventData["mice"].description,
-//     image: "images/tour-organizing-banner.jpg"
-// };
-
 function loadEventDetails() {
     // Get the event category from the URL parameter
     const urlParams = new URLSearchParams(window.location.search);
