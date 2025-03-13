@@ -7,291 +7,8 @@
     <title>Document</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-       *{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-   }
-        nav {
-            background-color: #000080;
-        }
-
-        .container {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 10px;
-        }
-
-        .nav-links li {
-            list-style: none;
-            color: white;
-            /* padding:5px; */
-        }
-
-        .nav-links li a {
-            color: #FF007F;
-            font-family: sans-serif;
-            font-weight: bold;
-            padding: 25px;
-            font-size: 20px;
-            text-decoration: none;
-
-        }
-
+    <link rel="stylesheet" href="assets/css/weddingplans.css">
     
-.nav-links button{
-    background: none;
-   border: none;
-   cursor: pointer;
-}
-.nav-links button li{
-    color:#ee2a7b;
-    font-size: 18px;
-    font-weight: bold;
-}
-.nav-links button li i{
-    color:white;
-    font-size: 28px;
-}
-        .logo img{
-            width:150px;
-            border: 1px solid black;
-           
-        }
-
-        nav .container .nav-links {
-            display: flex;
-        }
-
-        .toggle-btn {
-            display: none;
-            font-size: 20px;
-            color: white;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-        .banner{
-            position:relative;
-        }
-        .banner .banner-img{
-            width:100%;
-            opacity: 0.5;
-        }
-        .banner h2{
-            position:absolute;
-            top: 40%;
-            left:20%;
-           
-            font-family: sans-serif;
-            font-size: 50px;
-            
-        }
-        .banner h2 span{
-            display:block;
-        }
-        .banner button{
-            position: absolute;
-            top:5%;
-            right:2%;
-            padding:20px;
-            width:20%;
-            background-color:#FF007F;
-            color:black;
-            border:none;
-            border-radius: 20px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .banner .banner-whatsapp{
-            width:150px;
-            position:absolute;
-            right:5%;
-            top:30%;
-            animation: zoomInOut 2s infinite ease-in-out;
-
-        }
-        @keyframes zoomInOut {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.3);
-            }
-        }
-
-        .expertise{
-            margin-top: 40px;
-        }
-        .expertise-heading{
-            text-align: center;
-        }
-        .expertise .expertise-heading h2{
-            font-size: 40px;
-            font-family: sans-serif;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .expertise-heading img{
-            width:200px;
-            margin-bottom: 20px;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 50px;
-            justify-content: center;
-            width:90%;
-            margin: auto;
-            padding: 20px;
-        }
-
-        .grid-item {
-            overflow: hidden;
-            text-align: center;
-            margin-bottom: 30px;
-           
-        }
-
-        .grid-item img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .grid-item p {
-            background-color: #000080;
-            width: 300px;
-            margin: auto;
-            color: #FF007F;
-            font-size: 30px;
-            font-weight: bold;
-            font-family: sans-serif;
-            padding: 18px;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-           
-        }
-        footer {
-            background-color: #000080;
-            padding-top:50px;
-        }
-
-        .footer-container {
-            display: flex;
-            width: 95%;
-            margin: auto;
-            gap: 20px;
-        }
-
-        .footer {
-            flex-grow: 1;
-        }
-
-        .footer a {
-            display: block;
-            text-decoration: none;
-            color: #FF007F;
-            padding: 5px;
-            font-size: 20px;
-            font-family: sans-serif;
-            font-weight: bolder;
-
-        }
-        .footer1{
-          
-            text-align: center;
-        }
-        .footer1 img{
-            width:150px;
-            transform:translateY(150px);
-            
-        }
-
-        .footer h2 {
-            color: #FF007F;
-            font-family: sans-serif;
-            margin-bottom: 20px;
-        }
-
-        .footer4 p {
-            color: #FF007F;
-            font-family: sans-serif;
-            font-size: 20px;
-        }
-        .footer4 p i{
-            color:white;
-            padding-right: 10px;
-        }
-
-        .footer5 {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .footer5 h3 {
-            color: #FF007F;
-            font-family: sans-serif;
-            font-size: 25px;
-            margin-bottom: 20px;
-            margin-top: 20px;
-
-        }
-
-        .footer5 p {
-            color: #FF007F;
-            font-family: sans-serif;
-            font-size: 20px;
-
-        }
-        .footer5 .youtube i{
-            color:white;
-            background-color: red;
-            padding:5px;
-            border-radius: 20px;
-            margin-left: 20px;
-        }
-        .footer5 .WhatsApp i{
-            color:white;
-           background-color: lightgreen;
-            padding:5px;
-            border-radius: 20px;
-            margin-left: 20px;
-        }
-        .footer5 .instagram i{
-            color:white;
-           background:linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
-            padding:5px;
-            border-radius: 20px;
-            margin-left: 20px;
-        }
-        .footer5 .facebook i{
-            color:white;
-           background-color:  rgb(1, 101, 225);
-            padding:5px;
-            border-radius: 20px;
-            margin-left: 20px;
-        }
-        .footer5 .twitter i{
-            color:white;
-           background-color:  rgb(29, 155, 240);
-            padding:5px;
-            border-radius: 20px;
-            margin-left: 20px;
-        }
-        
-
-    </style>
 </head>
 
 <body>
@@ -301,30 +18,35 @@
                 <div class="logo">
                     <img src="assets/images/indexpage-images/WhatsApp Image 2025-03-09 at 1.11.51 PM.jpeg">
                 </div>
+                <button class="toggle-btn " id="toggle-btn">&#9776 </button>
                 <ul class="nav-links">
                     <li><a href="index.html">DESTINATION</a></li>
                     <li><a href="weddingplans.html">WEDDING PLANS</a></li>
                     <li><a href="corporateevent.html">CORPORATE EVENTS</a></li>
                     <li><a href="vlogs.html">VLOGS</a></li>
-                    <li><a href="#">WHO WE ARE </a></li>
-                    <li><a href="#">DROP US A LINE</a></li>
-                    <button><li class="icon"><i class="fa-solid fa-user"></i><br>LOGIN/<br><span>REGISTER</span></li></button>
+                    <li><a href="who-we-are.html">WHO WE ARE </a></li>
+                    <li><a href="Drop-us-a-line.html">DROP US A LINE</a></li>
                 </ul>
+                <button id="togglebtn">
+                    <i class="fa-solid fa-user"></i><br>LOGIN/<br><span>REGISTER</span>
+                </button>
             </div>
         </nav>
     </header>
-
+    <!-- header section -->
+<!-- banner section -->
     <section class="banner">
         <img src="assets/images/wedding-plans/beachvenue.png" class="banner-img">
         <h2>A WEEDING IS ONLY ONE DAY,<span> BUT THE MEMORIES LAST A LIFETIME</span></h2>
-        <button>BOOK AN APPOINTMENT</button>
+        <button id="appbtn">BOOK AN APPOINTMENT</button>
         <img src="assets/images/wedding-plans/image.svg.svg" class="banner-whatsapp">
-        
+
     </section>
+    <!-- expertise section -->
     <section class="expertise">
         <div class="expertise-heading">
-        <h2>OUR EXPERTISE</h2>
-        <img src="assets/images/wedding-plans/singlelineborder.png">
+            <h2>OUR EXPERTISE</h2>
+            <img src="assets/images/wedding-plans/singlelineborder.png">
         </div>
         <div class="grid-container">
             <div class="grid-item">
@@ -377,6 +99,68 @@
             </div>
         </div>
     </section>
+<!-- form section when clicking button -->
+    <section class="form" id="form">
+        <form id="login-form">
+            <div class="login-form">
+                <h2>LOGIN/REGISTER</h2>
+                <div class="input">
+                    <input type="text" placeholder="Name">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input">
+                    <input type="number" placeholder="Contact">
+                    <i class="fa-solid fa-address-book"></i>
+                </div>
+                <div class="input">
+                    <input type="email" placeholder="Mail">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input">
+                    <input type="password" placeholder="Password">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="input">
+                    <button type="submit" id="connect">CONNECT</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <div class="popup" id="popup">
+        <img src="assets/images/indexpage-images/logo.jpeg">
+        <p>Thank you for contacting us!</p>
+        <p>Our Experts will revert you back ASAP!</p>
+    </div>
+    <!-- form section when clicking button -->
+     <section class="appointment-form" id="appointment-form">
+        <form id="login-form">
+        <div class="appoint-form">
+            <h2>BOOK AN APPOINTMENT</h2>
+            <h2>Let Us Discuss About Your Dream Gather</h2>
+            <div class="input1">
+                <input type="text" placeholder="Name">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input1">
+                <input type="number" placeholder="Contact">
+                <i class="fa-solid fa-address-book"></i>
+            </div>
+            <div class="input1">
+                <input type="email" placeholder="Mail">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input1">
+                <textarea name="msg" id="msg" cols="30 rows=10">       Tell us about your plan, we will make it easier.</textarea>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="input1">
+                <button type="submit" id="connect">CONNECT</button>
+            </div>
+
+        </div>
+        </form>
+     </section>
+     <!-- footer -->
     <footer>
         <div class="footer-container">
             <div class="footer footer1">
@@ -403,17 +187,22 @@
                 <a href="#">Lighting & Entertainment</a>
             </div>
             <div class="footer footer4">
-               <h2>ADDRESS</h2>
-               <p><i class="fa-solid fa-location-dot"></i>  XYZ,ABC Street,Chennai,India</p>
-               <p> <i class='bx bx-phone-call'></i>+91 9123456789</p>
-              <p><i class='bx bx-envelope' ></i> connect@mneventplanner.com</p>
+                <h2>ADDRESS</h2>
+                <p><i class="fa-solid fa-location-dot"></i> XYZ,ABC Street,Chennai,India</p>
+                <p> <i class='bx bx-phone-call'></i>+91 9123456789</p>
+                <p><i class='bx bx-envelope'></i> connect@mneventplanner.com</p>
             </div>
         </div>
         <div class="footer5">
-            <h3>FOLLOW US @  <span class="youtube"><i class="fa-brands fa-youtube"></i></span><span class="WhatsApp"><i class='bx bxl-whatsapp'></i></span><span class="instagram"><i class='bx bxl-instagram' ></i></span><span class="facebook"><i class='bx bxl-facebook' ></i></span><span class="twitter"><i class='bx bxl-twitter' ></i></span></h3>
+            <h3>FOLLOW US @ <span class="youtube"><i class="fa-brands fa-youtube"></i></span><span class="WhatsApp"><i
+                        class='bx bxl-whatsapp'></i></span><span class="instagram"><i
+                        class='bx bxl-instagram'></i></span><span class="facebook"><i
+                        class='bx bxl-facebook'></i></span><span class="twitter"><i class='bx bxl-twitter'></i></span>
+            </h3>
             <p> 2025 MN Event Planner. <span>All Rights Reserved</span></p>
         </div>
     </footer>
+    <script src="assets/js/weddingplans.js"></script>
 </body>
 
 </html>

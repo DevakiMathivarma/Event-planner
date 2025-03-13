@@ -50,19 +50,19 @@
         }
 
 
-        .nav-links button {
+        .container button {
             background: none;
             border: none;
             cursor: pointer;
         }
 
-        .nav-links button li {
+        .container button {
             color: #ee2a7b;
             font-size: 18px;
             font-weight: bold;
         }
 
-        .nav-links button li i {
+        .container button i {
             color: white;
             font-size: 28px;
         }
@@ -79,7 +79,7 @@
 
         .toggle-btn {
             display: none;
-            font-size: 20px;
+            font-size: 40px;
             color: white;
             cursor: pointer;
             background: none;
@@ -121,9 +121,100 @@
 
         }
 
+        .form {
+            background-color: #000080;
+            width: 40%;
+            margin: auto;
+
+            display: none;
+            position: fixed;
+            /* Keeps it centered on screen */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .form.active {
+            display: flex;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+        }
+
+        .input {
+            position: relative;
+        }
+
+        .input i {
+            position: absolute;
+            top: 12px;
+            left: 10px;
+            color: grey;
+
+        }
+
+        .input input {
+            width: 450px;
+            padding: 15px;
+            border-radius: 20px;
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        input::placeholder {
+            color: grey;
+            font-size: 20px;
+            font-weight: bold;
+            transform: translateX(25px);
+        }
+
+        .input button {
+            background-color: #FF007F;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bolder;
+            border: none;
+            padding: 20px;
+        }
+
+        .popup {
+            background-color: #000080;
+            border-radius: 10px;
+            width: 30%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            z-index: 1001;
+        }
+
+        .popup p {
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: sans-serif;
+            color: white;
+        }
+
         footer {
             background-color: #000080;
-            padding-top:50px;
+            padding-top: 50px;
         }
 
         .footer-container {
@@ -147,14 +238,16 @@
             font-weight: bolder;
 
         }
-        .footer1{
-          
+
+        .footer1 {
+
             text-align: center;
         }
-        .footer1 img{
-            width:150px;
-            transform:translateY(150px);
-            
+
+        .footer1 img {
+            width: 150px;
+            transform: translateY(150px);
+
         }
 
         .footer h2 {
@@ -168,8 +261,9 @@
             font-family: sans-serif;
             font-size: 20px;
         }
-        .footer4 p i{
-            color:white;
+
+        .footer4 p i {
+            color: white;
             padding-right: 10px;
         }
 
@@ -193,46 +287,51 @@
             font-size: 20px;
 
         }
-        .footer5 .youtube i{
-            color:white;
+
+        .footer5 .youtube i {
+            color: white;
             background-color: red;
-            padding:5px;
+            padding: 5px;
             border-radius: 20px;
             margin-left: 20px;
         }
-        .footer5 .WhatsApp i{
-            color:white;
-           background-color: lightgreen;
-            padding:5px;
+
+        .footer5 .WhatsApp i {
+            color: white;
+            background-color: lightgreen;
+            padding: 5px;
             border-radius: 20px;
             margin-left: 20px;
         }
-        .footer5 .instagram i{
-            color:white;
-           background:linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
-            padding:5px;
+
+        .footer5 .instagram i {
+            color: white;
+            background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+            padding: 5px;
             border-radius: 20px;
             margin-left: 20px;
         }
-        .footer5 .facebook i{
-            color:white;
-           background-color:  rgb(1, 101, 225);
-            padding:5px;
+
+        .footer5 .facebook i {
+            color: white;
+            background-color: rgb(1, 101, 225);
+            padding: 5px;
             border-radius: 20px;
             margin-left: 20px;
         }
-        .footer5 .twitter i{
-            color:white;
-           background-color:  rgb(29, 155, 240);
-            padding:5px;
+
+        .footer5 .twitter i {
+            color: white;
+            background-color: rgb(29, 155, 240);
+            padding: 5px;
             border-radius: 20px;
             margin-left: 20px;
         }
-        
+
 
         .event-content {
             text-align: center;
-        
+
 
         }
 
@@ -297,6 +396,249 @@
 
         }
 
+        .get-in-touch.active {
+            display: flex;
+        }
+
+        .get-in-touch {
+            width: 60%;
+            border: 1px solid black;
+            position: relative;
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            /* Fixes position on screen */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1003;
+        }
+
+        .get-in-touch img {
+            width: 100%;
+            height: 650px;
+            opacity: 0.5;
+        }
+
+        .form-apply {
+            opacity: 1;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: absolute;
+            top: 10px;
+            padding: 20px;
+        }
+
+        .input-box input {
+            width: 350px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 30px;
+            border: 1px solid #FF007F;
+        }
+
+        .input-box input::placeholder {
+            color: grey;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .form2 h4 {
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+
+        .form2 {
+            padding: 10px;
+        }
+
+        .form2 label {
+            font-size: 18px;
+            font-family: sans-serif;
+            padding: 10px;
+        }
+
+        .form2 textarea {
+            width: 400px;
+            height: 200px;
+            border: 1px solid #FF007F;
+            font-size: 20px;
+            color: grey;
+        }
+
+        .get-in-touch .get-in-touch-btn {
+            text-align: center;
+        }
+
+        .get-in-touch button {
+            position: absolute;
+            bottom: 20px;
+            left: 40%;
+            width: 20%;
+            padding: 10px;
+            background-color: #000080;
+            color: #FF007F;
+            border-radius: 50px;
+            font-size: 20px;
+        }
+
+
+        @media(max-width:1024px) {
+            .nav-links li a {
+                font-size: 15px;
+                padding: 10px;
+            }
+
+            .logo img {
+                width: 80px;
+            }
+
+            .container button {
+                font-size: 15px;
+            }
+
+            .container button i {
+                font-size: 19px;
+                ;
+            }
+
+            .container {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .search-box input {
+                padding: 5px;
+                width: 100%;
+            }
+
+            .search-box button {
+                transform: translateX(-20px);
+                font-size: 10px;
+                width: 30%;
+            }
+
+            .get-in-touch {
+                width: 80%;
+            }
+        }
+
+        @media(max-width:768px) {
+            .nav-links li a {
+                font-size: 12px;
+                padding: 7px;
+            }
+
+            .nav-links {
+                padding: 5px;
+            }
+
+            .container {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .container button {
+                font-size: 10px;
+            }
+
+            .container button i {
+                font-size: 15px;
+
+            }
+
+            .get-in-touch {
+                width: 90%;
+            }
+
+            .logo img {
+                width: 50px;
+            }
+
+            .form2 h4 {
+                font-size: 18px;
+            }
+
+            .form2 textarea {
+                width: 200px;
+                height: 200px;
+            }
+
+            .input-box input::placeholder {
+                font-size: 15px;
+            }
+
+            .form2 label {
+                font-size: 15px;
+                font-family: sans-serif;
+                padding: 10px;
+            }
+
+            .search-box input::placeholder {
+                font-size: 15px;
+            }
+
+            .search-box input {
+                padding: 5px;
+                width: 100%;
+            }
+
+            .search-box button {
+                transform: translateX(-20px);
+                font-size: 10px;
+                width: 30%;
+            }
+
+            #event-description p {
+                font-family: sans-serif;
+                font-size: 20px;
+            }
+
+            #event-description h2 {
+                font-family: sans-serif;
+                font-size: 30px;
+            }
+
+            #event-description h3 {
+                font-family: sans-serif;
+                font-size: 25px;
+            }
+
+            #event-description li {
+                font-family: sans-serif;
+                font-size: 20px;
+
+            }
+
+            #event-description .themedli li {
+
+                font-size: 20px;
+
+            }
+
+            #event-description .tour li strong {
+                font-size: 20px;
+
+            }
+
+            .footer-container {
+                flex-direction: column;
+            }
+
+            .footer1 img {
+                transform: translateX(-300px);
+            }
+
+            .footer5 {
+                text-align: center;
+            }
+
+            .footer5 h3 {
+                font-size: 20px;
+            }
+        }
+
         @media(max-width:426px) {
 
             nav .container .nav-links {
@@ -333,6 +675,106 @@
             .toggle-btn {
                 display: block;
             }
+
+            .container #togglebtn {
+                display: none;
+            }
+
+            .logo img {
+                width: 100px;
+                align-self: flex-start;
+            }
+
+            .toggle-btn {
+                font-size: 30px;
+            }
+
+            .search-box input {
+                padding: 10px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .search-box button {
+                transform: translateX(-20px);
+                width: 40%;
+            }
+
+            #event-description p {
+                font-family: sans-serif;
+                font-size: 15px;
+            }
+
+            #event-description h2 {
+                font-family: sans-serif;
+                font-size: 20px;
+            }
+
+            #event-description h3 {
+                font-family: sans-serif;
+                font-size: 18px;
+            }
+
+            .get-in-touch.active {
+                display: none;
+            }
+
+            #event-description li {
+                font-family: sans-serif;
+                font-size: 15px;
+
+            }
+
+            #event-description .themedli li {
+
+                font-size: 15px;
+
+            }
+
+            #event-description .tour li strong {
+                font-size: 15px;
+
+            }
+
+            .footer h2 {
+                font-size: 18px;
+            }
+
+            .footer4 p {
+                font-size: 15px;
+            }
+
+            .footer5 h3 {
+                font-size: 13px;
+            }
+
+            .footer5 p {
+                font-size: 15px;
+            }
+
+            .footer a {
+                font-size: 15px;
+            }
+
+        }
+
+        @media(max-width:320px) {
+            #event-description {
+                padding: 20px;
+            }
+
+            .search-box button {
+                transform: translateX(-20px);
+                width: 40%;
+                font-size: 10px;
+            }
+
+            .search-box input {
+                padding: 20px;
+                width: 100%;
+            }
+
+
         }
     </style>
 </head>
@@ -350,18 +792,19 @@
                     <li><a href="weddingplans.html">WEDDING PLANS</a></li>
                     <li><a href="corporateevent.html">CORPORATE EVENTS</a></li>
                     <li><a href="vlogs.html">VLOGS</a></li>
-                    <li><a href="#">WHO WE ARE </a></li>
-                    <li><a href="#">DROP US A LINE</a></li>
-                    <button>
-                        <li class="icon"><i class="fa-solid fa-user"></i><br>LOGIN/<br><span>REGISTER</span></li>
-                    </button>
+                    <li><a href="who-we-are.html">WHO WE ARE </a></li>
+                    <li><a href="Drop-us-a-line.html">DROP US A LINE</a></li>
+
                 </ul>
+                <button id="togglebtn">
+                    <i class="fa-solid fa-user"></i><br>LOGIN/<br><span>REGISTER</span>
+                </button>
             </div>
         </nav>
     </header>
     <section class="search-box">
         <input type="text" placeholder="search">
-        <button type="submit">GET A QUOTE</button>
+        <button type="submit" id="getQuoteBtn">GET A QUOTE</button>
     </section>
     <section class="event-content">
         <img id="event-banner" src="" alt="Event Banner">
@@ -370,7 +813,89 @@
 
         </div>
     </section>
+    <section class="form" id="form">
+        <form id="login-form">
+            <div class="login-form">
+                <h2>LOGIN/REGISTER</h2>
+                <div class="input">
+                    <input type="text" placeholder="Name">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input">
+                    <input type="number" placeholder="Contact">
+                    <i class="fa-solid fa-address-book"></i>
+                </div>
+                <div class="input">
+                    <input type="email" placeholder="Mail">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input">
+                    <input type="password" placeholder="Password">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="input">
+                    <button type="submit" id="connect">CONNECT</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <div class="popup" id="popup">
+        <img src="assets/images/indexpage-images/logo.jpeg">
+        <p>Thank you for contacting us!</p>
+        <p>Our Experts will revert you back ASAP!</p>
+    </div>
+    <!-- get a quote -->
+    <section class="get-in-touch" id="getInTouchForm">
+        <img src="assets/images/indexpage-images/image-6.png">
+        <form>
+            <div class="form-apply">
+                <div class="get-in-touch-form">
+                    <div class="input-box">
+                        <input type="text" placeholder="First & Last name">
+                    </div>
+                    <div class="input-box">
+                        <input type="number" placeholder="Mobile">
+                    </div>
+                    <div class="input-box">
+                        <input type="mail" placeholder="Email id">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="Wedding or Special Event Date">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="Event Location (Or Considering)">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="How Many Guest Are You Expecting">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="Who is your Caterer if Decided?">
+                    </div>
+                </div>
+                <div class="form2">
+                    <h4>Package Interested In? (Select all that apply)</h4>
+                    <input type="checkbox">
+                    <label>Full Planning + Design-Wedding</label><br>
+                    <input type="checkbox">
+                    <label>Custom Quote Celebration - Corporate Party,Engagement Party,Birthday,Bat/Bar Mitzvah,Special
+                        Celebration</label><br>
+                    <input type="checkbox">
+                    <label>The Bubbly Bar</label><br>
+                    <input type="checkbox">s
+                    <label>Unsure,Lets Chat</label>
+                    <h4>
+                        More Details the Better - Tell us more of how we can help,your Vision and any details you know
+                        now
+                    </h4>
+                    <textarea name="msg" id="msg" cols="20" rows="20">Your Message</textarea>
 
+                </div>
+            </div>
+            <div class="get-in-touch-btn">
+                <button type="submit">Get A Quote</button>
+            </div>
+        </form>
+    </section>
     <footer>
         <div class="footer-container">
             <div class="footer footer1">
@@ -397,18 +922,22 @@
                 <a href="#">Lighting & Entertainment</a>
             </div>
             <div class="footer footer4">
-               <h2>ADDRESS</h2>
-               <p><i class="fa-solid fa-location-dot"></i>  XYZ,ABC Street,Chennai,India</p>
-               <p> <i class='bx bx-phone-call'></i>+91 9123456789</p>
-              <p><i class='bx bx-envelope' ></i> connect@mneventplanner.com</p>
+                <h2>ADDRESS</h2>
+                <p><i class="fa-solid fa-location-dot"></i> XYZ,ABC Street,Chennai,India</p>
+                <p> <i class='bx bx-phone-call'></i>+91 9123456789</p>
+                <p><i class='bx bx-envelope'></i> connect@mneventplanner.com</p>
             </div>
         </div>
         <div class="footer5">
-            <h3>FOLLOW US @  <span class="youtube"><i class="fa-brands fa-youtube"></i></span><span class="WhatsApp"><i class='bx bxl-whatsapp'></i></span><span class="instagram"><i class='bx bxl-instagram' ></i></span><span class="facebook"><i class='bx bxl-facebook' ></i></span><span class="twitter"><i class='bx bxl-twitter' ></i></span></h3>
+            <h3>FOLLOW US @ <span class="youtube"><i class="fa-brands fa-youtube"></i></span><span class="WhatsApp"><i
+                        class='bx bxl-whatsapp'></i></span><span class="instagram"><i
+                        class='bx bxl-instagram'></i></span><span class="facebook"><i
+                        class='bx bxl-facebook'></i></span><span class="twitter"><i class='bx bxl-twitter'></i></span>
+            </h3>
             <p> 2025 MN Event Planner. <span>All Rights Reserved</span></p>
         </div>
     </footer>
-    
+
     <script src="assets/js/script.js"></script>
 </body>
 

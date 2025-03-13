@@ -9,418 +9,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- fontawsome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-   *{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-   }
-        nav {
-            background-color: #000080;
-        }
-
-        .container {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 10px;
-        }
-
-        .nav-links li {
-            list-style: none;
-            color: white;
-            /* padding:5px; */
-        }
-
-        .nav-links li a {
-            color: #FF007F;
-            font-family: sans-serif;
-            font-weight: bold;
-            padding: 25px;
-            font-size: 20px;
-            text-decoration: none;
-
-        }
-
-    
-.nav-links button{
-    background: none;
-   border: none;
-   cursor: pointer;
-}
-.nav-links button li{
-    color:#ee2a7b;
-    font-size: 18px;
-    font-weight: bold;
-}
-.nav-links button li i{
-    color:white;
-    font-size: 28px;
-}
-        .logo img{
-            width:150px;
-            border: 1px solid black;
-           
-        }
-
-        nav .container .nav-links {
-            display: flex;
-        }
-
-        .toggle-btn {
-            display: none;
-            font-size: 20px;
-            color: white;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-
-        .search-box {
-            display: flex;
-            gap: 30px;
-            width: 90%;
-            margin: auto;
-            /* border: 1px solid black; */
-            margin-top: 20px;
-        }
-
-        .search-box input {
-            width: 70%;
-            padding: 20px;
-            border-radius: 20px;
-            border: 1px solid darkblue;
-            box-shadow: 0px 3px 1px grey;
-        }
-
-        .search-box input::placeholder {
-            font-size: 25px;
-        }
-
-        .search-box button {
-            border-radius: 20px;
-            width: 23%;
-            font-size: 20px;
-            font-weight: bold;
-            background-color: #FF007F;
-            border: none;
-            padding: 10px;
-
-        }
-
-        .carousel {
-            position: relative;
-            width: 100%;
-            margin: auto;
-            height: 70vh;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            perspective: 1000px;
-            margin-top: 40px;
-        }
-
-        .carousel img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0;
-            transition: transform 1s ease, opacity 1s ease;
-            transform: rotateY(20deg);
-        }
-
-        .carousel img.active {
-            opacity: 1;
-            transform: rotateY(0deg);
-        }
-
-        .caption {
-            position: absolute;
-            text-align: center;
-            color: #000080;
-            /* font-size: 30px; */
-            font-family: sans-serif;
-            font-weight: bolder;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-        }
-
-        .caption h2 {
-            font-size: 60px;
-            text-transform: uppercase;
-            width: 1000px;
-        }
-
-        .caption span {
-            display: block;
-            font-size: 2rem;
-            font-family: sans-serif;
-        }
-
-        .service {
-            width: 90%;
-            margin: auto
-        }
-        .service{
-            margin-top: 30px;
-        }
-
-        .service .serve {
-            text-align: center;
-            font-size: 25px;
-            font-family: sans-serif;
-
-        }
-        .service .serve img{
-            width:200px;
-            margin-top: 0;
-        }
-
-        .service .service-events {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-top: 20px;
-        }
-
-        .service .service-events-list {
-            text-align: center;
-            border: 1.5px solid #000080;
-            box-shadow: 0px 3px 1px rgba(147, 146, 146, 0.8);
-            
-        }
-        .service-events-list-content{
-            padding:30px;
-        }
-        .service-events-list-content h2{
-            font-family: sans-serif;
-            font-size: 25px;
-            margin-bottom: 5px;
-        }
-        .service-events-list-content p{
-            font-family: sans-serif;
-            font-size: 20px;
-            margin-bottom: 40px;
-        }
-        .service-events-list-content a{
-            text-decoration: none;
-            background-color: #000080;
-            color:#FF007F;
-            padding:18px;
-            font-family: sans-serif;
-            font-size: 18px;
-            border-radius: 30px;
-            font-weight: bold;
-            margin-bottom: 20px;
-
-        }
-
-        .service .service-events-list img {
-            width: 100%;
-        }
-
-        .two-column-layout {
-            display: flex;
-            width: 90%;
-            margin: auto;
-
-        }
-
-        .two-column-layout {
-            margin-top: 60px;
-            margin-bottom: 50px;
-        }
-
-        .column1 {
-            flex-grow: 1;
-            text-align: center;
-            border: 1px solid black;
-            padding:20px;
-        }
-        .column1 h2{
-            font-family: sans-serif;
-            font-size: 40px;
-        }
-        .column1 img{
-            margin-bottom: 8px;
-        }
-        .column1 p{
-            font-family: sans-serif;
-            font-size: 25px;
-            font-weight: bolder;
-        }
-
-        .column2 {
-            flex-grow: 1;
-        }
-
-        .column2 img {
-            width: 100%;
-            height:450px;
-
-        }
-
-        footer {
-            background-color: #000080;
-            padding-top:50px;
-        }
-
-        .footer-container {
-            display: flex;
-            width: 95%;
-            margin: auto;
-            gap: 20px;
-        }
-
-        .footer {
-            flex-grow: 1;
-        }
-
-        .footer a {
-            display: block;
-            text-decoration: none;
-            color: #FF007F;
-            padding: 5px;
-            font-size: 20px;
-            font-family: sans-serif;
-            font-weight: bolder;
-
-        }
-        .footer1{
-          
-            text-align: center;
-        }
-        .footer1 img{
-            width:150px;
-            transform:translateY(150px);
-            
-        }
-
-        .footer h2 {
-            color: #FF007F;
-            font-family: sans-serif;
-            margin-bottom: 20px;
-        }
-
-        .footer4 p {
-            color: #FF007F;
-            font-family: sans-serif;
-            font-size: 20px;
-        }
-        .footer4 p i{
-            color:white;
-            padding-right: 10px;
-        }
-
-        .footer5 {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .footer5 h3 {
-            color: #FF007F;
-            font-family: sans-serif;
-            font-size: 25px;
-            margin-bottom: 20px;
-            margin-top: 20px;
-
-        }
-
-        .footer5 p {
-            color: #FF007F;
-            font-family: sans-serif;
-            font-size: 20px;
-
-        }
-        .footer5 .youtube i{
-            color:white;
-            background-color: red;
-            padding:5px;
-            border-radius: 20px;
-            margin-left: 20px;
-        }
-        .footer5 .WhatsApp i{
-            color:white;
-           background-color: lightgreen;
-            padding:5px;
-            border-radius: 20px;
-            margin-left: 20px;
-        }
-        .footer5 .instagram i{
-            color:white;
-           background:linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
-            padding:5px;
-            border-radius: 20px;
-            margin-left: 20px;
-        }
-        .footer5 .facebook i{
-            color:white;
-           background-color:  rgb(1, 101, 225);
-            padding:5px;
-            border-radius: 20px;
-            margin-left: 20px;
-        }
-        .footer5 .twitter i{
-            color:white;
-           background-color:  rgb(29, 155, 240);
-            padding:5px;
-            border-radius: 20px;
-            margin-left: 20px;
-        }
-        
-
-
-
-
-
-        @media(max-width:426px) {
-
-            nav .container .nav-links {
-                display: none;
-                flex-direction: column;
-                background-color:#000080;
-                position: absolute;
-                width: 100%;
-                top: 50px;
-                left: 0;
-                z-index: 2;
-            }
-
-            nav .container .nav-links li {
-                border-bottom: 1px solid white;
-                width: 70%;
-                margin:auto;
-                padding:10px;
-            }
-
-            nav .container ul li a {
-
-                padding: 10px;
-                border: none;
-                text-align: left;
-
-            }
-
-            nav .container .nav-links.active {
-                display: flex;
-
-            }
-
-            .toggle-btn {
-                display: block;
-            }
-        }
-    </style>
+    <!-- css link -->
+     <link rel="stylesheet" href="assets/css/index.css">
 </head>
 
 <body>
@@ -436,18 +26,21 @@
                     <li><a href="weddingplans.html">WEDDING PLANS</a></li>
                     <li><a href="corporateevent.html">CORPORATE EVENTS</a></li>
                     <li><a href="vlogs.html">VLOGS</a></li>
-                    <li><a href="#">WHO WE ARE </a></li>
-                    <li><a href="#">DROP US A LINE</a></li>
-                    <button><li class="icon"><i class="fa-solid fa-user"></i><br>LOGIN/<br><span>REGISTER</span></li></button>
+                    <li><a href="who-we-are.html">WHO WE ARE </a></li>
+                    <li><a href="Drop-us-a-line.html">DROP US A LINE</a></li>
+
                 </ul>
+                <button id="togglebtn">
+                    <i class="fa-solid fa-user"></i><br>LOGIN/<br><span>REGISTER</span>
+                </button>
             </div>
         </nav>
     </header>
     <!-- ----------------search section---- -->
 
     <section class="search-box">
-        <input type="text" placeholder="search">
-        <button type="submit">BOOK AN APPOINTMENT</button>
+        <input type="text" placeholder="Search">
+        <button type="submit" id="appbtn">BOOK AN APPOINTMENT</button>
     </section>
     <!-- ----end search section--- -->
 
@@ -486,7 +79,8 @@
                 </div>
                 <div class="service-events-list-content">
                     <h2>Product Launching Events</h2>
-                    <p>Launching a new product is a crucial moment for every business. This requires a combination of strategic planning</p>
+                    <p>Launching a new product is a crucial moment for every business. This requires a combination of
+                        strategic planning</p>
                     <a href="eventDetails.html?event=productLaunching">SPECIFICS</a>
                 </div>
             </div>
@@ -506,7 +100,8 @@
                 </div>
                 <div class="service-events-list-content">
                     <h2>Team Building</h2>
-                    <p>Organizing a team-building event can be a highly rewarding experience, offering numerous benefits to both the organizer and the participants</p>
+                    <p>Organizing a team-building event can be a highly rewarding experience, offering numerous benefits
+                        to both the organizer and the participants</p>
                     <a href="eventDetails.html?event=teamBuilding">SPECIFICS</a>
                 </div>
             </div>
@@ -516,7 +111,8 @@
                 </div>
                 <div class="service-events-list-content">
                     <h2>Themed Catering</h2>
-                    <p>Each of these themes offers a unique dining experience, transporting guests to a different time or place, and making the evening truly unforgettable.</p>
+                    <p>Each of these themes offers a unique dining experience, transporting guests to a different time
+                        or place, and making the evening truly unforgettable.</p>
                     <a href="eventDetails.html?event=themedCatering">SPECIFICS</a>
                 </div>
             </div>
@@ -526,8 +122,9 @@
                 </div>
                 <div class="service-events-list-content">
                     <h2>Tour Organizer</h2>
-                    <p>Our passion is curating unforgettable journeys, bringing together like-minded adventurers, and revealing the hidden gems of our planet</p>
-                   <a href="eventDetails.html?event=tourOrganizer">SPECIFICS</a>
+                    <p>Our passion is curating unforgettable journeys, bringing together like-minded adventurers, and
+                        revealing the hidden gems of our planet</p>
+                    <a href="eventDetails.html?event=tourOrganizer">SPECIFICS</a>
                 </div>
             </div>
             <div class="service-events-list">
@@ -536,7 +133,8 @@
                 </div>
                 <div class="service-events-list-content">
                     <h2>Sound System</h2>
-                    <p>We are a provider of sound system rental services with various package options ranging from speakers, wireless mic, cable mic, mixer, etc.</p>
+                    <p>We are a provider of sound system rental services with various package options ranging from
+                        speakers, wireless mic, cable mic, mixer, etc.</p>
                     <a href="eventDetails.html?event=soundSystem">SPECIFICS</a>
                 </div>
             </div>
@@ -546,7 +144,8 @@
                 </div>
                 <div class="service-events-list-content">
                     <h2>Lighting</h2>
-                    <p>We are a provider of event lighting rental services with various package options ranging from par LED, moving head, halogen, smoke machine, etc.</p>
+                    <p>We are a provider of event lighting rental services with various package options ranging from par
+                        LED, moving head, halogen, smoke machine, etc.</p>
                     <a href="eventDetails.html?event=lighting">SPECIFICS</a>
                 </div>
             </div>
@@ -556,7 +155,8 @@
                 </div>
                 <div class="service-events-list-content">
                     <h2>Entertainment</h2>
-                    <p>We also provide various entertainment such as dance (traditional & modern), music, event MC, usher, and SPG</p>
+                    <p>We also provide various entertainment such as dance (traditional & modern), music, event MC,
+                        usher, and SPG</p>
                     <a href="eventDetails.html?event=entertainment">SPECIFICS</a>
                 </div>
             </div>
@@ -576,7 +176,8 @@
                 </div>
                 <div class="service-events-list-content">
                     <h2>Stage Decoration</h2>
-                    <p>We provide various types of stages for your events such as weddings, gala dinners, awards nights, etc.</p>
+                    <p>We provide various types of stages for your events such as weddings, gala dinners, awards nights,
+                        etc.</p>
                     <a href="eventDetails.html?event=stageDecoration">SPECIFICS</a>
                 </div>
             </div>
@@ -586,12 +187,15 @@
                 </div>
                 <div class="service-events-list-content">
                     <h2>Multimedia</h2>
-                    <p>We are a provider of multimedia rental services for event/meeting needs such as projectors, laptops, computers (PCs), printers, Drone Camera, etc.</p>
+                    <p>We are a provider of multimedia rental services for event/meeting needs such as projectors,
+                        laptops, computers (PCs), printers, Drone Camera, etc.</p>
                     <a href="eventDetails.html?event=multimedia">SPECIFICS</a>
                 </div>
             </div>
         </div>
     </section>
+    <!-- end service sectin -->
+     <!-- two column layout start -->
     <section class="two-column-layout">
         <div class="column1">
             <h2>Why Should You Choose Us</h2>
@@ -608,6 +212,70 @@
             <img src="assets/images/indexpage-images/corporate-events-3.jpg">
         </div>
     </section>
+    <!-- two column layout end -->
+<!-- form section when clicking button -->
+    <section class="form" id="form">
+        <form id="login-form">
+        <div class="login-form" >
+            <h2>LOGIN/REGISTER</h2>
+            <div class="input">
+                <input type="text" placeholder="Name">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input">
+                <input type="number" placeholder="Contact">
+                <i class="fa-solid fa-address-book"></i>
+            </div>
+            <div class="input">
+                <input type="email" placeholder="Mail">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input">
+                <input type="password" placeholder="Password">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="input">
+                <button type="submit" id="connect">CONNECT</button>
+            </div>
+        </div>
+        </form>
+    </section>
+    <div class="popup" id="popup">
+        <img src="assets/images/indexpage-images/logo.jpeg">
+        <p>Thank you for contacting us!</p>
+        <p>Our Experts will revert you back ASAP!</p>
+    </div>
+
+     <!-- form section when clicking button -->
+     <section class="appointment-form" id="appointment-form">
+        <form id="login-form">
+        <div class="appoint-form">
+            <h2>BOOK AN APPOINTMENT</h2>
+            <h2>Let Us Discuss About Your Dream Gather</h2>
+            <div class="input1">
+                <input type="text" placeholder="Name">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input1">
+                <input type="number" placeholder="Contact">
+                <i class="fa-solid fa-address-book"></i>
+            </div>
+            <div class="input1">
+                <input type="email" placeholder="Mail">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input1">
+                <textarea name="msg" id="msg" cols="30 rows=10">       Tell us about your plan, we will make it easier.</textarea>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="input1">
+                <button type="submit" id="connect">CONNECT</button>
+            </div>
+
+        </div>
+        </form>
+     </section>
+     <!-- footer -->
     <footer>
         <div class="footer-container">
             <div class="footer footer1">
@@ -634,46 +302,22 @@
                 <a href="#">Lighting & Entertainment</a>
             </div>
             <div class="footer footer4">
-               <h2>ADDRESS</h2>
-               <p><i class="fa-solid fa-location-dot"></i>  XYZ,ABC Street,Chennai,India</p>
-               <p> <i class='bx bx-phone-call'></i>+91 9123456789</p>
-              <p><i class='bx bx-envelope' ></i> connect@mneventplanner.com</p>
+                <h2>ADDRESS</h2>
+                <p><i class="fa-solid fa-location-dot"></i> XYZ,ABC Street,Chennai,India</p>
+                <p> <i class='bx bx-phone-call'></i>+91 9123456789</p>
+                <p><i class='bx bx-envelope'></i> connect@mneventplanner.com</p>
             </div>
         </div>
         <div class="footer5">
-            <h3>FOLLOW US @  <span class="youtube"><i class="fa-brands fa-youtube"></i></span><span class="WhatsApp"><i class='bx bxl-whatsapp'></i></span><span class="instagram"><i class='bx bxl-instagram' ></i></span><span class="facebook"><i class='bx bxl-facebook' ></i></span><span class="twitter"><i class='bx bxl-twitter' ></i></span></h3>
+            <h3>FOLLOW US @ <span class="youtube"><i class="fa-brands fa-youtube"></i></span><span class="WhatsApp"><i
+                        class='bx bxl-whatsapp'></i></span><span class="instagram"><i
+                        class='bx bxl-instagram'></i></span><span class="facebook"><i
+                        class='bx bxl-facebook'></i></span><span class="twitter"><i class='bx bxl-twitter'></i></span>
+            </h3>
             <p> 2025 MN Event Planner. <span>All Rights Reserved</span></p>
         </div>
     </footer>
-    <script>
-        const images = document.querySelectorAll('.carousel img');
-        let currentIndex = 0;
-
-        function getRandomIndex() {
-            let randomIndex;
-            do {
-                randomIndex = Math.floor(Math.random() * images.length);
-            } while (randomIndex === currentIndex);
-            return randomIndex;
-        }
-
-        function showImage() {
-            images[currentIndex].classList.remove('active');
-            currentIndex = getRandomIndex();
-            images[currentIndex].classList.add('active');
-        }
-
-        setInterval(showImage, 3000);
-
-
-        const btn = document.getElementById('toggle-btn')
-        const navlinks = document.getElementById('nav-links')
-        btn.addEventListener('click', () => {
-            navlinks.classList.toggle('active')
-        })
-        
-
-    </script>
+    <script src="assets/js/index.js"></script>
 </body>
 
 </html>

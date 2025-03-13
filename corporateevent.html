@@ -9,454 +9,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- fontawsome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        nav {
-            background-color: #000080;
-        }
-
-        .container {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 10px;
-        }
-
-        .nav-links li {
-            list-style: none;
-            color: white;
-            /* padding:5px; */
-        }
-
-        .nav-links li a {
-            color: #FF007F;
-            font-family: sans-serif;
-            font-weight: bold;
-            padding: 25px;
-            font-size: 20px;
-            text-decoration: none;
-
-        }
-
-
-        .nav-links button {
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        .nav-links button li {
-            color: #ee2a7b;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .nav-links button li i {
-            color: white;
-            font-size: 28px;
-        }
-
-        .logo img {
-            width: 150px;
-            border: 1px solid black;
-
-        }
-
-        nav .container .nav-links {
-            display: flex;
-        }
-
-        .toggle-btn {
-            display: none;
-            font-size: 20px;
-            color: white;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-
-        .two-column-layout {
-            display: flex;
-            width: 90%;
-            margin: auto;
-            position: relative;
-
-        }
-
-        .two-column-layout {
-            margin-top: 60px;
-        }
-
-        .two-column-layout .banner-whatsapp {
-            width: 120px;
-            position: absolute;
-            top: 40%;
-            right: 5%;
-            animation: zoomInOut 2s infinite ease-in-out;
-        }
-
-        @keyframes zoomInOut {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.3);
-            }
-        }
-        .two-column-layout .para{
-            margin-left: 20px;
-        }
-
-        .two-column-layout .para p {
-            text-align: left;
-            font-size: 25px;
-            font-family: sans-serif;
-            width: 90%;
-            padding: 10px;
-            font-weight: lighter;
-        }
-
-        .two-column-layout .lastpara {
-            margin-top: 30px;
-        }
-
-        .service {
-            margin-top: 20px;
-        }
-
-        .service-heading {
-            text-align: center;
-        }
-
-        .service .service-heading h2 {
-            font-size: 40px;
-            font-family: sans-serif;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .service-heading img {
-            width: 200px;
-            margin-bottom: 20px;
-        }
-
-        .service-events {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 50px;
-            justify-content: center;
-            width: 90%;
-            margin: auto;
-            padding: 20px;
-        }
-
-        .service-item {
-            overflow: hidden;
-            text-align: center;
-
-        }
-
-        .service-item img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            display: block;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-        }
-
-        .service-item p {
-            background-color: #000080;
-            color: #FF007F;
-            font-size: 23px;
-            font-weight: bold;
-            font-family: sans-serif;
-            padding: 18px;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-
-        }
-
-        .key-features {
-            margin-top: 20px;
-        }
-
-        .key-features-heading {
-            text-align: center;
-        }
-
-        .key-features .key-features-heading h2 {
-            font-size: 40px;
-            font-family: sans-serif;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .key-features-heading img {
-            width: 200px;
-            margin-bottom: 20px;
-        }
-
-        .key-features-events {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 50px;
-            justify-content: center;
-            width: 90%;
-            margin: auto;
-            padding: 20px;
-        }
-
-        .key-features-events-list {
-            border: 3px solid #000080;
-            padding: 30px;
-            border-radius: 40px;
-            /* border-top: 10px solid #000080; */
-            position: relative;
-        }
-
-        .key-features-events-list::before {
-            content: "";
-            position: absolute;
-            top: -6px;
-            left: 20px;
-            height: 15px;
-            width: 90%;
-            margin: auto;
-            background-color: #000080;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-
-        }
-
-        .key-features-events-list h3 {
-            font-size: 22px;
-            font-family: sans-serif;
-            text-align: center;
-            text-decoration: underline;
-            margin-bottom: 10px;
-        }
-
-        .key-features-events-list ul li {
-            font-size: 20px;
-            font-family: sans-serif;
-            width: 85%;
-            margin: auto;
-            font-weight: 500;
-        }
-        .tech-ability {
-            margin-top: 20px;
-        }
-
-        .tech-ability-heading {
-            text-align: center;
-        }
-
-        .tech-ability .tech-ability-heading h2 {
-            font-size: 40px;
-            font-family: sans-serif;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .tech-ability-heading img {
-            width: 200px;
-            margin-bottom: 20px;
-        }
-
-        .tech-ability-two-column-layout{
-            display:flex;
-            width:80%;
-            margin:auto;
-        }
-        .column1 img{
-            width:200px;
-            height:200px;
-            margin-left: 20px;
-
-
-        }
-        .column2 {
-            margin-left: 20px;
-            
-        }
-        .column2 h3{
-            font-size: 20px;
-            font-family: sans-serif;
-            padding-bottom: 10px;
-
-        }
-        .column2 ul li{
-            font-size: 20px;
-            font-family: sans-serif;
-            font-weight: 500;
-            width:90%;
-            margin:auto;
-        }
-        footer {
-            background-color: #000080;
-            padding-top:50px;
-            margin-top: 30px;
-        }
-
-        .footer-container {
-            display: flex;
-            width: 95%;
-            margin: auto;
-            gap: 20px;
-        }
-
-        .footer {
-            flex-grow: 1;
-        }
-
-        .footer a {
-            display: block;
-            text-decoration: none;
-            color: #FF007F;
-            padding: 5px;
-            font-size: 20px;
-            font-family: sans-serif;
-            font-weight: bolder;
-
-        }
-        .footer1{
-          
-            text-align: center;
-        }
-        .footer1 img{
-            width:150px;
-            transform:translateY(150px);
-            
-        }
-
-        .footer h2 {
-            color: #FF007F;
-            font-family: sans-serif;
-            margin-bottom: 20px;
-        }
-
-        .footer4 p {
-            color: #FF007F;
-            font-family: sans-serif;
-            font-size: 20px;
-        }
-        .footer4 p i{
-            color:white;
-            padding-right: 10px;
-        }
-
-        .footer5 {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .footer5 h3 {
-            color: #FF007F;
-            font-family: sans-serif;
-            font-size: 25px;
-            margin-bottom: 20px;
-            margin-top: 20px;
-
-        }
-
-        .footer5 p {
-            color: #FF007F;
-            font-family: sans-serif;
-            font-size: 20px;
-
-        }
-        .footer5 .youtube i{
-            color:white;
-            background-color: red;
-            padding:5px;
-            border-radius: 20px;
-            margin-left: 20px;
-        }
-        .footer5 .WhatsApp i{
-            color:white;
-           background-color: lightgreen;
-            padding:5px;
-            border-radius: 20px;
-            margin-left: 20px;
-        }
-        .footer5 .instagram i{
-            color:white;
-           background:linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
-            padding:5px;
-            border-radius: 20px;
-            margin-left: 20px;
-        }
-        .footer5 .facebook i{
-            color:white;
-           background-color:  rgb(1, 101, 225);
-            padding:5px;
-            border-radius: 20px;
-            margin-left: 20px;
-        }
-        .footer5 .twitter i{
-            color:white;
-           background-color:  rgb(29, 155, 240);
-            padding:5px;
-            border-radius: 20px;
-            margin-left: 20px;
-        }
-        
-
-
-
-        @media(max-width:426px) {
-
-            nav .container .nav-links {
-                display: none;
-                flex-direction: column;
-                background-color: #000080;
-                position: absolute;
-                width: 100%;
-                top: 50px;
-                left: 0;
-                z-index: 2;
-            }
-
-            nav .container .nav-links li {
-                border-bottom: 1px solid white;
-                width: 70%;
-                margin: auto;
-                padding: 10px;
-            }
-
-            nav .container ul li a {
-
-                padding: 10px;
-                border: none;
-                text-align: left;
-
-            }
-
-            nav .container .nav-links.active {
-                display: flex;
-
-            }
-
-            .toggle-btn {
-                display: block;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/corporateevent.css">
+    
 </head>
 
 <body>
@@ -472,12 +26,12 @@
                     <li><a href="weddingplans.html">WEDDING PLANS</a></li>
                     <li><a href="corporateevent.html">CORPORATE EVENTS</a></li>
                     <li><a href="vlogs.html">VLOGS</a></li>
-                    <li><a href="#">WHO WE ARE </a></li>
+                    <li><a href="who-we-are.html">WHO WE ARE </a></li>
                     <li><a href="#">DROP US A LINE</a></li>
-                    <button>
-                        <li class="icon"><i class="fa-solid fa-user"></i><br>LOGIN/<br><span>REGISTER</span></li>
-                    </button>
                 </ul>
+                <button id="togglebtn">
+                    <i class="fa-solid fa-user"></i><br>LOGIN/<br><span>REGISTER</span>
+                </button>
             </div>
         </nav>
     </header>
@@ -636,6 +190,40 @@
 
       </section>
       <!-- technical abilities end -->
+
+
+
+      <section class="form" id="form">
+        <form id="login-form">
+        <div class="login-form" >
+            <h2>LOGIN/REGISTER</h2>
+            <div class="input">
+                <input type="text" placeholder="Name">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input">
+                <input type="number" placeholder="Contact">
+                <i class="fa-solid fa-address-book"></i>
+            </div>
+            <div class="input">
+                <input type="email" placeholder="Mail">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input">
+                <input type="password" placeholder="Password">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="input">
+                <button type="submit" id="connect">CONNECT</button>
+            </div>
+        </div>
+        </form>
+    </section>
+    <div class="popup" id="popup">
+        <img src="assets/images/indexpage-images/logo.jpeg">
+        <p>Thank you for contacting us!</p>
+        <p>Our Experts will revert you back ASAP!</p>
+    </div>
       <footer>
         <div class="footer-container">
             <div class="footer footer1">
@@ -675,13 +263,7 @@
     </footer>
 
 
-    <script>
-        const btn = document.getElementById('toggle-btn')
-        const navlinks = document.getElementById('nav-links')
-        btn.addEventListener('click', () => {
-            navlinks.classList.toggle('active')
-        })
-    </script>
+    <script src="assets/js/corporateevent.js"></script>
 </body>
 
 </html>
