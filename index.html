@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Event Planner</title>
     <!-- boxicon link -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- fontawsome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- css link -->
-     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 
 <body>
@@ -195,7 +195,7 @@
         </div>
     </section>
     <!-- end service sectin -->
-     <!-- two column layout start -->
+    <!-- two column layout start -->
     <section class="two-column-layout">
         <div class="column1">
             <h2>Why Should You Choose Us</h2>
@@ -213,31 +213,38 @@
         </div>
     </section>
     <!-- two column layout end -->
-<!-- form section when clicking button -->
+    <!-- form section when clicking button -->
     <section class="form" id="form">
         <form id="login-form">
-        <div class="login-form" >
-            <h2>LOGIN/REGISTER</h2>
-            <div class="input">
-                <input type="text" placeholder="Name">
-                <i class="fa-solid fa-user"></i>
+            <div class="login-form">
+                <div class="close">
+                    <h2>LOGIN/REGISTER</h2>
+                    <i class='bx bx-x'></i>
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="Name" id="name">
+                    <span id="name-error" class="error"></span>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input">
+                    <input type="number" placeholder="Contact" id="contact">
+                    <span id="contact-error" class="error"></span>
+                    <i class="fa-solid fa-address-book"></i>
+                </div>
+                <div class="input">
+                    <input type="email" placeholder="Mail" id="email">
+                    <span id="email-error" class="error"></span>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input">
+                    <input type="password" placeholder="Password" id="password">
+                    <span id="password-error" class="error"></span>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="input">
+                    <button type="submit" id="connect">CONNECT</button>
+                </div>
             </div>
-            <div class="input">
-                <input type="number" placeholder="Contact">
-                <i class="fa-solid fa-address-book"></i>
-            </div>
-            <div class="input">
-                <input type="email" placeholder="Mail">
-                <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div class="input">
-                <input type="password" placeholder="Password">
-                <i class="fa-solid fa-lock"></i>
-            </div>
-            <div class="input">
-                <button type="submit" id="connect">CONNECT</button>
-            </div>
-        </div>
         </form>
     </section>
     <div class="popup" id="popup">
@@ -246,36 +253,37 @@
         <p>Our Experts will revert you back ASAP!</p>
     </div>
 
-     <!-- form section when clicking button -->
-     <section class="appointment-form" id="appointment-form">
+    <!-- form section when clicking button -->
+    <section class="appointment-form" id="appointment-form">
         <form id="login-form">
-        <div class="appoint-form">
-            <h2>BOOK AN APPOINTMENT</h2>
-            <h2>Let Us Discuss About Your Dream Gather</h2>
-            <div class="input1">
-                <input type="text" placeholder="Name">
-                <i class="fa-solid fa-user"></i>
-            </div>
-            <div class="input1">
-                <input type="number" placeholder="Contact">
-                <i class="fa-solid fa-address-book"></i>
-            </div>
-            <div class="input1">
-                <input type="email" placeholder="Mail">
-                <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div class="input1">
-                <textarea name="msg" id="msg" cols="30 rows=10">       Tell us about your plan, we will make it easier.</textarea>
-                <i class="fa-solid fa-lock"></i>
-            </div>
-            <div class="input1">
-                <button type="submit" id="connect">CONNECT</button>
-            </div>
+            <div class="appoint-form">
+                <h2>BOOK AN APPOINTMENT</h2>
+                <h2>Let Us Discuss About Your Dream Gather</h2>
+                <div class="input1">
+                    <input type="text" placeholder="Name">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input1">
+                    <input type="number" placeholder="Contact">
+                    <i class="fa-solid fa-address-book"></i>
+                </div>
+                <div class="input1">
+                    <input type="email" placeholder="Mail">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input1">
+                    <textarea name="msg" id="msg"
+                        cols="30 rows=10">       Tell us about your plan, we will make it easier.</textarea>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="input1">
+                    <button type="submit" id="connect">CONNECT</button>
+                </div>
 
-        </div>
+            </div>
         </form>
-     </section>
-     <!-- footer -->
+    </section>
+    <!-- footer -->
     <footer>
         <div class="footer-container">
             <div class="footer footer1">

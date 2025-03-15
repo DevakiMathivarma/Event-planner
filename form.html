@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Event Planner</title>
+    <!-- boxicon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- fontawsome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .form {
+            background-color: #000080;
+            width: 40%;
+            margin: auto;
+
+            display: none;
+            position: fixed;
+            /* Keeps it centered on screen */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .form.active {
+            display: flex;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+        }
+
+        .input {
+            position: relative;
+        }
+
+        .input i {
+            position: absolute;
+            top: 12px;
+            left: 10px;
+            color: grey;
+
+        }
+
+        .input input {
+            width: 450px;
+            padding: 15px;
+            border-radius: 20px;
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        input::placeholder {
+            color: grey;
+            font-size: 20px;
+            font-weight: bold;
+            transform: translateX(25px);
+        }
+
+        .input button {
+            background-color: #FF007F;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bolder;
+            border: none;
+            padding: 20px;
+        }
+
+
+        .error {
+            color: red;
+            font-size: 14px;
+            font-family: sans-serif;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .popup {
+            background-color: #000080;
+            border-radius: 10px;
+            width: 30%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            z-index: 1001;
+        }
+
+        .popup p {
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: sans-serif;
+            color: white;
+        }
+        .close i{
+            position:fixed;
+            top:0;
+            right:0;
+            font-size: 40px;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="form" id="form">
+        <form id="login-form">
+            <div class="login-form">
+                <div class="close">
+                <h2>LOGIN/REGISTER</h2>
+                <i class='bx bx-x'></i>
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="Name" id="name">
+                    <span id="name-error" class="error"></span>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input">
+                    <input type="number" placeholder="Contact" id="contact">
+                    <span id="contact-error" class="error"></span>
+                    <i class="fa-solid fa-address-book"></i>
+                </div>
+                <div class="input">
+                    <input type="email" placeholder="Mail" id="email">
+                    <span id="email-error" class="error"></span>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input">
+                    <input type="password" placeholder="Password" id="password">
+                    <span id="password-error" class="error"></span>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="input">
+                    <button type="submit" id="connect">CONNECT</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <div class="popup" id="popup">
+        <img src="assets/images/indexpage-images/logo.jpeg">
+        <p>Thank you for contacting us!</p>
+        <p>Our Experts will revert you back ASAP!</p>
+    </div>
+    <button id="togglebtn">
+        <i class="fa-solid fa-user"></i><br>LOGIN/<br><span>REGISTER</span>
+    </button>
+    <script>
+
+
+
+
+        const togglebtn = document.getElementById('togglebtn');
+        const form = document.getElementById('form');
+        const form1 = document.getElementById('login-form');
+        const popup = document.getElementById('popup');
+        const closeBtn = document.querySelector('.close i');
+
+
+        togglebtn.addEventListener('click', () => {
+            form.classList.toggle('active');
+        });
+
+        // Close form when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!form.contains(event.target) && event.target !== togglebtn) {
+                form.classList.remove('active');
+            }
+        });
+         // Select the close icon
+
+// Close form when clicking the close icon
+closeBtn.addEventListener('click', () => {
+    form.classList.remove('active');
+    clearErrors()
+});
+function clearErrors() {
+    document.querySelectorAll('.error').forEach(error => error.textContent = ""); // Clear error text
+    document.querySelectorAll('.input input').forEach(input => input.style.border = ""); // Reset borders
+}
+
+        // Validation function
+        function validateForm() {
+            let isValid = true;
+
+            // Selecting input fields and error message spans
+            const name = document.getElementById('name');
+            const contact = document.getElementById('contact');
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+
+            const nameError = document.getElementById('name-error');
+            const contactError = document.getElementById('contact-error');
+            const emailError = document.getElementById('email-error');
+            const passwordError = document.getElementById('password-error');
+
+            // Name validation
+            if (name.value.trim() === "") {
+                nameError.textContent = "Enter your name";
+                name.style.border = "2px solid red";
+                isValid = false;
+            } else {
+                nameError.textContent = "";
+                name.style.border = "2px solid green";
+            }
+
+            // Contact validation (only numbers)
+            if (/^\d{10}$/.test(contact.value.trim())) {
+                contactError.textContent = "";
+                contact.style.border = "2px solid green";
+            } else {
+                contactError.textContent = "Enter a valid 10-digit number";
+                contact.style.border = "2px solid red";
+                isValid = false;
+            }
+
+            // Email validation
+            if (email.value.trim().includes("@") && email.value.trim().includes(".")) {
+                emailError.textContent = "";
+                email.style.border = "2px solid green";
+            } else {
+                emailError.textContent = "Enter a valid email";
+                email.style.border = "2px solid red";
+                isValid = false;
+            }
+
+            // Password validation (minimum 8 characters)
+            if (password.value.length < 8) {
+                passwordError.textContent = "Password must be at least 8 characters";
+                password.style.border = "2px solid red";
+                isValid = false;
+            } else {
+                passwordError.textContent = "";
+                password.style.border = "2px solid green";
+            }
+
+            return isValid;
+        }
+
+        // Form submission with validation
+        form1.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            if (validateForm()) {
+
+                const userData = {
+                    name: document.getElementById('name').value.trim(),
+                    contact: document.getElementById('contact').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    password: document.getElementById('password').value.trim(),
+                };
+
+                localStorage.setItem('userData', JSON.stringify(userData));
+
+                popup.style.display = "flex";
+
+                setTimeout(() => {
+                    popup.style.display = "none";
+                    form.classList.remove('active');
+                }, 3000);
+
+                form1.reset();
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
+<!-- .form {
+    width: 60%;
+}
+.input input{
+    width:350px;
+    padding:10px;
+}
+input::placeholder {
+    font-size: 17px;
+}
+.input button{
+    font-size: 15px;
+    padding:15px;
+} -->

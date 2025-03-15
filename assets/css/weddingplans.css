@@ -255,6 +255,21 @@ input::placeholder {
     padding: 20px;
 }
 
+.close i{
+    position:fixed;
+    top:0;
+    right:0;
+    font-size: 40px;
+    color:white;
+}
+.error {
+    color: red;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-top: 5px;
+    display: block;
+}
+
 /* apppoint form style */
 .appointment-form {
     background-color: white;

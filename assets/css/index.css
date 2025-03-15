@@ -307,7 +307,9 @@ nav .container .nav-links {
     gap: 20px;
 
 }
-
+.login-form h2{
+color:white;
+}
 .input {
     position: relative;
 }
@@ -342,6 +344,13 @@ input::placeholder {
     font-weight: bolder;
     border: none;
     padding: 20px;
+}
+.close i{
+    position:fixed;
+    top:0;
+    right:0;
+    font-size: 40px;
+    color:white;
 }
 .appointment-form {
     background-color:white;
@@ -423,6 +432,14 @@ input::placeholder {
     border: none;
     padding: 15px;
     color:#FF007F;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-top: 5px;
+    display: block;
 }
 
 .popup {
@@ -631,7 +648,18 @@ width:60%;
         width:90%;
     }
     .form {
-        width: 70%;
+        width: 60%;
+    }
+    .input input{
+        width:350px;
+        padding:10px;
+    }
+    input::placeholder {
+        font-size: 17px;
+    }
+    .input button{
+        font-size: 15px;
+        padding:15px;
     }
     .appointment-form {
 width:70%;
@@ -713,7 +741,7 @@ width:70%;
         background-color: #000080;
         position: absolute;
         width: 100%;
-        top: 50px;
+        top: 70px;
         left: 0;
         z-index: 2;
     }
