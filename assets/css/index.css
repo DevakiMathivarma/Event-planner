@@ -57,7 +57,6 @@ nav {
 
 .logo img {
     width: 150px;
-    border: 1px solid black;
 
 }
 
@@ -73,13 +72,13 @@ nav .container .nav-links {
     background: none;
     border: none;
 }
-
+/* header section css end */
+/* search bar css */
 .search-box {
     display: flex;
     gap: 30px;
     width: 90%;
     margin: auto;
-    /* border: 1px solid black; */
     margin-top: 20px;
 }
 
@@ -93,7 +92,32 @@ nav .container .nav-links {
 
 .search-box input::placeholder {
     font-size: 25px;
-    color:grey;
+    color: grey;
+}
+
+.suggestions {
+    position: absolute;
+    top:23%;
+    width: 40%;
+    background: white;
+    border: 1px solid #ccc;
+    display: none;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.suggestions div {
+    border-bottom: 1px solid grey;
+    width:90%;
+    margin:auto;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.suggestions div:hover {
+    background: #f0f0f0;
 }
 
 .search-box button {
@@ -106,7 +130,8 @@ nav .container .nav-links {
     padding: 10px;
 
 }
-
+/* search bar section end */
+/* carousel css */
 .carousel {
     position: relative;
     width: 100%;
@@ -159,7 +184,7 @@ nav .container .nav-links {
     font-size: 2rem;
     font-family: sans-serif;
 }
-
+/* service section css */
 .service {
     width: 90%;
     margin: auto
@@ -224,14 +249,16 @@ nav .container .nav-links {
     transition: 1s ease-in-out;
 
 }
-.service-events-list-content a:hover{
+
+.service-events-list-content a:hover {
     background-color: #FF007F;
-    color:black;
+    color: black;
 }
 
 .service .service-events-list img {
     width: 100%;
 }
+/* two column layout css */
 
 .two-column-layout {
     display: flex;
@@ -276,6 +303,7 @@ nav .container .nav-links {
     height: 450px;
 
 }
+/* login form css */
 
 .form {
     background-color: #000080;
@@ -284,8 +312,7 @@ nav .container .nav-links {
 
     display: none;
     position: fixed;
-    /* Keeps it centered on screen */
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     flex-direction: column;
@@ -307,9 +334,11 @@ nav .container .nav-links {
     gap: 20px;
 
 }
-.login-form h2{
-color:white;
+
+.login-form h2 {
+    color: white;
 }
+
 .input {
     position: relative;
 }
@@ -345,20 +374,29 @@ input::placeholder {
     border: none;
     padding: 20px;
 }
-.close i{
-    position:fixed;
-    top:0;
-    right:0;
-    font-size: 40px;
-    color:white;
-}
-.appointment-form {
-    background-color:white;
-    width: 40%;
-    margin: auto;
-    display:none;
+
+.close i {
     position: fixed;
-    top: 50%;
+    top: 0;
+    right: 0;
+    font-size: 40px;
+    color: white;
+}
+.error {
+    color: red;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-top: 5px;
+    display: block;
+}
+/* appointment form css */
+.appointment-form {
+    background-color: white;
+    width: 35%;
+    margin: auto;
+    display: none;
+    position: fixed;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     flex-direction: column;
@@ -366,7 +404,7 @@ input::placeholder {
     justify-content: center;
     z-index: 1000;
     padding: 30px;
-    box-shadow: 0px 3px 3px  grey;
+    box-shadow: 0px 3px 3px grey;
 }
 
 .appointment-form.active {
@@ -381,9 +419,12 @@ input::placeholder {
     gap: 20px;
 
 }
-.appoint-form h2{
+
+.appoint-form h2 {
     font-family: sans-serif;
-    color:#000080;
+    color: #000080;
+    font-size: 20px;
+    text-align: center;
 }
 
 .input1 {
@@ -393,55 +434,61 @@ input::placeholder {
 .input1 i {
     position: absolute;
     top: 12px;
-    left: 10px;
-    color: grey;
+    right: 10px;
+    color: black;
 
 }
 
 .input1 input {
-    width: 450px;
+    width: 390px;
     padding: 15px;
     border-radius: 20px;
     border: none;
     margin-bottom: 10px;
-    background-color:#FF007F;
+    background-color: #FF007F;
 }
 
-input::placeholder {
-    color:black;
+input::placeholder,textarea::placeholder {
+    color: black;
     font-size: 20px;
     font-weight: bold;
-    transform: translateX(25px);
 }
-.input1 textarea{
-    width:450px;
-    height:200px;
-    background-color:#FF007F;
+
+.input1 textarea {
+    width: 380px;
+    height: 150px;
+    background-color: #FF007F;
     font-size: 20px;
     font-family: sans-serif;
     font-weight: bold;
-    padding:20px;
+    padding: 20px;
 
 }
 
 .input1 button {
-    background-color:#000080;
+    background-color: #000080;
     border-radius: 30px;
     font-size: 18px;
     font-weight: bolder;
     border: none;
     padding: 15px;
-    color:#FF007F;
+    color: #FF007F;
 }
-
-.error {
+.error-msg {
     color: red;
     font-size: 14px;
-    font-family: sans-serif;
-    margin-top: 5px;
-    display: block;
+    display: none;
+}
+.close-btn i {
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    color:black;
 }
 
+
+/* popup when clicking connect btn css */
 .popup {
     background-color: #000080;
     border-radius: 10px;
@@ -455,7 +502,7 @@ input::placeholder {
     justify-content: center;
     align-items: center;
     padding: 30px;
-    z-index:1001;
+    z-index: 1001;
 }
 
 .popup p {
@@ -465,6 +512,8 @@ input::placeholder {
     font-family: sans-serif;
     color: white;
 }
+
+/* footer section */
 
 footer {
     background-color: #000080;
@@ -585,154 +634,253 @@ footer {
 
 
 
-@media(max-width:1024px){
-    .nav-links li a{
+@media(max-width:1024px) {
+    .nav-links li a {
         font-size: 15px;
-        padding:5px;
+        padding: 5px;
     }
-    .nav-links{
-        padding:5px;
+
+    .nav-links {
+        padding: 5px;
     }
-    .container{
-        width:100%;
-        padding:20px;
+
+    .container {
+        width: 100%;
+        padding: 20px;
     }
-    .logo img{
-        width:90px;
+
+    .logo img {
+        width: 90px;
     }
-    .container button{
-        font-size:15px;
+
+    .container button {
+        font-size: 15px;
     }
-    .container button i{
-        font-size: 19px;;
+
+    .container button i {
+        font-size: 19px;
+        ;
     }
+
     .form {
         width: 60%;
     }
+
+    .suggestions {
+        position: absolute;
+        top:40%;
+        width: 40%;
+        max-height: 300px;
+    }
+    
     .appointment-form {
-width:60%;
+        width: 40%;
+    }
+    .appoint-form h2{
+        font-size: 15px;
+    }
+    .input1 input,.input1 textarea{
+        width:350px;
+    }
+    input::placeholder,textarea::placeholder {
+        font-size: 15px;
+    }
+    .input1 button{
+        font-size: 15px;
+        padding:13px;
+    }
+    .popup p{
+        font-size: 15px;
+        text-align: center;
     }
 }
-@media(max-width:768px){
-    .nav-links li a{
+
+@media(max-width:768px) {
+    .nav-links li a {
         font-size: 12px;
-        padding:5px;
+        padding: 5px;
     }
-    .nav-links{
-        padding:5px;
+
+    .nav-links {
+        padding: 5px;
     }
-    .container{
-        width:100%;
-        padding:20px;
+
+    .container {
+        width: 100%;
+        padding: 20px;
     }
-    .container button{
-        font-size:10px;
+
+    .container button {
+        font-size: 10px;
     }
-    .container button i{
-        font-size: 15px;;
+
+    .container button i {
+        font-size: 15px;
+        ;
     }
-    .logo img{
-        width:50px;
+
+    .logo img {
+        width: 50px;
     }
+
     .caption h2 {
         font-size: 40px;
     }
+
     .caption span {
         font-size: 1.5rem;
     }
-    .search-box input::placeholder{
+
+    .search-box input::placeholder {
         font-size: 15px;
     }
-    .search-box  input{
-        padding:5px;
-        width:90%;
+
+    .search-box input {
+        padding: 5px;
+        width: 90%;
     }
+    .suggestions {
+        position: absolute;
+        top:30%;
+        width: 50%;
+        max-height: 300px;
+    }
+
     .form {
         width: 60%;
     }
-    .input input{
-        width:350px;
-        padding:10px;
+
+    .input input {
+        width: 350px;
+        padding: 10px;
     }
+
     input::placeholder {
         font-size: 17px;
     }
-    .input button{
+
+    .input button {
         font-size: 15px;
-        padding:15px;
-    }
-    .appointment-form {
-width:70%;
+        padding: 15px;
     }
 
-    .search-box button{
+    .appointment-form {
+        width: 53%;
+    }
+    .appoint-form h2{
+        font-size: 15px;
+    }
+    .input1 input,.input1 textarea{
+        width:350px;
+    }
+    input::placeholder,textarea::placeholder {
+        font-size: 15px;
+    }
+    .input1 button{
+        font-size: 15px;
+        padding:13px;
+    }
+    .close-btn i{
+        font-size: 18px;
+        right:20px;
+        top:20px;
+    }
+    .popup{
+        width:40%;
+    }
+    .popup p{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .search-box button {
         transform: translateX(-15px);
         font-size: 10px;
     }
-    .carousel{
-        width:100%;
+
+    .carousel {
+        width: 100%;
         margin-left: 0;
     }
-    .service .serve{
+
+    .service .serve {
         font-size: 15px;
     }
-    .service .serve img{
+
+    .service .serve img {
         width: 150px;
     }
-    .service .service-events{
-        width:90%;
+
+    .service .service-events {
+        width: 90%;
         margin: auto;
         grid-template-columns: repeat(2, 1fr);
     }
+
     .service-events-list-content {
         padding: 20px;
     }
-    .service-events-list-content h2{
+
+    .service-events-list-content h2 {
         font-size: 20px;
     }
+
     .service-events-list-content p {
         font-size: 15px;
     }
+
     .service-events-list-content a {
-        font-size:15px ;
+        font-size: 15px;
     }
-    .two-column-layout{
+
+    .two-column-layout {
         flex-direction: column;
-        gap:10px;
+        gap: 10px;
     }
-    .column1{
-        width:80%;
-        margin:auto;
+
+    .column1 {
+        width: 80%;
+        margin: auto;
     }
+
     .column1 h2 {
         font-size: 20px;
     }
+
     .column1 p {
         font-size: 17px;
     }
-    .column1 img{
-        width:100px;
+
+    .column1 img {
+        width: 100px;
     }
-    .column2{
-        width:80%;
-        margin:auto;
+
+    .column2 {
+        width: 80%;
+        margin: auto;
     }
+
     .column2 img {
-        height:350px;
+        height: 350px;
     }
-    .footer-container{
+
+    .footer-container {
         flex-direction: column;
     }
+
     .footer1 img {
         transform: translateX(-300px);
     }
-    .footer5{
+
+    .footer5 {
         text-align: center;
     }
+
     .footer5 h3 {
         font-size: 20px;
     }
 }
+
 @media(max-width:426px) {
 
     nav .container .nav-links {
@@ -765,97 +913,222 @@ width:70%;
         display: flex;
 
     }
-    .appointment-form.active {
-        display: none;
+    .suggestions {
+        position: absolute;
+        top:35%;
+        width: 50%;
+        max-height: 300px;
     }
 
     .toggle-btn {
         display: block;
     }
-    .service .service-events{
+
+    .service .service-events {
         grid-template-columns: repeat(1, 1fr);
     }
-    .logo img{
-        width:100px;
-        transform: translateX(-100px);
+
+    .logo img {
+        width: 100px;
+        transform: translateX(-70px);
     }
-    .container #togglebtn{
-        display:none;
+
+    .container #togglebtn span {
+        display: none;
     }
-    .container .toggle-btn{
-        transform: translateX(100px);
+
+    .container #togglebtn {
+        transform: translateX(20px);
+    }
+    .form{
+        width:70%;
+    }
+    .form h2{
+        font-size: 15px;
+    }
+    .input input{
+        width:280px;
+    }
+    input::placeholder{
+        font-size: 13px;
+    }
+    .input i{
+        font-size: 10px;
+    }
+    .appointment-form {
+        width: 78%;
+        border-radius: 10px;
+        gap:10px;
+    }
+    .appoint-form h2{
+        font-size: 15px;
+    }
+    .input1 input,.input1 textarea{
+        width:300px;
+        padding:10px;
+    }
+    input::placeholder,textarea::placeholder {
+        font-size: 15px;
+    }
+    .input1 button{
+        font-size: 15px;
+        padding:13px;
+    }
+    .close-btn i{
+        font-size: 18px;
+        right:20px;
+        top:10px;
+    }
+    .popup{
+        width:60%;
+    }
+    .popup p{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .container .toggle-btn {
+        transform: translateX(150px);
         font-size: 30px;
     }
+
     .search-box input {
         padding: 10px;
         width: 100%;
         margin: auto;
     }
+
     .search-box button {
         transform: translateX(-20px);
-        width:40%;
+        width: 40%;
     }
+
     .caption h2 {
         font-size: 20px;
     }
+
     .caption span {
         font-size: 1rem;
     }
-    .footer h2{
+
+    .footer h2 {
         font-size: 18px;
     }
+
     .footer4 p {
         font-size: 15px;
     }
+
     .footer5 h3 {
         font-size: 13px;
     }
+
     .footer5 p {
         font-size: 15px;
     }
-    .footer a{
+
+    .footer a {
         font-size: 15px;
     }
-    .column1{
-        width:95%;
+
+    .column1 {
+        width: 95%;
     }
-    .column2{
-        width:95%;
+
+    .column2 {
+        width: 95%;
     }
 }
-@media(max-width:376px){
-    .logo img{
-        width:100px;
-        transform: translateX(-80px);
+
+@media(max-width:376px) {
+    .logo img {
+        width: 100px;
+        transform: translateX(-50px);
     }
-    .container .toggle-btn{
-        transform: translateX(50px);
-        font-size: 40px;
+
+    .container .toggle-btn {
+        transform: translateX(130px);
+        font-size: 30px;
     }
+    .form{
+        width:70%;
+    }
+    .input input{
+        width:240px;
+    }
+    .appointment-form {
+        width: 85%;
+        border-radius: 10px;
+        gap:10px;
+    }
+    .appoint-form h2{
+        font-size: 13px;
+    }
+    .input1 input,.input1 textarea{
+        width:250px;
+        padding:10px;
+    }
+    input::placeholder,textarea::placeholder {
+        font-size: 13px;
+    }
+    .input1 button{
+        font-size: 15px;
+        padding:13px;
+    }
+    .input1 textarea {
+        width:250px;
+        height:100px;
+    }
+    .close-btn i{
+        font-size: 18px;
+        right:20px;
+        top:10px;
+    }
+    .popup{
+        width:80%;
+    }
+    .popup p{
+        font-size: 15px;
+        text-align: center;
+    }
+
     .caption h2 {
         font-size: 20px;
     }
+
     .caption span {
         font-size: 1rem;
     }
 }
-@media(max-width:320px){
-    .logo img{
-        width:90px;
-        transform: translateX(-70px);}
-    .container .toggle-btn{
-        transform: translateX(50px);
-        font-size: 30px;
+
+@media(max-width:320px) {
+    .logo img {
+        width: 90px;
+        transform: translateX(-40px);
     }
+
+    .container .toggle-btn {
+        transform: translateX(110px);
+        font-size: 18px;
+    }
+    .form{
+        width:90%;
+    }
+    .input input{
+        width:270px;
+    }
+
     .search-box input {
         padding: 10px;
         width: 100%;
         margin: auto;
     }
+
     .search-box button {
         transform: translateX(-20px);
-        width:40%;
+        width: 40%;
     }
+
     .caption h2 {
         font-size: 18px;
     }

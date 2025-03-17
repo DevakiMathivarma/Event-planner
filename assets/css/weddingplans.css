@@ -57,8 +57,6 @@ nav {
 
 .logo img {
     width: 150px;
-    border: 1px solid black;
-
 }
 
 nav .container .nav-links {
@@ -196,7 +194,7 @@ nav .container .nav-links {
     margin: auto;
     display: none;
     position: fixed;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     flex-direction: column;
@@ -273,11 +271,11 @@ input::placeholder {
 /* apppoint form style */
 .appointment-form {
     background-color: white;
-    width: 40%;
+    width: 35%;
     margin: auto;
     display: none;
     position: fixed;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     flex-direction: column;
@@ -304,6 +302,8 @@ input::placeholder {
 .appoint-form h2 {
     font-family: sans-serif;
     color: #000080;
+    font-size: 20px;
+    text-align: center;
 }
 
 .input1 {
@@ -313,13 +313,13 @@ input::placeholder {
 .input1 i {
     position: absolute;
     top: 12px;
-    left: 10px;
-    color: grey;
+    right: 10px;
+    color: black;
 
 }
 
 .input1 input {
-    width: 450px;
+    width: 390px;
     padding: 15px;
     border-radius: 20px;
     border: none;
@@ -327,16 +327,15 @@ input::placeholder {
     background-color: #FF007F;
 }
 
-input::placeholder {
+input::placeholder,textarea::placeholder {
     color: black;
     font-size: 20px;
     font-weight: bold;
-    transform: translateX(25px);
 }
 
 .input1 textarea {
-    width: 450px;
-    height: 200px;
+    width: 380px;
+    height: 150px;
     background-color: #FF007F;
     font-size: 20px;
     font-family: sans-serif;
@@ -346,15 +345,28 @@ input::placeholder {
 }
 
 .input1 button {
-    background-color: #FF007F;
+    background-color: #000080;
     border-radius: 30px;
     font-size: 18px;
     font-weight: bolder;
     border: none;
     padding: 15px;
+    color: #FF007F;
+}
+.error-msg {
+    color: red;
+    font-size: 14px;
+    display: none;
+}
+.close-btn i {
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    color:black;
 }
 
-
+/* popup style */
 .popup {
     background-color: #000080;
     border-radius: 10px;
@@ -527,10 +539,27 @@ footer {
         left:10%;
     }
     .form {
-        width: 70%;
+        width: 60%;
     }
     .appointment-form {
-width:70%;
+width:40%;
+    }
+    .appoint-form h2{
+        font-size: 15px;
+    }
+    .input1 input,.input1 textarea{
+        width:350px;
+    }
+    input::placeholder,textarea::placeholder {
+        font-size: 15px;
+    }
+    .input1 button{
+        font-size: 15px;
+        padding:13px;
+    }
+    .popup p{
+        font-size: 15px;
+        text-align: center;
     }
     .banner button{
         width: 25%;
@@ -579,6 +608,48 @@ width:70%;
     .banner .banner-whatsapp{
         width:70px;
         top:40%;
+    }
+    .form {
+        width: 60%;
+    }
+    .input input{
+        width:350px;
+        padding:10px;
+    }
+    input::placeholder {
+        font-size: 17px;
+    }
+    .input button{
+        font-size: 15px;
+        padding:15px;
+    }
+    .appointment-form {
+        width: 53%;
+    }
+    .appoint-form h2{
+        font-size: 15px;
+    }
+    .input1 input,.input1 textarea{
+        width:350px;
+    }
+    input::placeholder,textarea::placeholder {
+        font-size: 15px;
+    }
+    .input1 button{
+        font-size: 15px;
+        padding:13px;
+    }
+    .close-btn i{
+        font-size: 18px;
+        right:20px;
+        top:20px;
+    }
+    .popup{
+        width:40%;
+    }
+    .popup p{
+        font-size: 15px;
+        text-align: center;
     }
     .expertise .expertise-heading h2{
         font-size: 30px;
@@ -632,25 +703,70 @@ width:70%;
         display: flex;
 
     }
-    .appointment-form.active {
-        display: none;
-    }
-
     .toggle-btn {
         display: block;
     }
 
     .logo img {
         width: 100px;
-        transform: translateX(-100px);
+        transform: translateX(-70px);
     }
 
-    .container #togglebtn {
+    .container #togglebtn span {
         display: none;
     }
+    .container #togglebtn{
+        transform: translateX(20px);
+          }
+          .form{
+            width:70%;
+        }
+        .form h2{
+            font-size: 15px;
+        }
+        .input input{
+            width:280px;
+        }
+        input::placeholder{
+            font-size: 13px;
+        }
+        .input i{
+            font-size: 10px;
+        }
+        .appointment-form {
+            width: 78%;
+            border-radius: 10px;
+            gap:10px;
+        }
+        .appoint-form h2{
+            font-size: 15px;
+        }
+        .input1 input,.input1 textarea{
+            width:300px;
+            padding:10px;
+        }
+        input::placeholder,textarea::placeholder {
+            font-size: 15px;
+        }
+        .input1 button{
+            font-size: 15px;
+            padding:13px;
+        }
+        .close-btn i{
+            font-size: 18px;
+            right:20px;
+            top:10px;
+        }
+        .popup{
+            width:60%;
+        }
+        .popup p{
+            font-size: 15px;
+            text-align: center;
+        }
 
     .container .toggle-btn {
-        transform: translateX(100px);
+        transform: translateX(150px);
         font-size: 30px;
     }
     .banner .banner-img{
@@ -702,20 +818,68 @@ width:70%;
 @media(max-width:376px){
     .logo img{
         width:100px;
-        transform: translateX(-80px);
+        transform: translateX(-50px);
     }
     .container .toggle-btn{
-        transform: translateX(50px);
-        font-size: 40px;
+        transform: translateX(130px);
+        font-size: 30px;
     }
+    .form{
+        width:70%;
+    }
+    .input input{
+        width:240px;
+    }
+    .appointment-form {
+        width: 85%;
+        border-radius: 10px;
+        gap:10px;
+    }
+    .appoint-form h2{
+        font-size: 13px;
+    }
+    .input1 input,.input1 textarea{
+        width:250px;
+        padding:10px;
+    }
+    input::placeholder,textarea::placeholder {
+        font-size: 13px;
+    }
+    .input1 button{
+        font-size: 15px;
+        padding:13px;
+    }
+    .input1 textarea {
+        width:250px;
+        height:100px;
+    }
+    .close-btn i{
+        font-size: 18px;
+        right:20px;
+        top:10px;
+    }
+    .popup{
+        width:80%;
+    }
+    .popup p{
+        font-size: 15px;
+        text-align: center;
+    }
+
 }
 @media(max-width:320px){
     .logo img{
         width:90px;
-        transform: translateX(-70px);}
+        transform: translateX(-40px);}
     .container .toggle-btn{
-        transform: translateX(50px);
-        font-size: 30px;
+        transform: translateX(110px);
+        font-size: 18px;
+    }
+    .form{
+        width:90%;
+    }
+    .input input{
+        width:270px;
     }
     .grid-container{
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

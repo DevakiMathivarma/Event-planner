@@ -129,10 +129,136 @@ form1.addEventListener('submit', (event) => {
     }
 });
 
+// appointment form
 
+document.addEventListener("DOMContentLoaded", function () {
+    const appbtn = document.getElementById("appbtn");
+    const appform = document.getElementById("appointment-form");
+    const closeFormBtn = document.querySelector(".close-btn i"); // Close icon
+    const apptForm = document.getElementById("appt-login-form");
+    const apptPopup = document.getElementById("appointment-popup");
 
-const appbtn = document.getElementById('appbtn')
-const appform = document.getElementById('appointment-form')
-appbtn.addEventListener('click', () => {
-    appform.classList.toggle('active')
-})
+    const apptName = document.getElementById("appt-name");
+    const apptContact = document.getElementById("appt-contact");
+    const apptEmail = document.getElementById("appt-email");
+    const apptMessage = document.getElementById("appt-message");
+
+    // Function to show error
+    function showError(input, message) {
+        const errorMsg = input.closest(".input1").querySelector(".error-msg");
+        errorMsg.innerText = message;
+        errorMsg.style.display = "block";
+    }
+
+    // Function to clear error
+    function clearError(input) {
+        const errorMsg = input.closest(".input1").querySelector(".error-msg");
+        errorMsg.style.display = "none";
+    }
+
+    // Open the form
+    appbtn.addEventListener("click", () => {
+        appform.classList.add("active");
+    });
+
+    // Close the form and reset fields
+    closeFormBtn.addEventListener("click", () => {
+        appform.classList.remove("active");
+        apptForm.reset();
+        document.querySelectorAll(".error-msg").forEach(msg => msg.style.display = "none");
+    });
+
+    // Email live validation while typing
+    apptEmail.addEventListener("input", function () {
+        if (!/\S+@\S+\.\S+/.test(apptEmail.value)) {
+            showError(apptEmail, "Enter a valid email");
+        } else {
+            clearError(apptEmail);
+        }
+    });
+
+    // Contact number live validation while typing
+    apptContact.addEventListener("input", function () {
+        if (!/^\d{10}$/.test(apptContact.value)) {
+            showError(apptContact, "Enter a valid 10-digit number");
+        } else {
+            clearError(apptContact);
+        }
+    });
+
+    // Form submission validation
+    apptForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let isValid = true;
+
+        if (apptName.value.trim() === "") {
+            showError(apptName, "Name is required");
+            isValid = false;
+        } else {
+            clearError(apptName);
+        }
+
+        if (!/^\d{10}$/.test(apptContact.value)) {
+            showError(apptContact, "Enter a valid 10-digit number");
+            isValid = false;
+        } else {
+            clearError(apptContact);
+        }
+
+        if (!/\S+@\S+\.\S+/.test(apptEmail.value)) {
+            showError(apptEmail, "Enter a valid email");
+            isValid = false;
+        } else {
+            clearError(apptEmail);
+        }
+
+        if (apptMessage.value.trim() === "") {
+            showError(apptMessage, "Message cannot be empty");
+            isValid = false;
+        } else {
+            clearError(apptMessage);
+        }
+
+        if (isValid) {
+            appform.classList.remove("active");
+            apptForm.reset();
+            apptPopup.style.display = "flex";
+            setTimeout(() => apptPopup.style.display = "none", 3000);
+        }
+    });
+});
+
+// search bar
+const events = ["Wedding", "Birthday", "Corporate Event", "Conference", "Concert", "Trade Show", "Award Ceremony","wedding flowers","wedding bands","wedding planning","NETWORKING & RELATIONSHIP-BUILDING EVENTS","BUSINESS MEETINGS ","Conferences & Summits"];
+        const searchInput = document.getElementById("searchInput");
+        const suggestionsBox = document.getElementById("suggestionsBox");
+
+        searchInput.addEventListener("input", function() {
+            let input = searchInput.value.toLowerCase();
+            suggestionsBox.innerHTML = "";
+            if (input) {
+                let matches = events.filter(event => event.toLowerCase().includes(input));
+                if (matches.length > 0) {
+                    suggestionsBox.style.display = "block";
+                    matches.forEach(event => {
+                        let div = document.createElement("div");
+                        div.textContent = event;
+                        div.onclick = () => {
+                            searchInput.value = event;
+                            suggestionsBox.style.display = "none";
+                        };
+                        suggestionsBox.appendChild(div);
+                    });
+                } else {
+                    suggestionsBox.style.display = "none";
+                }
+            } else {
+                suggestionsBox.style.display = "none";
+            }
+        });
+
+        document.addEventListener("click", function(e) {
+            if (!searchInput.contains(e.target) && !suggestionsBox.contains(e.target)) {
+                suggestionsBox.style.display = "none";
+            }
+        });

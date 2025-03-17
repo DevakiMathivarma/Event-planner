@@ -16,7 +16,7 @@
         <nav>
             <div class="container">
                 <div class="logo">
-                    <img src="assets/images/indexpage-images/WhatsApp Image 2025-03-09 at 1.11.51 PM.jpeg">
+                    <img src="assets/images/indexpage-images/mn-logo.jpeg">
                 </div>
                 <button class="toggle-btn " id="toggle-btn">&#9776 </button>
                 <ul class="nav-links">
@@ -39,7 +39,8 @@
         <img src="assets/images/wedding-plans/beachvenue.png" class="banner-img">
         <h2>A WEEDING IS ONLY ONE DAY,<span> BUT THE MEMORIES LAST A LIFETIME</span></h2>
         <button id="appbtn">BOOK AN APPOINTMENT</button>
-        <img src="assets/images/wedding-plans/image.svg.svg" class="banner-whatsapp">
+        <a href="https://wa.me/1234567890?text=Hello%20there!" target="_blank">
+        <img src="assets/images/wedding-plans/image.svg.svg" class="banner-whatsapp"></a>
 
     </section>
     <!-- expertise section -->
@@ -138,35 +139,48 @@
         <p>Thank you for contacting us!</p>
         <p>Our Experts will revert you back ASAP!</p>
     </div>
-    <!-- form section when clicking button -->
+    
+     <!-- appointment form section when clicking button -->
      <section class="appointment-form" id="appointment-form">
-        <form id="login-form">
-        <div class="appoint-form">
-            <h2>BOOK AN APPOINTMENT</h2>
-            <h2>Let Us Discuss About Your Dream Gather</h2>
-            <div class="input1">
-                <input type="text" placeholder="Name">
-                <i class="fa-solid fa-user"></i>
+        <form id="appt-login-form">
+            <div class="appoint-form">
+                <div class="close-btn" id="close-form">
+                    <h2>BOOK AN APPOINTMENT</h2>
+                    <h2>Let Us Discuss About Your Dream Gather</h2>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="input1">
+                    <input type="text" id="appt-name" placeholder="Name">
+                    <i class="fa-solid fa-user"></i>
+                    <small class="error-msg"></small>
+                </div>
+                <div class="input1">
+                    <input type="number" id="appt-contact" placeholder="Contact">
+                    <i class="fa-solid fa-address-book"></i>
+                    <small class="error-msg"></small>
+                </div>
+                <div class="input1">
+                    <input type="email" id="appt-email" placeholder="Mail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <small class="error-msg"></small>
+                </div>
+                <div class="input1">
+                    <textarea id="appt-message" cols="30" rows="5" placeholder="Tell us about your plan, we will make it easier."></textarea>
+                    <i class="fa-solid fa-comment"></i>
+                    <small class="error-msg"></small>
+                </div>
+                <div class="input1">
+                    <button type="submit" id="appt-connect">CONNECT</button>
+                </div>
             </div>
-            <div class="input1">
-                <input type="number" placeholder="Contact">
-                <i class="fa-solid fa-address-book"></i>
-            </div>
-            <div class="input1">
-                <input type="email" placeholder="Mail">
-                <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div class="input1">
-                <textarea name="msg" id="msg" cols="30 rows=10">       Tell us about your plan, we will make it easier.</textarea>
-                <i class="fa-solid fa-lock"></i>
-            </div>
-            <div class="input1">
-                <button type="submit" id="connect">CONNECT</button>
-            </div>
-
-        </div>
         </form>
-     </section>
+    </section>
+
+    <div class="popup" id="appointment-popup">
+        <img src="assets/images/indexpage-images/mn-logo.jpeg">
+        <p>Thank you for contacting us!</p>
+        <p>Our Experts will revert you back ASAP!</p>
+    </div>
      <!-- footer -->
     <footer>
         <div class="footer-container">

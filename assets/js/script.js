@@ -616,6 +616,44 @@ form1.addEventListener('submit', (event) => {
     }, 3000);
 })
 
+
+// get quote form toggle
 document.getElementById("getQuoteBtn").addEventListener("click", function () {
     document.getElementById("getInTouchForm").classList.toggle("active");
 });
+
+
+// search bar
+const events = ["Wedding", "Birthday", "Corporate Event", "Conference", "Concert", "Trade Show", "Award Ceremony","wedding flowers","wedding bands","wedding planning","NETWORKING & RELATIONSHIP-BUILDING EVENTS","BUSINESS MEETINGS ","Conferences & Summits"];
+        const searchInput = document.getElementById("searchInput");
+        const suggestionsBox = document.getElementById("suggestionsBox");
+
+        searchInput.addEventListener("input", function() {
+            let input = searchInput.value.toLowerCase();
+            suggestionsBox.innerHTML = "";
+            if (input) {
+                let matches = events.filter(event => event.toLowerCase().includes(input));
+                if (matches.length > 0) {
+                    suggestionsBox.style.display = "block";
+                    matches.forEach(event => {
+                        let div = document.createElement("div");
+                        div.textContent = event;
+                        div.onclick = () => {
+                            searchInput.value = event;
+                            suggestionsBox.style.display = "none";
+                        };
+                        suggestionsBox.appendChild(div);
+                    });
+                } else {
+                    suggestionsBox.style.display = "none";
+                }
+            } else {
+                suggestionsBox.style.display = "none";
+            }
+        });
+
+        document.addEventListener("click", function(e) {
+            if (!searchInput.contains(e.target) && !suggestionsBox.contains(e.target)) {
+                suggestionsBox.style.display = "none";
+            }
+        });

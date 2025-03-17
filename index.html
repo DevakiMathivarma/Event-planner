@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Planner</title>
+    <title>EventPlanner</title>
     <!-- boxicon link -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- fontawsome link -->
@@ -14,11 +14,12 @@
 </head>
 
 <body>
+    <!-- header section -->
     <header>
         <nav>
             <div class="container">
                 <div class="logo">
-                    <img src="assets/images/indexpage-images/WhatsApp Image 2025-03-09 at 1.11.51 PM.jpeg">
+                    <img src="assets/images/indexpage-images/mn-logo.jpeg">
                 </div>
                 <button class="toggle-btn " id="toggle-btn">&#9776 </button>
                 <ul class="nav-links" id="nav-links">
@@ -31,7 +32,8 @@
 
                 </ul>
                 <button id="togglebtn">
-                    <i class="fa-solid fa-user"></i><br>LOGIN/<br><span>REGISTER</span>
+                    <i class="fa-solid fa-user"></i><br>LOGIN<br><span>REGISTER</span>
+                    
                 </button>
             </div>
         </nav>
@@ -39,7 +41,8 @@
     <!-- ----------------search section---- -->
 
     <section class="search-box">
-        <input type="text" placeholder="Search">
+        <input type="text"  id="searchInput" placeholder="Search">
+        <div class="suggestions" id="suggestionsBox"></div>
         <button type="submit" id="appbtn">BOOK AN APPOINTMENT</button>
     </section>
     <!-- ----end search section--- -->
@@ -248,46 +251,58 @@
         </form>
     </section>
     <div class="popup" id="popup">
-        <img src="assets/images/indexpage-images/logo.jpeg">
+        <img src="assets/images/indexpage-images/mn-logo.jpeg">
         <p>Thank you for contacting us!</p>
         <p>Our Experts will revert you back ASAP!</p>
     </div>
 
-    <!-- form section when clicking button -->
+    <!-- appointment form section when clicking button -->
     <section class="appointment-form" id="appointment-form">
-        <form id="login-form">
+        <form id="appt-login-form">
             <div class="appoint-form">
-                <h2>BOOK AN APPOINTMENT</h2>
-                <h2>Let Us Discuss About Your Dream Gather</h2>
+                <div class="close-btn" id="close-form">
+                    <h2>BOOK AN APPOINTMENT</h2>
+                    <h2>Let Us Discuss About Your Dream Gather</h2>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
                 <div class="input1">
-                    <input type="text" placeholder="Name">
+                    <input type="text" id="appt-name" placeholder="Name">
                     <i class="fa-solid fa-user"></i>
+                    <small class="error-msg"></small>
                 </div>
                 <div class="input1">
-                    <input type="number" placeholder="Contact">
+                    <input type="number" id="appt-contact" placeholder="Contact">
                     <i class="fa-solid fa-address-book"></i>
+                    <small class="error-msg"></small>
                 </div>
                 <div class="input1">
-                    <input type="email" placeholder="Mail">
+                    <input type="email" id="appt-email" placeholder="Mail">
                     <i class="fa-solid fa-envelope"></i>
+                    <small class="error-msg"></small>
                 </div>
                 <div class="input1">
-                    <textarea name="msg" id="msg"
-                        cols="30 rows=10">       Tell us about your plan, we will make it easier.</textarea>
-                    <i class="fa-solid fa-lock"></i>
+                    <textarea id="appt-message" cols="30" rows="5" placeholder="Tell us about your plan, we will make it easier."></textarea>
+                    <i class="fa-solid fa-comment"></i>
+                    <small class="error-msg"></small>
                 </div>
                 <div class="input1">
-                    <button type="submit" id="connect">CONNECT</button>
+                    <button type="submit" id="appt-connect">CONNECT</button>
                 </div>
-
             </div>
         </form>
     </section>
+
+    <div class="popup" id="appointment-popup">
+        <img src="assets/images/indexpage-images/mn-logo.jpeg">
+        <p>Thank you for contacting us!</p>
+        <p>Our Experts will revert you back ASAP!</p>
+    </div>
+
     <!-- footer -->
     <footer>
         <div class="footer-container">
             <div class="footer footer1">
-                <img src="assets/images/indexpage-images/logo.jpeg">
+                <img src="assets/images/indexpage-images/mn-logo.jpeg">
             </div>
             <div class="footer footer2">
                 <h2>QUICK LINKS</h2>

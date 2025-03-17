@@ -69,7 +69,6 @@
 
         .logo img {
             width: 150px;
-            border: 1px solid black;
 
         }
 
@@ -109,6 +108,30 @@
             font-size: 25px;
         }
 
+        .suggestions {
+    position: absolute;
+    top:23%;
+    width: 40%;
+    background: white;
+    border: 1px solid #ccc;
+    display: none;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.suggestions div {
+    border-bottom: 1px solid grey;
+    width:90%;
+    margin:auto;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.suggestions div:hover {
+    background: #f0f0f0;
+}
         .search-box button {
             border-radius: 20px;
             width: 15%;
@@ -512,7 +535,13 @@
                 padding: 5px;
                 width: 100%;
             }
-
+            .suggestions {
+        position: absolute;
+        top:40%;
+        width: 40%;
+        max-height: 300px;
+    }
+    
             .search-box button {
                 transform: translateX(-20px);
                 font-size: 10px;
@@ -589,6 +618,13 @@
                 font-size: 10px;
                 width: 30%;
             }
+            .suggestions {
+        position: absolute;
+        top:30%;
+        width: 50%;
+        max-height: 300px;
+    }
+
 
             #event-description p {
                 font-family: sans-serif;
@@ -694,6 +730,13 @@
                 width: 100%;
                 margin: auto;
             }
+            .suggestions {
+        position: absolute;
+        top:35%;
+        width: 50%;
+        max-height: 300px;
+    }
+
 
             .search-box button {
                 transform: translateX(-20px);
@@ -784,7 +827,7 @@
         <nav>
             <div class="container">
                 <div class="logo">
-                    <img src="assets/images/indexpage-images/WhatsApp Image 2025-03-09 at 1.11.51 PM.jpeg">
+                    <img src="assets/images/indexpage-images/mn-logo.jpeg">
                 </div>
                 <button class="toggle-btn " id="toggle-btn">&#9776 </button>
                 <ul class="nav-links" id="nav-links">
@@ -803,7 +846,8 @@
         </nav>
     </header>
     <section class="search-box">
-        <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search"  id="searchInput">
+        <div class="suggestions" id="suggestionsBox"></div>
         <button type="submit" id="getQuoteBtn">GET A QUOTE</button>
     </section>
     <section class="event-content">
@@ -844,6 +888,10 @@
         <p>Thank you for contacting us!</p>
         <p>Our Experts will revert you back ASAP!</p>
     </div>
+
+
+   
+
     <!-- get a quote -->
     <section class="get-in-touch" id="getInTouchForm">
         <img src="assets/images/indexpage-images/image-6.png">

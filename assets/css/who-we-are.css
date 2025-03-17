@@ -57,8 +57,6 @@ nav {
 
 .logo img {
     width: 150px;
-    border: 1px solid black;
-
 }
 
 nav .container .nav-links {
@@ -264,7 +262,7 @@ nav .container .nav-links {
     display: none;
     position: fixed;
     /* Keeps it centered on screen */
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     flex-direction: column;
@@ -312,6 +310,7 @@ input::placeholder {
     font-size: 20px;
     font-weight: bold;
     transform: translateX(25px);
+    
 }
 
 .input button {
@@ -322,7 +321,20 @@ input::placeholder {
     border: none;
     padding: 20px;
 }
-
+.close i{
+    position:fixed;
+    top:0;
+    right:0;
+    font-size: 40px;
+    color:white;
+}
+.error {
+    color: red;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-top: 5px;
+    display: block;
+}
 .popup {
     background-color: #000080;
     border-radius: 10px;
@@ -347,82 +359,143 @@ input::placeholder {
     color: white;
 }
 
-.get-in-touch.active {
+/* get in touch form */
+
+/* .get-in-touch.active {
     display: flex;
 }
 
 .get-in-touch {
     width: 60%;
+    max-width: 800px;
     border: 1px solid black;
-    position: relative;
+    position:fixed;
     display: none;
-    flex-direction: column;
-    position: fixed;
+    /* flex-direction: column; */
+    /* position: fixed; */
     /* Fixes position on screen */
-    top: 50%;
+    /* top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1005;
+    background: white;
+    transform: translate(-50%, -50%); */
+    /* z-index: 1005; */
 }
-.get-in-touch img{
+/*.get-in-touch img{
     width:100%;
-    height:650px;
+    height:250px;
     opacity: 0.7;
+    object-fit: cover;
    
 }
 .form-apply{
-    opacity: 1;
     display:flex;
+    flex-direction: column;
     justify-content: center;
-    gap:20px;
-    position:absolute;
-    top:10px;
+    gap:15px;
     padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+
 }
 .input-box input{
-    width:350px;
-    padding:20px;
-    margin-bottom: 20px;
+    width:100%;
+    padding:15px;
+    margin-bottom: 10px;
     border-radius: 30px;
     border: 1px solid #FF007F;
-}
-.input-box input::placeholder{
-    color:grey;
-    font-size: 20px;
-    font-weight: bold;
-}
-.form2 h4{
-    font-size: 20px;
-    font-family: sans-serif;
+    font-size: 16px;
 }
 .form2{
     padding:10px;
+    background-color:rgba(255, 255, 255, 0.9) ;
 }
-.form2 label{
+.input-box input::placeholder{
+    color:grey;
+    font-size: 16px;
+    font-weight: bold;
+}
+.form2 h4{
     font-size: 18px;
     font-family: sans-serif;
-    padding: 10px;
+}
+.form2 label{
+    font-size: 16px;
+    font-family: sans-serif;
 }
 .form2 textarea{
-width:400px;
-height:200px;
+width:100%;
+height:150px;
 border: 1px solid #FF007F;
-font-size: 20px;
+font-size: 16px;
 color:grey;
 }
 .get-in-touch .get-in-touch-btn{
 text-align: center;
+margin-top: 20px;
 }
 .get-in-touch button{
-position:absolute;
-bottom: 20px;
-left:40%;
-width:20%;
-padding:10px;
+
+width:80%;
+padding:12px;
 background-color: #000080;
 color:#FF007F;
 border-radius: 50px;
-font-size: 20px;}
+font-size: 20px;
+cursor:pointer; 
+
+
+}*/
+
+
+
+.get-in-touch {
+    width: 60%;
+    max-width: 800px;
+    border: 1px solid black;
+    position: fixed; /* Keeps the form centered */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1005;
+    background-image:url("assets/images/indexpage-images/image-6.png"); /* Set background image */
+    background-size: cover; /* Cover entire container */
+    background-position: center; /* Center the image */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Remove the img inside .get-in-touch */
+.get-in-touch img {
+    display: none; /* Hides the inline image */
+}
+
+/* Ensures form fields are readable */
+.form-apply, .form2 {
+    background-color: rgba(255, 255, 255, 0.8); /* Adds transparency */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Input fields */
+.input-box input, .form2 textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    border: 1px solid #FF007F;
+    font-size: 16px;
+}
+
+/* Button styling */
+.get-in-touch button {
+    width: 80%;
+    padding: 12px;
+    background-color: #000080;
+    color: white;
+    border-radius: 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
 
 footer {
     background-color: #000080;
@@ -567,6 +640,9 @@ footer {
         font-size: 19px;
 
     }
+    .form{
+        width:60%;
+    }
 
     .column2 p {
         font-size: 18px;
@@ -629,6 +705,20 @@ footer {
 
     .logo img {
         width: 50px;
+    }
+    .form {
+        width: 60%;
+    }
+    .input input{
+        width:350px;
+        padding:10px;
+    }
+    input::placeholder {
+        font-size: 17px;
+    }
+    .input button{
+        font-size: 15px;
+        padding:15px;
     }
 
     .who-we-are-heading h2 {
@@ -719,17 +809,33 @@ footer {
         display: block;
     }
 
-    .logo img {
-        width: 100px;
-        transform: translateX(-100px);
+    .logo img{
+        width:100px;
+        transform: translateX(-70px);
     }
-
-    .container #togglebtn {
-        display: none;
+    .container #togglebtn span{
+        display:none;
     }
-
-    .container .toggle-btn {
-        transform: translateX(100px);
+          .container #togglebtn{
+  transform: translateX(20px);
+    }
+    .form{
+        width:70%;
+    }
+    .form h2{
+        font-size: 15px;
+    }
+    .input input{
+        width:280px;
+    }
+    input::placeholder{
+        font-size: 13px;
+    }
+    .input i{
+        font-size: 10px;
+    }
+    .container .toggle-btn{
+        transform: translateX(150px);
         font-size: 30px;
     }
 
@@ -789,13 +895,20 @@ footer {
 @media(max-width:376px) {
     .logo img {
         width: 100px;
-        transform: translateX(-80px);
+        transform: translateX(-50px);
     }
 
     .container .toggle-btn {
-        transform: translateX(50px);
-        font-size: 40px;
+        transform: translateX(130px);
+        font-size: 30px;
     }
+    .form{
+        width:70%;
+    }
+    .input input{
+        width:240px;
+    }
+    
     .about-content h2{
         font-size: 19px;
     }
@@ -822,12 +935,18 @@ footer {
 @media(max-width:320px) {
     .logo img {
         width: 90px;
-        transform: translateX(-70px);
+        transform: translateX(-40px);
     }
 
     .container .toggle-btn {
-        transform: translateX(50px);
-        font-size: 30px;
+        transform: translateX(110px);
+        font-size: 18px;
+    }
+    .form{
+        width:90%;
+    }
+    .input input{
+        width:270px;
     }
     .column2 button{
         width:50%;

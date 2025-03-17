@@ -57,8 +57,6 @@ nav {
 
 .logo img {
     width: 150px;
-    border: 1px solid black;
-
 }
 
 nav .container .nav-links {
@@ -134,6 +132,13 @@ flex-direction: column; */
     margin: auto;
     text-align: center;
 
+}
+
+.error-msg{
+    font-size: 20px;
+    color:red;
+    display:block;
+  transform: translateY(-20px);
 }
 
 .btn button {
@@ -213,7 +218,20 @@ input::placeholder {
     border: none;
     padding: 20px;
 }
-
+.close i{
+    position:fixed;
+    top:0;
+    right:0;
+    font-size: 40px;
+    color:white;
+}
+.error {
+    color: red;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-top: 5px;
+    display: block;
+}
 .popup {
     background-color: #000080;
     border-radius: 10px;
@@ -422,8 +440,19 @@ footer {
         font-size: 15px;
         
     }
-    .form{
-        width:70%;
+    .form {
+        width: 60%;
+    }
+    .input input{
+        width:350px;
+        padding:10px;
+    }
+    input::placeholder {
+        font-size: 17px;
+    }
+    .input button{
+        font-size: 15px;
+        padding:15px;
     }
     .popup{
         width: 50%;
@@ -521,20 +550,35 @@ footer {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .logo img {
-        width: 100px;
-        transform: translateX(-100px);
+    .logo img{
+        width:100px;
+        transform: translateX(-70px);
     }
-
-    .container #togglebtn {
-        display: none;
+    .container #togglebtn span{
+        display:none;
     }
-
-    .container .toggle-btn {
-        transform: translateX(100px);
+          .container #togglebtn{
+  transform: translateX(20px);
+    }
+    .form{
+        width:70%;
+    }
+    .form h2{
+        font-size: 15px;
+    }
+    .input input{
+        width:280px;
+    }
+    input::placeholder{
+        font-size: 13px;
+    }
+    .input i{
+        font-size: 10px;
+    }
+    .container .toggle-btn{
+        transform: translateX(150px);
         font-size: 30px;
     }
-
     .footer h2 {
         font-size: 18px;
     }
@@ -564,14 +608,20 @@ footer {
 @media(max-width:376px) {
     .logo img {
         width: 100px;
-        transform: translateX(-80px);
+        transform: translateX(-50px);
     }
 
     .container .toggle-btn {
-        transform: translateX(50px);
-        font-size: 40px;
+        transform: translateX(130px);
+        font-size: 30px;
     }
-
+    .form{
+        width:70%;
+    }
+    .input input{
+        width:240px;
+    }
+    
     .heading h2 {
         font-size: 20px;
         font-family: sans-serif;
@@ -586,12 +636,18 @@ footer {
 @media(max-width:320px) {
     .logo img {
         width: 90px;
-        transform: translateX(-70px);
+        transform: translateX(-40px);
     }
 
     .container .toggle-btn {
-        transform: translateX(50px);
-        font-size: 30px;
+        transform: translateX(110px);
+        font-size: 18px;
+    }
+    .form{
+        width:90%;
+    }
+    .input input{
+        width:270px;
     }
     .name input{
         padding:10px;
