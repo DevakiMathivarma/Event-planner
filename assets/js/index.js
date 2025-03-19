@@ -228,37 +228,70 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// search bar
-const events = ["Wedding", "Birthday", "Corporate Event", "Conference", "Concert", "Trade Show", "Award Ceremony","wedding flowers","wedding bands","wedding planning","NETWORKING & RELATIONSHIP-BUILDING EVENTS","BUSINESS MEETINGS ","Conferences & Summits"];
-        const searchInput = document.getElementById("searchInput");
-        const suggestionsBox = document.getElementById("suggestionsBox");
 
-        searchInput.addEventListener("input", function() {
-            let input = searchInput.value.toLowerCase();
-            suggestionsBox.innerHTML = "";
-            if (input) {
-                let matches = events.filter(event => event.toLowerCase().includes(input));
-                if (matches.length > 0) {
-                    suggestionsBox.style.display = "block";
-                    matches.forEach(event => {
-                        let div = document.createElement("div");
-                        div.textContent = event;
-                        div.onclick = () => {
-                            searchInput.value = event;
-                            suggestionsBox.style.display = "none";
-                        };
-                        suggestionsBox.appendChild(div);
-                    });
-                } else {
+
+
+// List of available events
+const events = [
+    "MICE Events", "Product Launching Events", "Company Gathering", "Team Building", 
+    "Themed Catering", "Tour Organizer", "Sound System", "Lighting", "Entertainment", 
+    "Photography", "Stage Decoration", "Multimedia"
+];
+
+const searchInput = document.getElementById("searchInput");
+const suggestionsBox = document.getElementById("suggestionsBox");
+const eventLists = document.querySelectorAll(".service-events-list"); // All event divs
+const eventContainer = document.querySelector(".service-events"); // Parent div
+
+searchInput.addEventListener("input", function() {
+    let input = searchInput.value.toLowerCase();
+    suggestionsBox.innerHTML = "";
+    
+    if (input) {
+        let matches = events.filter(event => event.toLowerCase().includes(input));
+        
+        if (matches.length > 0) {
+            suggestionsBox.style.display = "block";
+            matches.forEach(event => {
+                let div = document.createElement("div");
+                div.textContent = event;
+                div.onclick = () => {
+                    searchInput.value = event;
                     suggestionsBox.style.display = "none";
-                }
-            } else {
-                suggestionsBox.style.display = "none";
-            }
-        });
+                    filterEvents(event); // Call function to filter events
+                };
+                suggestionsBox.appendChild(div);
+            });
+        } else {
+            suggestionsBox.style.display = "none";
+        }
+    } else {
+        suggestionsBox.style.display = "none";
+        resetEvents(); // Show all events when search is cleared
+    }
+});
 
-        document.addEventListener("click", function(e) {
-            if (!searchInput.contains(e.target) && !suggestionsBox.contains(e.target)) {
-                suggestionsBox.style.display = "none";
-            }
-        });
+document.addEventListener("click", function(e) {
+    if (!searchInput.contains(e.target) && !suggestionsBox.contains(e.target)) {
+        suggestionsBox.style.display = "none";
+    }
+});
+
+// Function to filter events based on search selection
+function filterEvents(selectedEvent) {
+    eventLists.forEach(eventDiv => {
+        const eventTitle = eventDiv.querySelector("h2").textContent.trim();
+        if (eventTitle.toLowerCase() === selectedEvent.toLowerCase()) {
+            eventDiv.style.display = "block"; // Show matching event
+        } else {
+            eventDiv.style.display = "none"; // Hide others
+        }
+    });
+}
+
+// Function to reset and show all events
+function resetEvents() {
+    eventLists.forEach(eventDiv => {
+        eventDiv.style.display = "block";
+    });
+}

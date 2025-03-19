@@ -3,6 +3,7 @@ const navlinks = document.getElementById('nav-links')
 btn.addEventListener('click', () => {
     navlinks.classList.toggle('active')
 })
+
 const togglebtn = document.getElementById('togglebtn');
 const form = document.getElementById('form');
 const form1 = document.getElementById('login-form');

@@ -348,7 +348,8 @@ input::placeholder {
     justify-content: center;
     align-items: center;
     padding: 30px;
-    z-index: 1001;
+    z-index: 1000;
+   
 }
 
 .popup p {
@@ -361,141 +362,103 @@ input::placeholder {
 
 /* get in touch form */
 
-/* .get-in-touch.active {
+.get-in-touch.active {
     display: flex;
 }
 
 .get-in-touch {
-    width: 60%;
-    max-width: 800px;
+    width: 53%;
     border: 1px solid black;
-    position:fixed;
     display: none;
-    /* flex-direction: column; */
-    /* position: fixed; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
     /* Fixes position on screen */
-    /* top: 50%;
+    top: 50%;
     left: 50%;
-    background: white;
-    transform: translate(-50%, -50%); */
-    /* z-index: 1005; */
+    transform: translate(-50%, -50%);
+   
+   
 }
-/*.get-in-touch img{
+.get-in-touch img{
     width:100%;
-    height:250px;
+    height:650px;
     opacity: 0.7;
-    object-fit: cover;
    
 }
 .form-apply{
+    opacity: 1;
     display:flex;
-    flex-direction: column;
     justify-content: center;
-    gap:15px;
+    gap:20px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-
+    /* background-color:white; */
 }
 .input-box input{
-    width:100%;
-    padding:15px;
-    margin-bottom: 10px;
+    width:320px;
+    padding:13px;
+    margin-bottom: 20px;
     border-radius: 30px;
     border: 1px solid #FF007F;
-    font-size: 16px;
-}
-.form2{
-    padding:10px;
-    background-color:rgba(255, 255, 255, 0.9) ;
 }
 .input-box input::placeholder{
     color:grey;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: bold;
 }
 .form2 h4{
     font-size: 18px;
     font-family: sans-serif;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.form2{
+    padding:10px;
 }
 .form2 label{
-    font-size: 16px;
+    font-size: 18px;
     font-family: sans-serif;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 .form2 textarea{
-width:100%;
-height:150px;
+width:400px;
+height:200px;
 border: 1px solid #FF007F;
-font-size: 16px;
+font-size: 20px;
 color:grey;
 }
 .get-in-touch .get-in-touch-btn{
 text-align: center;
-margin-top: 20px;
+}
+.form-get-in-touch{
+    background-color: white;
 }
 .get-in-touch button{
-
-width:80%;
-padding:12px;
+width:20%;
+padding:10px;
 background-color: #000080;
 color:#FF007F;
 border-radius: 50px;
 font-size: 20px;
-cursor:pointer; 
-
-
-}*/
-
-
-
-.get-in-touch {
-    width: 60%;
-    max-width: 800px;
-    border: 1px solid black;
-    position: fixed; /* Keeps the form centered */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1005;
-    background-image:url("assets/images/indexpage-images/image-6.png"); /* Set background image */
-    background-size: cover; /* Cover entire container */
-    background-position: center; /* Center the image */
-    padding: 20px;
-    border-radius: 10px;
+margin-bottom: 30px;
 }
-
-/* Remove the img inside .get-in-touch */
-.get-in-touch img {
-    display: none; /* Hides the inline image */
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 3px;
+    margin-top: -5px;
+    margin-left: 5px;
 }
-
-/* Ensures form fields are readable */
-.form-apply, .form2 {
-    background-color: rgba(255, 255, 255, 0.8); /* Adds transparency */
-    padding: 20px;
-    border-radius: 10px;
+.get-close-btn i{
+    position:fixed;
+    top:0;
+    right:0;
+    font-size: 40px;
+    color:black;
 }
-
-/* Input fields */
-.input-box input, .form2 textarea {
-    width: 100%;
-    padding: 15px;
-    border-radius: 30px;
-    border: 1px solid #FF007F;
-    font-size: 16px;
-}
-
-/* Button styling */
-.get-in-touch button {
-    width: 80%;
-    padding: 12px;
-    background-color: #000080;
-    color: white;
-    border-radius: 30px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-}
-
 
 footer {
     background-color: #000080;
@@ -678,6 +641,30 @@ footer {
         width: 100%;
         margin: auto;
     }
+    .get-in-touch{
+        width:58%;
+    }
+    .input-box input{
+        width:250px;
+    }
+    .input-box input::placeholder{
+        font-size: 10px;
+    }
+    .form2 h4{
+        font-size: 15px;
+    }
+    .form2 label{
+        font-size: 15px;
+    }
+    .form2 textarea{
+        width:300px;
+
+    }
+    .get-in-touch button{
+        width:30%;
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
 }
 
 @media(max-width:768px) {
@@ -769,6 +756,9 @@ footer {
 
     .footer5 h3 {
         font-size: 20px;
+    }
+    .popup{
+        width:50%;
     }
 }
 
@@ -889,6 +879,12 @@ footer {
 
     .column2 {
         width: 95%;
+    }
+    .get-in-touch{
+        top:60%;
+    }
+    .form-apply{
+       flex-direction: column;
     }
 }
 

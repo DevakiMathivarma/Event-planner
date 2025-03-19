@@ -30,7 +30,6 @@ function clearErrors() {
 function validateForm() {
     let isValid = true;
 
-    // Selecting input fields and error message spans
     const name = document.getElementById('name');
     const contact = document.getElementById('contact');
     const email = document.getElementById('email');
@@ -111,6 +110,90 @@ form1.addEventListener('submit', (event) => {
 });
 
 
+// get in touch form
 document.getElementById("getQuoteBtn").addEventListener("click", function () {
-    document.getElementById("getInTouchForm").classList.toggle("active");
+    document.getElementById("getInTouchForm").classList.add("active");
+});
+
+// Close button functionality
+document.getElementById("closeGetInTouch").addEventListener("click", function () {
+    document.getElementById("getInTouchForm").classList.remove("active");
+});
+
+// Function to show popup
+function showPopup() {
+    let popup = document.getElementById("get-in-touch-popup");
+    if (!popup) {
+        console.error("Popup element not found!");
+        return;
+    }
+    popup.style.display = "block"; 
+    console.log("Popup displayed");
+
+    
+    setTimeout(() => {
+        popup.style.display = "none";
+    }, 3000);
+}
+
+// Real-time validation for inputs
+document.querySelectorAll(".input-box input, textarea").forEach(input => {
+    input.addEventListener("input", function () {
+        validateInput(this);
+    });
+});
+
+function validateInput(input) {
+    let value = input.value.trim();
+    let errorMessage = input.nextElementSibling;
+
+    if (!errorMessage || !errorMessage.classList.contains("error-message")) {
+        errorMessage = document.createElement("span");
+        errorMessage.classList.add("error-message");
+        input.parentNode.appendChild(errorMessage);
+    }
+
+    if (value === "") {
+        input.style.border = "2px solid red";
+        errorMessage.textContent = `${input.placeholder} is required`;
+    } else {
+        input.style.border = "1px solid #FF007F";
+        errorMessage.textContent = "";
+    }
+
+    // Email validation
+    if (input.id === "emailAddress" && value !== "") {
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(value)) {
+            input.style.border = "2px solid red";
+            errorMessage.textContent = "Enter a valid email address";
+        }
+    }
+
+    // Mobile number validation (10 digits)
+    if (input.id === "mobileNumber" && value !== "") {
+        let mobilePattern = /^[0-9]{10}$/;
+        if (!mobilePattern.test(value)) {
+            input.style.border = "2px solid red";
+            errorMessage.textContent = "Enter a valid 10-digit mobile number";
+        }
+    }
+}
+
+// Form submission validation
+document.getElementById("getInTouchFormID").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let isValid = true;
+    document.querySelectorAll(".input-box input, textarea").forEach(input => {
+        validateInput(input);
+        if (input.value.trim() === "") {
+            isValid = false;
+        }
+    });
+
+    if (isValid) {
+        showPopup();
+        document.getElementById("getInTouchFormID").reset(); 
+    }
 });

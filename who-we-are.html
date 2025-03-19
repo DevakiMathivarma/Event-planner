@@ -154,58 +154,66 @@
     </div>
     <!-- get-in-touch-form -->
     <section class="get-in-touch" id="getInTouchForm">
-        <img src="assets/images/indexpage-images/image-6.png">
-        <form>
+        <form class="form-get-in-touch" id="getInTouchFormID">
+            <div class="get-close-btn">
+                <i class='bx bx-x' id="closeGetInTouch"></i>
+            </div>
             <div class="form-apply">
                 <div class="get-in-touch-form">
                     <div class="input-box">
-                        <input type="text" placeholder="First & Last name">
+                        <input type="text" id="fullName" placeholder="First & Last Name">
+                        <span class="error-message" id="fullNameError"></span>
                     </div>
                     <div class="input-box">
-                        <input type="number" placeholder="Mobile">
+                        <input type="number" id="mobileNumber" placeholder="Mobile">
+                        <span class="error-message" id="mobileNumberError"></span>
                     </div>
                     <div class="input-box">
-                        <input type="mail" placeholder="Email id">
+                        <input type="email" id="emailAddress" placeholder="Email ID">
+                        <span class="error-message" id="emailAddressError"></span>
                     </div>
                     <div class="input-box">
-                        <input type="text" placeholder="Wedding or Special Event Date">
+                        <input type="text" id="eventDate" placeholder="Wedding or Special Event Date">
+                        <span class="error-message" id="eventDateError"></span>
                     </div>
                     <div class="input-box">
-                        <input type="text" placeholder="Event Location (Or Considering)">
+                        <input type="text" id="eventLocation" placeholder="Event Location (Or Considering)">
+                        <span class="error-message" id="eventLocationError"></span>
                     </div>
                     <div class="input-box">
-                        <input type="text" placeholder="How Many Guest Are You Expecting">
+                        <input type="text" id="guestCount" placeholder="How Many Guests Are You Expecting">
+                        <span class="error-message" id="guestCountError"></span>
                     </div>
                     <div class="input-box">
-                        <input type="text" placeholder="Who is your Caterer if Decided?">
+                        <input type="text" id="caterer" placeholder="Who is your Caterer if Decided?">
+                        <span class="error-message" id="catererError"></span>
                     </div>
                 </div>
                 <div class="form2">
                     <h4>Package Interested In? (Select all that apply)</h4>
-                    <input type="checkbox">
-                    <label>Full Planning + Design-Wedding</label><br>
-                    <input type="checkbox">
-                    <label>Custom Quote Celebration - Corporate Party,Engagement Party,Birthday,Bat/Bar Mitzvah,Special
-                        Celebration</label><br>
-                    <input type="checkbox">
-                    <label>The Bubbly Bar</label><br>
-                    <input type="checkbox">s
-                    <label>Unsure,Lets Chat</label>
-                    <h4>
-                        More Details the Better - Tell us more of how we can help,your Vision and any details you know
-                        now
-                    </h4>
-                    <textarea name="msg" id="msg" cols="20" rows="20" placeholder="Your Message...."></textarea>
-
+                    <input type="checkbox" id="package1">
+                    <label for="package1">Full Planning + Design-Wedding</label><br>
+                    <input type="checkbox" id="package2">
+                    <label for="package2">Custom Quote Celebration - Corporate Party, Engagement Party, Birthday, Bat/Bar Mitzvah, Special Celebration</label><br>
+                    <input type="checkbox" id="package3">
+                    <label for="package3">The Bubbly Bar</label><br>
+                    <input type="checkbox" id="package4">
+                    <label for="package4">Unsure, Let's Chat</label>
+    
+                    <h4>More Details - Tell us how we can help</h4>
+                    <textarea name="msg" id="messageBox" cols="20" rows="5" placeholder="Your Message..."></textarea>
+                    <span class="error-message" id="messageBoxError"></span>
                 </div>
             </div>
             <div class="get-in-touch-btn">
-                <button type="submit">Get A Quote</button>
+                <button type="submit" id="submitGetInTouch">Get A Quote</button>
             </div>
         </form>
     </section>
+    
+    
     <div class="popup" id="get-in-touch-popup">
-        <img src="assets/images/indexpage-images/logo.jpeg">
+        <img src="assets/images/indexpage-images/mn-logo.jpeg">
         <p>Thank you for contacting us!</p>
         <p>Our Experts will revert you back ASAP!</p>
     </div>
@@ -213,7 +221,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer footer1">
-                <img src="assets/images/indexpage-images/logo.jpeg">
+                <img src="assets/images/indexpage-images/mn-logo.jpeg">
             </div>
             <div class="footer footer2">
                 <h2>QUICK LINKS</h2>

@@ -109,29 +109,30 @@
         }
 
         .suggestions {
-    position: absolute;
-    top:23%;
-    width: 40%;
-    background: white;
-    border: 1px solid #ccc;
-    display: none;
-    max-height: 300px;
-    overflow-y: auto;
-    z-index: 1000;
-    border-radius: 10px;
-}
+            position: absolute;
+            top: 23%;
+            width: 40%;
+            background: white;
+            border: 1px solid #ccc;
+            display: none;
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1000;
+            border-radius: 10px;
+        }
 
-.suggestions div {
-    border-bottom: 1px solid grey;
-    width:90%;
-    margin:auto;
-    padding: 15px;
-    cursor: pointer;
-}
+        .suggestions div {
+            border-bottom: 1px solid grey;
+            width: 90%;
+            margin: auto;
+            padding: 15px;
+            cursor: pointer;
+        }
 
-.suggestions div:hover {
-    background: #f0f0f0;
-}
+        .suggestions div:hover {
+            background: #f0f0f0;
+        }
+
         .search-box button {
             border-radius: 20px;
             width: 15%;
@@ -424,9 +425,8 @@
         }
 
         .get-in-touch {
-            width: 60%;
+            width: 53%;
             border: 1px solid black;
-            position: relative;
             display: none;
             flex-direction: column;
             position: fixed;
@@ -434,13 +434,15 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 1003;
+
+
         }
 
         .get-in-touch img {
             width: 100%;
             height: 650px;
-            opacity: 0.5;
+            opacity: 0.7;
+
         }
 
         .form-apply {
@@ -448,14 +450,13 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            position: absolute;
-            top: 10px;
             padding: 20px;
+            /* background-color:white; */
         }
 
         .input-box input {
-            width: 350px;
-            padding: 20px;
+            width: 320px;
+            padding: 15px;
             margin-bottom: 20px;
             border-radius: 30px;
             border: 1px solid #FF007F;
@@ -463,13 +464,15 @@
 
         .input-box input::placeholder {
             color: grey;
-            font-size: 20px;
+            font-size: 13px;
             font-weight: bold;
         }
 
         .form2 h4 {
-            font-size: 20px;
+            font-size: 18px;
             font-family: sans-serif;
+            margin-bottom: 20px;
+            margin-top: 30px;
         }
 
         .form2 {
@@ -480,6 +483,7 @@
             font-size: 18px;
             font-family: sans-serif;
             padding: 10px;
+            margin-bottom: 20px;
         }
 
         .form2 textarea {
@@ -494,17 +498,37 @@
             text-align: center;
         }
 
+        .form-get-in-touch {
+            background-color: white;
+        }
+
         .get-in-touch button {
-            position: absolute;
-            bottom: 20px;
-            left: 40%;
             width: 20%;
             padding: 10px;
             background-color: #000080;
             color: #FF007F;
             border-radius: 50px;
             font-size: 20px;
+            margin-bottom: 30px;
         }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 3px;
+            margin-top: -5px;
+            margin-left: 5px;
+        }
+
+        .get-close-btn i {
+            position: fixed;
+            top: 0;
+            right: 0;
+            font-size: 40px;
+            color: black;
+        }
+
 
 
         @media(max-width:1024px) {
@@ -535,13 +559,14 @@
                 padding: 5px;
                 width: 100%;
             }
+
             .suggestions {
-        position: absolute;
-        top:40%;
-        width: 40%;
-        max-height: 300px;
-    }
-    
+                position: absolute;
+                top: 40%;
+                width: 40%;
+                max-height: 300px;
+            }
+
             .search-box button {
                 transform: translateX(-20px);
                 font-size: 10px;
@@ -549,8 +574,36 @@
             }
 
             .get-in-touch {
-                width: 80%;
+                width: 58%;
             }
+
+            .input-box input {
+                width: 250px;
+            }
+
+            .input-box input::placeholder {
+                font-size: 10px;
+            }
+
+            .form2 h4 {
+                font-size: 15px;
+            }
+
+            .form2 label {
+                font-size: 15px;
+            }
+
+            .form2 textarea {
+                width: 300px;
+
+            }
+
+            .get-in-touch button {
+                width: 30%;
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
+
         }
 
         @media(max-width:768px) {
@@ -618,12 +671,13 @@
                 font-size: 10px;
                 width: 30%;
             }
+
             .suggestions {
-        position: absolute;
-        top:30%;
-        width: 50%;
-        max-height: 300px;
-    }
+                position: absolute;
+                top: 30%;
+                width: 50%;
+                max-height: 300px;
+            }
 
 
             #event-description p {
@@ -672,6 +726,10 @@
 
             .footer5 h3 {
                 font-size: 20px;
+            }
+
+            .popup {
+                width: 50%;
             }
         }
 
@@ -730,12 +788,13 @@
                 width: 100%;
                 margin: auto;
             }
+
             .suggestions {
-        position: absolute;
-        top:35%;
-        width: 50%;
-        max-height: 300px;
-    }
+                position: absolute;
+                top: 35%;
+                width: 50%;
+                max-height: 300px;
+            }
 
 
             .search-box button {
@@ -846,7 +905,7 @@
         </nav>
     </header>
     <section class="search-box">
-        <input type="text" placeholder="Search"  id="searchInput">
+        <input type="text" placeholder="Search" id="searchInput">
         <div class="suggestions" id="suggestionsBox"></div>
         <button type="submit" id="getQuoteBtn">GET A QUOTE</button>
     </section>
@@ -890,64 +949,78 @@
     </div>
 
 
-   
+
 
     <!-- get a quote -->
     <section class="get-in-touch" id="getInTouchForm">
-        <img src="assets/images/indexpage-images/image-6.png">
-        <form>
+        <form class="form-get-in-touch" id="getInTouchFormID">
+            <div class="get-close-btn">
+                <i class='bx bx-x' id="closeGetInTouch"></i>
+            </div>
             <div class="form-apply">
                 <div class="get-in-touch-form">
                     <div class="input-box">
-                        <input type="text" placeholder="First & Last name">
+                        <input type="text" id="fullName" placeholder="First & Last Name">
+                        <span class="error-message" id="fullNameError"></span>
                     </div>
                     <div class="input-box">
-                        <input type="number" placeholder="Mobile">
+                        <input type="number" id="mobileNumber" placeholder="Mobile">
+                        <span class="error-message" id="mobileNumberError"></span>
                     </div>
                     <div class="input-box">
-                        <input type="mail" placeholder="Email id">
+                        <input type="email" id="emailAddress" placeholder="Email ID">
+                        <span class="error-message" id="emailAddressError"></span>
                     </div>
                     <div class="input-box">
-                        <input type="text" placeholder="Wedding or Special Event Date">
+                        <input type="text" id="eventDate" placeholder="Wedding or Special Event Date">
+                        <span class="error-message" id="eventDateError"></span>
                     </div>
                     <div class="input-box">
-                        <input type="text" placeholder="Event Location (Or Considering)">
+                        <input type="text" id="eventLocation" placeholder="Event Location (Or Considering)">
+                        <span class="error-message" id="eventLocationError"></span>
                     </div>
                     <div class="input-box">
-                        <input type="text" placeholder="How Many Guest Are You Expecting">
+                        <input type="text" id="guestCount" placeholder="How Many Guests Are You Expecting">
+                        <span class="error-message" id="guestCountError"></span>
                     </div>
                     <div class="input-box">
-                        <input type="text" placeholder="Who is your Caterer if Decided?">
+                        <input type="text" id="caterer" placeholder="Who is your Caterer if Decided?">
+                        <span class="error-message" id="catererError"></span>
                     </div>
                 </div>
                 <div class="form2">
                     <h4>Package Interested In? (Select all that apply)</h4>
-                    <input type="checkbox">
-                    <label>Full Planning + Design-Wedding</label><br>
-                    <input type="checkbox">
-                    <label>Custom Quote Celebration - Corporate Party,Engagement Party,Birthday,Bat/Bar Mitzvah,Special
-                        Celebration</label><br>
-                    <input type="checkbox">
-                    <label>The Bubbly Bar</label><br>
-                    <input type="checkbox">s
-                    <label>Unsure,Lets Chat</label>
-                    <h4>
-                        More Details the Better - Tell us more of how we can help,your Vision and any details you know
-                        now
-                    </h4>
-                    <textarea name="msg" id="msg" cols="20" rows="20">Your Message</textarea>
+                    <input type="checkbox" id="package1">
+                    <label for="package1">Full Planning + Design-Wedding</label><br>
+                    <input type="checkbox" id="package2">
+                    <label for="package2">Custom Quote Celebration - Corporate Party, Engagement Party, Birthday,
+                        Bat/Bar Mitzvah, Special Celebration</label><br>
+                    <input type="checkbox" id="package3">
+                    <label for="package3">The Bubbly Bar</label><br>
+                    <input type="checkbox" id="package4">
+                    <label for="package4">Unsure, Let's Chat</label>
 
+                    <h4>More Details - Tell us how we can help</h4>
+                    <textarea name="msg" id="messageBox" cols="20" rows="5" placeholder="Your Message..."></textarea>
+                    <span class="error-message" id="messageBoxError"></span>
                 </div>
             </div>
             <div class="get-in-touch-btn">
-                <button type="submit">Get A Quote</button>
+                <button type="submit" id="submitGetInTouch">Get A Quote</button>
             </div>
         </form>
     </section>
+
+
+    <div class="popup" id="get-in-touch-popup">
+        <img src="assets/images/indexpage-images/mn-logo.jpeg">
+        <p>Thank you for contacting us!</p>
+        <p>Our Experts will revert you back ASAP!</p>
+    </div>
     <footer>
         <div class="footer-container">
             <div class="footer footer1">
-                <img src="assets/images/indexpage-images/logo.jpeg">
+                <img src="assets/images/indexpage-images/mn-logo.jpeg">
             </div>
             <div class="footer footer2">
                 <h2>QUICK LINKS</h2>
