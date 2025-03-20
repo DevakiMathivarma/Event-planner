@@ -78,6 +78,13 @@ document.getElementById("login-form").addEventListener("submit", function (event
 
     // If all validations pass, show popup and reset form
     if (isValid) {
+        let userData = {
+            name: name,
+            contact: contact,
+            email: email,
+            password: password
+        };
+        localStorage.setItem("user", JSON.stringify(userData));
         document.getElementById("popup").style.display = "block"; // Show popup
         setTimeout(() => {
             document.getElementById("popup").style.display = "none"; // Hide popup after 3 seconds
