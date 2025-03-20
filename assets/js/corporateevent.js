@@ -5,110 +5,85 @@
         btn.addEventListener('click', () => {
             navlinks.classList.toggle('active')
         })
+
+        // login_form
         
-        const togglebtn = document.getElementById('togglebtn');
-        const form = document.getElementById('form');
-        const form1 = document.getElementById('login-form');
-        const popup = document.getElementById('popup');
-        const closeBtn = document.querySelector('.close i');
-        
-        
-        togglebtn.addEventListener('click', () => {
-            form.classList.toggle('active');
+        document.getElementById("togglebtn").addEventListener("click", function () {
+            let formSection = document.getElementById("form");
+            formSection.style.display = (formSection.style.display === "none" || formSection.style.display === "") ? "block" : "none";
         });
         
-        closeBtn.addEventListener('click', () => {
-            form.classList.remove('active');
-            clearErrors()
+        
+        document.querySelector(".close i").addEventListener("click", function () {
+            document.getElementById("form").style.display = "none";
         });
-        function clearErrors() {
-            document.querySelectorAll('.error').forEach(error => error.textContent = ""); 
-            document.querySelectorAll('.input input').forEach(input => input.style.border = ""); 
-        }
         
+        document.getElementById("contact").addEventListener("input", function () {
+            let contact = this.value.trim();
+            let contactError = document.getElementById("contact-error");
         
-        // Validation function
-        function validateForm() {
+            if (!/^\d{10}$/.test(contact)) {
+                contactError.innerText = "Enter a valid 10-digit contact number";
+            } else {
+                contactError.innerText = ""; // Remove error when valid
+            }
+        });
+        
+        // Form Validation on Submit
+        document.getElementById("login-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
+        
             let isValid = true;
         
-            // Selecting input fields and error message spans
-            const name = document.getElementById('name');
-            const contact = document.getElementById('contact');
-            const email = document.getElementById('email');
-            const password = document.getElementById('password');
+            // Get input values
+            let name = document.getElementById("name").value.trim();
+            let contact = document.getElementById("contact").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value.trim();
         
-            const nameError = document.getElementById('name-error');
-            const contactError = document.getElementById('contact-error');
-            const emailError = document.getElementById('email-error');
-            const passwordError = document.getElementById('password-error');
+            // Get error elements
+            let nameError = document.getElementById("name-error");
+            let contactError = document.getElementById("contact-error");
+            let emailError = document.getElementById("email-error");
+            let passwordError = document.getElementById("password-error");
         
-            // Name validation
-            if (name.value.trim() === "") {
-                nameError.textContent = "Enter your name";
-                name.style.border = "2px solid red";
-                isValid = false;
-            } else {
-                nameError.textContent = "";
-                name.style.border = "2px solid green";
-            }
+            // Clear previous errors
+            nameError.innerText = "";
+            contactError.innerText = "";
+            emailError.innerText = "";
+            passwordError.innerText = "";
         
-            // Contact validation (only numbers)
-            if (/^\d{10}$/.test(contact.value.trim())) {
-                contactError.textContent = "";
-                contact.style.border = "2px solid green";
-            } else {
-                contactError.textContent = "Enter a valid 10-digit number";
-                contact.style.border = "2px solid red";
+            // Name Validation: Must be at least 3 characters and contain only letters
+            if (name.length < 3 || !/^[a-zA-Z ]+$/.test(name)) {
+                nameError.innerText = "Enter a valid name (at least 3 letters)";
                 isValid = false;
             }
         
-            // Email validation
-            if (email.value.trim().includes("@") && email.value.trim().includes(".")) {
-                emailError.textContent = "";
-                email.style.border = "2px solid green";
-            } else {
-                emailError.textContent = "Enter a valid email";
-                email.style.border = "2px solid red";
+            // Contact Validation: Must be exactly 10-digit number
+            if (!/^\d{10}$/.test(contact)) {
+                contactError.innerText = "Enter a valid 10-digit contact number";
                 isValid = false;
             }
         
-            // Password validation (minimum 8 characters)
-            if (password.value.length < 8) {
-                passwordError.textContent = "Password must be at least 8 characters";
-                password.style.border = "2px solid red";
+            // Email Validation: Must follow correct email pattern
+            if (!/^\S+@\S+\.\S+$/.test(email)) {
+                emailError.innerText = "Enter a valid email address";
                 isValid = false;
-            } else {
-                passwordError.textContent = "";
-                password.style.border = "2px solid green";
             }
         
-            return isValid;
-        }
+            // Password Validation: Must be at least 6 characters long
+            if (password.length < 6) {
+                passwordError.innerText = "Password must be at least 6 characters";
+                isValid = false;
+            }
         
-        // Form submission with validation
-        form1.addEventListener('submit', (event) => {
-            event.preventDefault();
-        
-            if (validateForm()) {
-        
-                const userData = {
-                    name: document.getElementById('name').value.trim(),
-                    contact: document.getElementById('contact').value.trim(),
-                    email: document.getElementById('email').value.trim(),
-                    password: document.getElementById('password').value.trim(),
-                };
-        
-                localStorage.setItem('userData', JSON.stringify(userData));
-        
-                popup.style.display = "flex";
-        
+            // If all validations pass, show popup and reset form
+            if (isValid) {
+                document.getElementById("popup").style.display = "block"; // Show popup
                 setTimeout(() => {
-                    popup.style.display = "none";
-                    form.classList.remove('active');
+                    document.getElementById("popup").style.display = "none"; // Hide popup after 3 seconds
                 }, 3000);
-        
-                form1.reset();
+                document.getElementById("login-form").reset(); // Clear form
+                document.getElementById("form").style.display = "none"; // Hide form after submission
             }
         });
-        
-        

@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* navigation bar css */
 nav {
     background-color: #000080;
 }
@@ -72,7 +72,7 @@ nav .container .nav-links {
     background: none;
     border: none;
 }
-
+/* two column-layout css */
 .two-column-layout {
     display: flex;
     width: 90%;
@@ -120,7 +120,7 @@ nav .container .nav-links {
 .two-column-layout .lastpara {
     margin-top: 30px;
 }
-
+/* service section css */
 .service {
     margin-top: 20px;
 }
@@ -177,7 +177,7 @@ nav .container .nav-links {
     border-bottom-right-radius: 15px;
 
 }
-
+/* key-features section css */
 .key-features {
     margin-top: 20px;
 }
@@ -245,6 +245,8 @@ nav .container .nav-links {
     margin: auto;
     font-weight: 500;
 }
+/* tech-ability section css */
+
 .tech-ability {
     margin-top: 20px;
 }
@@ -294,6 +296,7 @@ nav .container .nav-links {
     width:90%;
     margin:auto;
 }
+/* login_form */
 .form {
     background-color: #000080;
     width: 40%;
@@ -332,7 +335,7 @@ nav .container .nav-links {
 .input i {
     position: absolute;
     top: 12px;
-    left: 10px;
+    right: 10px;
     color: grey;
 
 }
@@ -397,6 +400,7 @@ input::placeholder {
     font-family: sans-serif;
     color: white;
 }
+/* footer css */
 footer {
     background-color: #000080;
     padding-top:50px;

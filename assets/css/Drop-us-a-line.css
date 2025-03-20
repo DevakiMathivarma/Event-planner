@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* navigation bar css */
 nav {
     background-color: #000080;
 }
@@ -90,7 +90,7 @@ nav .container .nav-links {
 .banner img {
     width: 100%;
 }
-
+/*contact form  */
 .form-fill {
     text-align: center;
     margin-top: 40px;
@@ -150,7 +150,7 @@ flex-direction: column; */
     border: none;
     border-radius: 30px;
 }
-
+/* login_form css */
 .form {
     background-color: #000080;
     width: 40%;
@@ -190,7 +190,7 @@ flex-direction: column; */
 .input i {
     position: absolute;
     top: 12px;
-    left: 10px;
+    right: 10px;
     color: grey;
 
 }
@@ -255,7 +255,7 @@ input::placeholder {
     font-family: sans-serif;
     color: white;
 }
-
+/* footer section css */
 footer {
     background-color: #000080;
     padding-top: 50px;
