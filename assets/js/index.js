@@ -30,11 +30,16 @@ btn.addEventListener('click', () => {
 document.getElementById("togglebtn").addEventListener("click", function () {
     let formSection = document.getElementById("form");
     formSection.style.display = (formSection.style.display === "none" || formSection.style.display === "") ? "block" : "none";
+    
 });
 
 
 document.querySelector(".close i").addEventListener("click", function () {
     document.getElementById("form").style.display = "none";
+    document.getElementById("name-error").innerText = "";
+    document.getElementById("contact-error").innerText = "";
+    document.getElementById("email-error").innerText = "";
+    document.getElementById("password-error").innerText = "";
 });
 
 document.getElementById("contact").addEventListener("input", function () {
@@ -91,8 +96,8 @@ document.getElementById("login-form").addEventListener("submit", function (event
     }
 
     // Password Validation: Must be at least 6 characters long
-    if (password.length < 6) {
-        passwordError.innerText = "Password must be at least 6 characters";
+    if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)) {
+        passwordError.innerText = "Includes 1uppercase,1 lowercase,1 number, and1 special character";
         isValid = false;
     }
 
