@@ -80,6 +80,7 @@ nav .container .nav-links {
     width: 90%;
     margin: auto;
     margin-top: 20px;
+    margin-right: 30px;
 }
 
 .search-box input {
@@ -208,7 +209,8 @@ nav .container .nav-links {
 
 .service .service-events {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(3,1fr);
     gap: 40px;
     margin-top: 20px;
 }
@@ -223,7 +225,10 @@ nav .container .nav-links {
 .service-events-list-content {
     padding: 30px;
 }
-
+.service-events-list-a{
+    padding: 10px;
+    margin-bottom: 20px;
+}
 .service-events-list-content h2 {
     font-family: sans-serif;
     font-size: 25px;
@@ -233,24 +238,28 @@ nav .container .nav-links {
 .service-events-list-content p {
     font-family: sans-serif;
     font-size: 20px;
-    margin-bottom: 40px;
 }
-
-.service-events-list-content a {
+.service-events-list-content .align{
+    margin-bottom: 20px;
+}
+.service-events-list a {
     text-decoration: none;
     background-color: #000080;
     color: #FF007F;
     padding: 18px;
+    padding-left: 25px;
+    padding-right: 25px;
     font-family: sans-serif;
     font-size: 18px;
     border-radius: 30px;
     font-weight: bold;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     transition: 1s ease-in-out;
+    cursor: pointer;
 
 }
 
-.service-events-list-content a:hover {
+.service-events-list a:hover {
     background-color: #FF007F;
     color: black;
 }
@@ -634,7 +643,7 @@ footer {
 
 
 
-@media(max-width:1024px) {
+@media(max-width:1024px){
     .nav-links li a {
         font-size: 15px;
         padding: 5px;
@@ -650,11 +659,11 @@ footer {
     }
 
     .logo img {
-        width: 90px;
+        width: 70px;
     }
 
     .container button {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .container button i {
@@ -1133,3 +1142,4 @@ footer {
         font-size: 18px;
     }
 }
+
