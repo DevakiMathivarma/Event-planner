@@ -1528,7 +1528,7 @@ footer {
     }
     
 }
-@media (min-width: 1401px) and (max-width: 1600px){
+@media (min-width: 1401px) and (max-width: 1500px){
     .nav-links li a {
         font-size: 20px;
         padding: 20px;
