@@ -661,11 +661,11 @@ footer {
 }
 
 
-
+/* 
 @media(max-width:1500px){
     .nav-links li a {
         font-size: 20px;
-        padding: 20px;
+        padding: 10px;
     }
 
     .nav-links {
@@ -1187,9 +1187,9 @@ footer {
     .caption h2 {
         font-size: 18px;
     }
-}
+} */
 
-/* @media(min-width:320px) and (max-width:767px) {
+@media(min-width:320px) and (max-width:767px) {
 
     nav .container .nav-links {
         display: none;
@@ -1528,9 +1528,9 @@ footer {
     }
     
 }
-@media (min-width: 1401px) and (max-width: 1500px){
+@media (min-width: 1401px) and (max-width: 1700px){
     .nav-links li a {
-        font-size: 20px;
+        font-size: 25px;
         padding: 20px;
     }
 
@@ -1548,7 +1548,7 @@ footer {
     }
 
     .container button {
-        font-size: 18px;
+        font-size: 23px;
     }
 
     .container button i {
@@ -1563,4 +1563,4 @@ footer {
         font-size: 2rem;
     }
 
-} */
+}
