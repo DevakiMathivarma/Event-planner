@@ -1528,9 +1528,9 @@ footer {
     }
     
 }
-@media (min-width: 1401px) and (max-width: 1700px){
+@media (min-width: 1401px) and (max-width: 1600px){
     .nav-links li a {
-        font-size: 25px;
+        font-size: 20px;
         padding: 20px;
     }
 
@@ -1544,7 +1544,7 @@ footer {
     }
 
     .logo img {
-        width: 90px;
+        width: 130px;
     }
 
     .container button {
