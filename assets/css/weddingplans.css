@@ -56,11 +56,11 @@ nav {
 
 .container button i {
     color: white;
-    font-size: 28px;
+    font-size: 25px;
 }
 
 .logo img {
-    width: 150px;
+    width: 120px;
 }
 
 nav .container .nav-links {
@@ -421,7 +421,7 @@ footer {
     text-decoration: none;
     color: #FF007F;
     padding: 5px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: sans-serif;
     font-weight: bolder;
 
@@ -447,7 +447,7 @@ footer {
 .footer4 p {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .footer4 p i {
@@ -463,7 +463,7 @@ footer {
 .footer5 h3 {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 25px;
+    font-size: 23px;
     margin-bottom: 20px;
     margin-top: 20px;
 
@@ -472,7 +472,7 @@ footer {
 .footer5 p {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 
 }
 
@@ -482,6 +482,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .WhatsApp i {
@@ -490,6 +491,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .instagram i {
@@ -498,6 +500,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .facebook i {
@@ -506,6 +509,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .twitter i {
@@ -514,6 +518,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 @media(max-width:1024px) {

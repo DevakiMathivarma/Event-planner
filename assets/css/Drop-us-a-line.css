@@ -10,15 +10,19 @@ nav {
 
 .container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content:center;
+
     align-items: center;
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
 }
 
 .nav-links {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    padding: 10px;
+    width: 100%;
 }
 
 .nav-links li {
@@ -31,8 +35,8 @@ nav {
     color: #FF007F;
     font-family: sans-serif;
     font-weight: bold;
-    padding: 25px;
-    font-size: 20px;
+    padding: 11px;
+    font-size: 18px;
     text-decoration: none;
 
 }
@@ -52,11 +56,11 @@ nav {
 
 .container button i {
     color: white;
-    font-size: 28px;
+    font-size: 25px;
 }
 
 .logo img {
-    width: 150px;
+    width: 120px;
 }
 
 nav .container .nav-links {
@@ -78,7 +82,7 @@ nav .container .nav-links {
 }
 
 .heading h2 {
-    font-size: 40px;
+    font-size: 35px;
     font-family: sans-serif;
     font-weight: bold;
 }
@@ -149,6 +153,12 @@ flex-direction: column; */
     background-color: #FF007F;
     border: none;
     border-radius: 30px;
+    cursor:pointer;
+    transition: 0.5s ease-in-out;
+}
+.btn button:hover{
+    background-color: #000080;
+    color:#FF007F
 }
 /* login_form css */
 .form {
@@ -277,7 +287,7 @@ footer {
     text-decoration: none;
     color: #FF007F;
     padding: 5px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: sans-serif;
     font-weight: bolder;
 
@@ -297,7 +307,7 @@ footer {
 .footer h2 {
     color: #FF007F;
     font-family: sans-serif;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .footer4 p {
@@ -319,7 +329,7 @@ footer {
 .footer5 h3 {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 25px;
+    font-size: 23px;
     margin-bottom: 20px;
     margin-top: 20px;
 
@@ -328,7 +338,7 @@ footer {
 .footer5 p {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 
 }
 
@@ -338,6 +348,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .WhatsApp i {
@@ -346,6 +357,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .instagram i {
@@ -354,6 +366,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .facebook i {
@@ -362,6 +375,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .twitter i {
@@ -370,6 +384,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 @media(max-width:1024px) {

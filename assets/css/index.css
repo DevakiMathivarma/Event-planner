@@ -58,11 +58,11 @@ nav {
 
 .container button i {
     color: white;
-    font-size: 28px;
+    font-size: 25px;
 }
 
 .logo img {
-    width: 150px;
+    width: 120px;
 
 }
 
@@ -136,6 +136,7 @@ nav .container .nav-links {
     background-color: #FF007F;
     border: none;
     padding: 10px;
+    cursor: pointer;
 
 }
 
@@ -218,7 +219,6 @@ nav .container .nav-links {
 
 .service .service-events {
     display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     margin-top: 20px;
@@ -233,7 +233,7 @@ nav .container .nav-links {
 }
 
 .service-events-list-content {
-    padding: 30px;
+    padding: 15px;
 }
 
 .service-events-list-a {
@@ -249,14 +249,13 @@ nav .container .nav-links {
 
 .service-events-list-content h2 {
     font-family: sans-serif;
-    font-size: 25px;
+    font-size: 23px;
     margin-bottom: 5px;
 }
 
 .service-events-list-content p {
     font-family: sans-serif;
-    font-size: 20px;
-}
+    font-size: 18px;}
 
 
 
@@ -268,7 +267,7 @@ nav .container .nav-links {
     padding-left: 25px;
     padding-right: 25px;
     font-family: sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     border-radius: 30px;
     font-weight: bold;
     /* margin-bottom: 20px; */
@@ -284,6 +283,10 @@ nav .container .nav-links {
 
 .service .service-events-list img {
     width: 100%;
+}
+.service-events-list:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* two column layout css */
@@ -570,7 +573,7 @@ footer {
     text-decoration: none;
     color: #FF007F;
     padding: 5px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: sans-serif;
     font-weight: bolder;
 
@@ -596,7 +599,7 @@ footer {
 .footer4 p {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .footer4 p i {
@@ -612,7 +615,7 @@ footer {
 .footer5 h3 {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 25px;
+    font-size: 23px;
     margin-bottom: 20px;
     margin-top: 20px;
 
@@ -621,7 +624,7 @@ footer {
 .footer5 p {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 
 }
 
@@ -631,6 +634,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .WhatsApp i {
@@ -639,6 +643,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .instagram i {
@@ -647,6 +652,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .facebook i {
@@ -655,6 +661,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .twitter i {
@@ -663,6 +670,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 

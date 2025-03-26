@@ -11,15 +11,19 @@ nav {
 
 .container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content:center;
+
     align-items: center;
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
 }
 
 .nav-links {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    padding: 10px;
+    width: 100%;
 }
 
 .nav-links li {
@@ -32,8 +36,8 @@ nav {
     color: #FF007F;
     font-family: sans-serif;
     font-weight: bold;
-    padding: 25px;
-    font-size: 20px;
+    padding: 11px;
+    font-size: 18px;
     text-decoration: none;
 
 }
@@ -53,11 +57,11 @@ nav {
 
 .container button i {
     color: white;
-    font-size: 28px;
+    font-size: 25px;
 }
 
 .logo img {
-    width: 150px;
+    width: 120px;
 
 }
 
@@ -98,7 +102,7 @@ nav .container .nav-links {
 .behind-the-scenes h3 {
     text-align: center;
     font-family: sans-serif;
-    font-size: 23px;
+    font-size: 20px;
     text-decoration: underline;
     margin-bottom: 50px;
 }
@@ -108,21 +112,40 @@ nav .container .nav-links {
     justify-content: center;
     align-items: center;
     gap: 50px;
+   
+    width:90%;
+    max-width: 1200px;
+    margin:auto;
+}
+.coporate-events{
     margin-bottom: 30px;
 }
 
 .coporate-events .image1 {
     border-radius: 50px;
-    width: 400px;
-    height: 350px;
+    width: 340px;
+    height: 310px;
 }
-
+.coporate-events img{
+    width:100%;
+    height:auto;
+}
 .wedding-day-disasters {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
+    width:90%;
+    max-width: 1200px;
+    margin:auto;
+  
+}
+.wedding-day-disasters{
     margin-bottom: 30px;
+}
+.wedding-day-disasters img{
+    width:100%;
+    height:auto;
 }
 
 .coporate-events img,.wedding-day-disasters img {
@@ -269,7 +292,7 @@ footer {
     text-decoration: none;
     color: #FF007F;
     padding: 5px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: sans-serif;
     font-weight: bolder;
 
@@ -295,7 +318,7 @@ footer {
 .footer4 p {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .footer4 p i {
@@ -311,7 +334,7 @@ footer {
 .footer5 h3 {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 25px;
+    font-size: 23px;
     margin-bottom: 20px;
     margin-top: 20px;
 
@@ -320,7 +343,7 @@ footer {
 .footer5 p {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 
 }
 
@@ -330,6 +353,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .WhatsApp i {
@@ -338,6 +362,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .instagram i {
@@ -346,6 +371,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .facebook i {
@@ -354,6 +380,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .twitter i {
@@ -362,6 +389,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 @media(max-width:1024px) {

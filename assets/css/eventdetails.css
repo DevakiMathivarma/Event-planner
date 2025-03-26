@@ -10,15 +10,19 @@ nav {
 
 .container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content:center;
+
     align-items: center;
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
 }
 
 .nav-links {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    padding: 10px;
+    width: 100%;
 }
 
 .nav-links li {
@@ -31,8 +35,8 @@ nav {
     color: #FF007F;
     font-family: sans-serif;
     font-weight: bold;
-    padding: 25px;
-    font-size: 20px;
+    padding: 11px;
+    font-size: 18px;
     text-decoration: none;
 
 }
@@ -52,11 +56,11 @@ nav {
 
 .container button i {
     color: white;
-    font-size: 28px;
+    font-size: 25px;
 }
 
 .logo img {
-    width: 150px;
+    width: 120px;
 
 }
 
@@ -85,7 +89,7 @@ nav .container .nav-links {
 }
 
 .search-box input {
-    width: 70%;
+    width: 80%;
     padding: 20px;
     border-radius: 20px;
     border: 1px solid darkblue;
@@ -93,7 +97,7 @@ nav .container .nav-links {
 }
 
 .search-box input::placeholder {
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .suggestions {
@@ -125,13 +129,20 @@ nav .container .nav-links {
     border-radius: 20px;
     width: 15%;
     margin: auto;
-    font-size: 20px;
+    font-size:18px;
     font-weight: bold;
     background-color: #FF007F;
     border: none;
     padding: 20px;
+    cursor:pointer;
+    transition: all 0.3s ease-in-out;
 
 }
+.search-box button:hover {
+    background-color: #FF1493; /* Lighter pink */
+    transform: scale(1.1); /* Slightly enlarge */
+}
+
 
 .form {
     background-color: #000080;
@@ -245,7 +256,7 @@ footer {
     text-decoration: none;
     color: #FF007F;
     padding: 5px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: sans-serif;
     font-weight: bolder;
 
@@ -271,7 +282,7 @@ footer {
 .footer4 p {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .footer4 p i {
@@ -287,7 +298,7 @@ footer {
 .footer5 h3 {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 25px;
+    font-size: 23px;
     margin-bottom: 20px;
     margin-top: 20px;
 
@@ -296,7 +307,7 @@ footer {
 .footer5 p {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 
 }
 
@@ -306,6 +317,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .WhatsApp i {
@@ -314,6 +326,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .instagram i {
@@ -322,6 +335,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .facebook i {
@@ -330,6 +344,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .twitter i {
@@ -338,6 +353,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 

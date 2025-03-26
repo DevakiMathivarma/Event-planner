@@ -10,15 +10,19 @@ nav {
 
 .container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content:center;
+
     align-items: center;
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
 }
 
 .nav-links {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    padding: 10px;
+    width: 100%;
 }
 
 .nav-links li {
@@ -31,8 +35,8 @@ nav {
     color: #FF007F;
     font-family: sans-serif;
     font-weight: bold;
-    padding: 25px;
-    font-size: 20px;
+    padding: 11px;
+    font-size: 18px;
     text-decoration: none;
 
 }
@@ -52,11 +56,11 @@ nav {
 
 .container button i {
     color: white;
-    font-size: 28px;
+    font-size: 25px;
 }
 
 .logo img {
-    width: 150px;
+    width: 120px;
 
 }
 
@@ -75,9 +79,10 @@ nav .container .nav-links {
 /* two column-layout css */
 .two-column-layout {
     display: flex;
-    width: 90%;
+    width: 100%;
     margin: auto;
     position: relative;
+    max-width: 1200px;
 
 }
 
@@ -105,20 +110,23 @@ nav .container .nav-links {
     }
 }
 .two-column-layout .para{
-    margin-left: 20px;
+    margin-left:5px;
 }
 
 .two-column-layout .para p {
     text-align: left;
-    font-size: 25px;
+    font-size: 22px;
     font-family: sans-serif;
-    width: 90%;
+    width: 100%;
     padding: 10px;
     font-weight: lighter;
 }
 
 .two-column-layout .lastpara {
     margin-top: 30px;
+}
+.two-column-layout .para2{
+    margin-top: 20px;
 }
 /* service section css */
 .service {
@@ -147,9 +155,10 @@ nav .container .nav-links {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 50px;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     margin: auto;
     padding: 20px;
+    max-width: 1200px;
 }
 
 .service-item {
@@ -205,12 +214,13 @@ nav .container .nav-links {
 
 .key-features-events {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     margin: auto;
     padding: 20px;
+    max-width: 1200px;
 }
 
 .key-features-events-list {
@@ -236,7 +246,7 @@ nav .container .nav-links {
 }
 
 .key-features-events-list h3 {
-    font-size: 22px;
+    font-size: 20px;
     font-family: sans-serif;
     text-align: center;
     text-decoration: underline;
@@ -244,7 +254,7 @@ nav .container .nav-links {
 }
 
 .key-features-events-list ul li {
-    font-size: 20px;
+    font-size: 18px;
     font-family: sans-serif;
     width: 85%;
     margin: auto;
@@ -261,7 +271,7 @@ nav .container .nav-links {
 }
 
 .tech-ability .tech-ability-heading h2 {
-    font-size: 40px;
+    font-size: 35px;
     font-family: sans-serif;
     font-weight: bold;
     margin-bottom: 20px;
@@ -428,7 +438,7 @@ footer {
     text-decoration: none;
     color: #FF007F;
     padding: 5px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: sans-serif;
     font-weight: bolder;
 
@@ -452,7 +462,7 @@ footer {
 .footer4 p {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 .footer4 p i{
     color:white;
@@ -467,7 +477,7 @@ footer {
 .footer5 h3 {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 25px;
+    font-size: 23px;
     margin-bottom: 20px;
     margin-top: 20px;
 
@@ -476,7 +486,7 @@ footer {
 .footer5 p {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 
 }
 .footer5 .youtube i{
@@ -485,6 +495,7 @@ footer {
     padding:5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 .footer5 .WhatsApp i{
     color:white;
@@ -492,6 +503,7 @@ footer {
     padding:5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 .footer5 .instagram i{
     color:white;
@@ -499,6 +511,7 @@ footer {
     padding:5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 .footer5 .facebook i{
     color:white;
@@ -506,6 +519,7 @@ footer {
     padding:5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 .footer5 .twitter i{
     color:white;
@@ -513,6 +527,7 @@ footer {
     padding:5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 @media(max-width:1024px) {
     .nav-links li a {

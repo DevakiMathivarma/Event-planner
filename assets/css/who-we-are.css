@@ -10,15 +10,19 @@ nav {
 
 .container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content:center;
+
     align-items: center;
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
 }
 
 .nav-links {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    padding: 10px;
+    width: 100%;
 }
 
 .nav-links li {
@@ -31,8 +35,8 @@ nav {
     color: #FF007F;
     font-family: sans-serif;
     font-weight: bold;
-    padding: 25px;
-    font-size: 20px;
+    padding: 11px;
+    font-size: 18px;
     text-decoration: none;
 
 }
@@ -52,11 +56,11 @@ nav {
 
 .container button i {
     color: white;
-    font-size: 28px;
+    font-size: 25px;
 }
 
 .logo img {
-    width: 150px;
+    width: 120px;
 }
 
 nav .container .nav-links {
@@ -118,9 +122,10 @@ nav .container .nav-links {
 /* who we are awsome events css */
 .who-we-are-awesome-events {
     display: flex;
-    width: 80%;
+    width: 90%;
     margin: auto;
-    gap: 40px;
+    gap: 50px;
+    max-width: 1200px;
 
 }
 
@@ -129,31 +134,41 @@ nav .container .nav-links {
     margin-bottom: 30px;
 }
 
-.column2 h2 {
+.column2 .heading {
     margin-top: 20px;
-    font-size: 30px;
+    font-size: 27px;
     font-family: sans-serif;
+   margin-left: 150px;
 
 }
-
+.column1 img{
+    width:350px;
+    height:510px;
+}
 .column2 .awsomeEvents {
     text-decoration: underline;
     margin-bottom: 10px;
+    font-size: 23px;
+    font-family: sans-serif;
+    margin-left: 40px;
+
+
 }
 
 .column2 p {
-    font-size: 25px;
+    margin-top: 10px;
+    font-size: 22px;
     font-family: sans-serif;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: left;
-    width: 80%;
+    width: 85%;
     word-spacing: 5px;
 }
 
 .column2 button {
     width: 25%;
     background-color: #FF007F;
-    padding: 15px;
+    padding: 18px;
     border: none;
     border-radius: 20px;
     font-size: 20px;
@@ -170,14 +185,14 @@ nav .container .nav-links {
     text-align: center;
     font-size: 25px;
     font-family: sans-serif;
-    font-weight: bolder;
+    font-weight: 700;
     margin-bottom: 20px;
 
 }
 
 .Event-planner .heading1 {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     font-family: sans-serif;
     font-weight: bolder;
     margin-bottom: 30px;
@@ -187,10 +202,11 @@ nav .container .nav-links {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    width: 95%;
+    gap: 70px;
+    width: 100%;
     margin: auto;
     text-align: center;
+    max-width: 1200px;
 
 }
 
@@ -201,7 +217,7 @@ nav .container .nav-links {
 }
 
 .event-planner-experience h3 {
-    font-size: 23px;
+    font-size: 20px;
     font-weight: bolder;
     font-family: sans-serif;
     margin-bottom: 5px;
@@ -211,7 +227,7 @@ nav .container .nav-links {
     font-size: 20px;
     font-weight: bolder;
     font-family: sans-serif;
-    width: 400px;
+    width: 320px;
 }
 /* about us css */
 .about-us {
@@ -220,12 +236,16 @@ nav .container .nav-links {
     gap: 40px;
     width: 80%;
     margin: auto;
+    max-width: 1200px;
 }
 
 .about-us {
     margin-top: 50px;
 }
-
+.about-image img{
+    max-width: 1200px;
+    width:100%;
+}
 .about-content {
     text-align: center;
 }
@@ -238,20 +258,21 @@ nav .container .nav-links {
 }
 
 .about-content h2 {
-    font-size: 30px;
+    font-size: 23px;
     font-weight: bolder;
     font-family: sans-serif;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .about-content p {
 
-    font-size: 25px;
+    font-size: 22px;
     font-family: sans-serif;
-    width: 80%;
+    width: 95%;
     margin: auto;
     margin-bottom: 20px;
     word-spacing: 5px;
+    font-weight: 500;
 }
 
 /*      login form     */
@@ -498,7 +519,7 @@ footer {
     text-decoration: none;
     color: #FF007F;
     padding: 5px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: sans-serif;
     font-weight: bolder;
 
@@ -524,7 +545,7 @@ footer {
 .footer4 p {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .footer4 p i {
@@ -540,7 +561,7 @@ footer {
 .footer5 h3 {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 25px;
+    font-size: 23px;
     margin-bottom: 20px;
     margin-top: 20px;
 
@@ -549,7 +570,7 @@ footer {
 .footer5 p {
     color: #FF007F;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 
 }
 
@@ -559,6 +580,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .WhatsApp i {
@@ -567,6 +589,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .instagram i {
@@ -575,6 +598,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .facebook i {
@@ -583,6 +607,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .footer5 .twitter i {
@@ -591,6 +616,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 @media(max-width:1024px) {
