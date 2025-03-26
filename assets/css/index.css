@@ -105,7 +105,7 @@ nav .container .nav-links {
 
 .suggestions {
     position: absolute;
-    top: 23%;
+    top: 30%;
     width: 40%;
     background: white;
     border: 1px solid #ccc;
@@ -131,7 +131,7 @@ nav .container .nav-links {
 .search-box button {
     border-radius: 20px;
     width: 23%;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     background-color: #FF007F;
     border: none;
@@ -242,8 +242,9 @@ nav .container .nav-links {
 }
 .service-events-list-a a{
     position: absolute;
-    bottom :5px;
-    right:33%;
+    bottom :10px;
+    right: 50%;
+    transform: translateX(50%);
 }
 
 .service-events-list-content h2 {
@@ -257,9 +258,7 @@ nav .container .nav-links {
     font-size: 20px;
 }
 
-.service-events-list-content .align {
-    margin-bottom: 20px;
-}
+
 
 .service-events-list a {
     text-decoration: none;
@@ -310,7 +309,7 @@ nav .container .nav-links {
 
 .column1 h2 {
     font-family: sans-serif;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .column1 img {
