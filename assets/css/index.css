@@ -10,12 +10,13 @@ nav {
 
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
 
     align-items: center;
     width: 100%;
-    max-width: 1500px; /* Adjust as needed */
     margin: auto;
+    max-width: 1200px; /* Adjust as needed */
+   
 }
 
 .nav-links {
@@ -23,6 +24,7 @@ nav {
     justify-content: center;
     align-items: center;
     width: 100%;
+    
 }
 
 .nav-links li {
@@ -35,8 +37,8 @@ nav {
     color: #FF007F;
     font-family: sans-serif;
     font-weight: bold;
-    padding: 20px;
-    font-size: 20px;
+    padding: 11px;
+    font-size: 18px;
     text-decoration: none;
 
 }
