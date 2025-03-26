@@ -1292,7 +1292,8 @@ footer {
     .service-events-list-a a{
         position: absolute;
         bottom :10px;
-        right:28%;
+        right: 50%; /* Center alignment */
+        transform: translateX(50%);
         font-size: 15px;
     }
     .two-column-layout {
@@ -1354,8 +1355,8 @@ footer {
 }
 @media (min-width: 768px) and (max-width: 1023px){
     .nav-links li a {
-        font-size: 12px;
-        padding: 5px;
+        font-size: 10px;
+        padding: 7px;
     }
 
     .nav-links {
@@ -1363,7 +1364,7 @@ footer {
     }
 
     .container {
-        width: 100%;
+        width: 90%;
         padding: 20px;
     }
 
@@ -1437,7 +1438,8 @@ footer {
     .service-events-list-a a{
         position: absolute;
         bottom :10px;
-        right:28%;
+        right: 50%;
+        transform: translateX(50%);
         font-size: 15px;
     }
     .service-events-list-content a {
@@ -1493,18 +1495,26 @@ footer {
 }
 @media (min-width: 1024px) and (max-width: 1300px){
     .nav-links li a {
-        font-size: 15px;
-        padding: 5px;
+        font-size: 13px;
+        padding: 7px;
     }
 
     .nav-links {
         padding: 5px;
     }
 
-    .container {
+    /* .container {
         width: 100%;
         padding: 20px;
+    } */
+    .container {
+        width: 85%;
+        padding: 20px;
     }
+    .search-box button {
+        font-size: 15px;
+    }
+
 
     .logo img {
         width: 70px;
@@ -1521,7 +1531,8 @@ footer {
     .service-events-list-a a{
         position: absolute;
         bottom :10px;
-        right:25%;
+        right: 50%;
+        transform: translateX(50%);
     }
     .service-events-list-a {
         padding: 20px;
@@ -1534,16 +1545,21 @@ footer {
 }
 @media (min-width: 1401px) and (max-width: 1500px){
     .nav-links li a {
-        font-size: 20px;
-        padding: 20px;
+        font-size: 18px;
+        padding: 10px;
     }
 
     .nav-links {
         padding: 10px;
     }
 
-    .container {
+    /* .container {
         width: 100%;
+        padding: 20px;
+
+    } */
+    .container {
+        width: 85%;
         padding: 20px;
     }
 
