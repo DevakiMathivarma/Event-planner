@@ -113,7 +113,7 @@ nav .container .nav-links {
     align-items: center;
     gap: 50px;
    
-    width:90%;
+    width:80%;
     max-width: 1200px;
     margin:auto;
 }
@@ -123,12 +123,12 @@ nav .container .nav-links {
 
 .coporate-events .image1 {
     border-radius: 50px;
-    width: 340px;
-    height: 310px;
+    width: 320px;
+    height: 300px;
 }
 .coporate-events img{
-    width:100%;
-    height:auto;
+    width: 320px;
+    height: 300px;
 }
 .wedding-day-disasters {
     display: flex;
@@ -144,8 +144,8 @@ nav .container .nav-links {
     margin-bottom: 30px;
 }
 .wedding-day-disasters img{
-    width:100%;
-    height:auto;
+    width: 320px;
+    height: 300px;
 }
 
 .coporate-events img,.wedding-day-disasters img {

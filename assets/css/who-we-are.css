@@ -82,7 +82,7 @@ nav .container .nav-links {
 }
 
 .who-we-are-heading h2 {
-    font-size: 35px;
+    font-size: 30px;
     font-family: sans-serif;
     font-weight: bold;
 }
@@ -139,6 +139,7 @@ nav .container .nav-links {
     font-size: 27px;
     font-family: sans-serif;
    margin-left: 150px;
+   margin-bottom: 10px;
 
 }
 .column1 img{
@@ -536,7 +537,7 @@ margin-top: 40px;
     color: #FF007F;
     border-radius: 50px;
     font-size: 20px;
-    /* margin-bottom: 30px; */
+    margin-bottom: 10px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
@@ -793,7 +794,7 @@ footer {
     }
 
     .get-in-touch {
-        width: 58%;
+        width: 75%;
     }
 
     .input-box input {
@@ -1055,10 +1056,12 @@ footer {
     }
 
     .get-in-touch {
-        top: 50%;
-        width:70%;
+        top: 60%;
+        width:90%;
     }
-
+    .get-in-touch-form{
+        margin-top: 10px;
+        }
     .form-apply {
         flex-direction: column;
         gap: 5px;
@@ -1093,10 +1096,26 @@ footer {
         width: 50%;
         font-size: 10px;
     }
+    .popup{
+        width:60%;
+    }
+    .popup p{
+        font-size: 15px;
+        text-align: center;
+    }
     .footer1 img {
         width: 150px;
         transform: translateX(-90px);
     
+    }
+    .column2 .heading{
+        margin-left: 30px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .column2 .awsomeEvents{
+        margin-left: 10px;
+        font-size: 15px;
     }
 }
 
@@ -1145,8 +1164,15 @@ footer {
         width: 200px;
     }
     .get-in-touch {
-        top: 50%;
+        top: 60%;
+        width:85%;
+    }
+    .popup{
         width:80%;
+    }
+    .popup p{
+        font-size: 15px;
+        text-align: center;
     }
 
 }
@@ -1189,12 +1215,21 @@ footer {
         font-size: 20px;
     }
     .get-in-touch {
-        top: 50%;
+        top: 60%;
         width:90%;
     }
     .footer1 img {
         width: 100px;
         transform: translateX(-90px);
     
+    }
+    .column2 .heading{
+        margin-left: 30px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .column2 .awsomeEvents{
+        margin-left: 10px;
+        font-size: 15px;
     }
 }
