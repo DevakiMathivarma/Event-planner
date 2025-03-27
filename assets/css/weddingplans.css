@@ -112,10 +112,11 @@ nav .container .nav-links {
     font-size: 15px;
     font-weight: bold;
     max-width: 1200px;
+    cursor: pointer;
 }
 
 .banner .banner-whatsapp {
-    width: 150px;
+    width: 100px;
     position: absolute;
     right: 5%;
     top: 30%;
@@ -199,7 +200,7 @@ nav .container .nav-links {
 /* login_form css */
 .form {
     background-color: #000080;
-    width: 40%;
+    width: 50%;
     margin: auto;
     display: none;
     position: fixed;
@@ -211,6 +212,7 @@ nav .container .nav-links {
     justify-content: center;
     z-index: 1000;
     padding: 20px;
+    border-radius: 10px;
 }
 
 .form.active {
@@ -225,6 +227,9 @@ nav .container .nav-links {
     gap: 20px;
 
 }
+.login-form h2 {
+    color: white;
+}
 
 .input {
     position: relative;
@@ -232,8 +237,9 @@ nav .container .nav-links {
 
 .input i {
     position: absolute;
-    top: 12px;
-    right: 10px;
+    top: 35%;
+    left: 10px;
+    transform: translateY(-50%);
     color: grey;
 
 }
@@ -241,6 +247,7 @@ nav .container .nav-links {
 .input input {
     width: 450px;
     padding: 15px;
+    padding-left: 50px; 
     border-radius: 20px;
     border: none;
     margin-bottom: 10px;
@@ -250,7 +257,7 @@ input::placeholder {
     color: grey;
     font-size: 20px;
     font-weight: bold;
-    transform: translateX(25px);
+    transform: translateX(10px);
 }
 
 .input button {
@@ -260,6 +267,7 @@ input::placeholder {
     font-weight: bolder;
     border: none;
     padding: 20px;
+    cursor: pointer;
 }
 
 .close i{
@@ -268,6 +276,7 @@ input::placeholder {
     right:0;
     font-size: 40px;
     color:white;
+    cursor: pointer;
 }
 .error {
     color: red;
@@ -276,11 +285,39 @@ input::placeholder {
     margin-top: 5px;
     display: block;
 }
+.input input {
+    transition: all 0.3s ease-in-out;
+}
 
+.input input:focus {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 8px rgba(255, 0, 127, 0.7);
+}
+
+
+.input button {
+    transition: all 0.3s ease-in-out;
+}
+
+.input button:hover {
+    background-color: #ff3399;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(255, 0, 127, 0.6);
+}
+
+
+.close i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.close i:hover {
+    transform: scale(1.02);
+    color: #ff3399;
+}
 /* apppoint form style */
 .appointment-form {
     background-color: white;
-    width: 35%;
+    width: 45%;
     margin: auto;
     display: none;
     position: fixed;
@@ -293,6 +330,7 @@ input::placeholder {
     z-index: 1000;
     padding: 30px;
     box-shadow: 0px 3px 3px grey;
+    border-radius: 20px;
 }
 
 .appointment-form.active {
@@ -321,35 +359,55 @@ input::placeholder {
 
 .input1 i {
     position: absolute;
-    top: 12px;
-    right: 10px;
+    top: 35%;
+    left: 10px;
+    transform: translateY(-50%);
     color: black;
+    opacity:0.5;
+    transition: transform 0.3s ease-in-out;
 
+}
+.input1 input:focus, 
+.input1 textarea:focus {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+.input1 input:focus::placeholder,.input1 textarea:focus::placeholder{
+    opacity: 1;
+}
+.input1 input:focus + i, 
+.input1 textarea:focus + i {
+    transform: translateY(-50%) scale(1.2);
+    opacity:1;
 }
 
 .input1 input {
     width: 390px;
     padding: 15px;
+    padding-left: 50px;
     border-radius: 20px;
     border: none;
     margin-bottom: 10px;
-    background-color: #FF007F;
+    background-color: #f873ad;
 }
 
-input::placeholder,textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
     color: black;
     font-size: 20px;
     font-weight: bold;
+    opacity:0.5;
 }
 
 .input1 textarea {
     width: 380px;
-    height: 150px;
-    background-color: #FF007F;
+    height: 120px;
+    background-color:#f873ad ;
     font-size: 20px;
     font-family: sans-serif;
     font-weight: bold;
     padding: 20px;
+    padding-left: 50px; 
 
 }
 
@@ -361,19 +419,36 @@ input::placeholder,textarea::placeholder {
     border: none;
     padding: 15px;
     color: #FF007F;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.input1 button:hover {
+    background-color: #FF007F;
+    color: white;
+    transform: scale(1.1);
 }
 .error-msg {
     color: red;
     font-size: 14px;
     display: none;
 }
+
 .close-btn i {
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
     font-size: 30px;
-    color:black;
+    color: black;
 }
+.close-btn i:hover {
+    transform: scale(1.2);
+    color:#ee2a7b;
+}
+
+.close-btn i:active {
+    transform: scale(0.8);
+    transition: transform 0.1s ease-in-out;
+}
+
 
 /* popup style */
 .popup {
@@ -390,6 +465,7 @@ input::placeholder,textarea::placeholder {
     align-items: center;
     padding: 30px;
     z-index: 1001;
+    text-align: center;
 }
 
 .popup p {
@@ -398,6 +474,7 @@ input::placeholder,textarea::placeholder {
     font-weight: bold;
     font-family: sans-serif;
     color: white;
+    text-align: center;
 }
 /* footer section css */
 footer {
@@ -556,7 +633,7 @@ footer {
         width: 60%;
     }
     .appointment-form {
-width:40%;
+width:50%;
     }
     .appoint-form h2{
         font-size: 15px;
@@ -605,7 +682,7 @@ width:40%;
 
     .container button i {
         font-size: 15px;
-        ;
+        
     }
 
     .logo img {
@@ -616,19 +693,20 @@ width:40%;
         left:10%;
     }
     .banner button{
-        width: 25%;
-        font-size: 15px;
+        width: 29%;
+        font-size: 13px;
     }
     .banner .banner-whatsapp{
         width:70px;
         top:40%;
     }
     .form {
-        width: 60%;
+        width: 80%;
     }
     .input input{
-        width:350px;
+        width:420px;
         padding:10px;
+        padding-left: 40px; 
     }
     input::placeholder {
         font-size: 17px;
@@ -638,7 +716,7 @@ width:40%;
         padding:15px;
     }
     .appointment-form {
-        width: 53%;
+        width: 59%;
     }
     .appoint-form h2{
         font-size: 15px;
@@ -723,23 +801,23 @@ width:40%;
 
     .logo img {
         width: 100px;
-        transform: translateX(-70px);
+        transform: translateX(-90px);
     }
 
     .container #togglebtn span {
         display: none;
     }
     .container #togglebtn{
-        transform: translateX(20px);
+        transform: translateX(60px);
           }
           .form{
-            width:70%;
+            width:90%;
         }
         .form h2{
             font-size: 15px;
         }
         .input input{
-            width:280px;
+            width:350px;
         }
         input::placeholder{
             font-size: 13px;
@@ -748,7 +826,7 @@ width:40%;
             font-size: 10px;
         }
         .appointment-form {
-            width: 78%;
+            width: 90%;
             border-radius: 10px;
             gap:10px;
         }
@@ -758,6 +836,7 @@ width:40%;
         .input1 input,.input1 textarea{
             width:300px;
             padding:10px;
+            padding-left:40px;
         }
         input::placeholder,textarea::placeholder {
             font-size: 15px;
@@ -828,24 +907,29 @@ width:40%;
     .column2{ 
         width:95%;
     }
+    .footer1 img {
+        width: 150px;
+        transform: translateX(-90px);
+    
+    }
 }
 @media(max-width:376px){
     .logo img{
         width:100px;
-        transform: translateX(-50px);
+        transform: translateX(-70px);
     }
     .container .toggle-btn{
         transform: translateX(130px);
         font-size: 30px;
     }
     .form{
-        width:70%;
+        width:90%;
     }
     .input input{
-        width:240px;
+        width:300px;
     }
     .appointment-form {
-        width: 85%;
+        width: 90%;
         border-radius: 10px;
         gap:10px;
     }
@@ -855,6 +939,7 @@ width:40%;
     .input1 input,.input1 textarea{
         width:250px;
         padding:10px;
+        padding-left: 40px;
     }
     input::placeholder,textarea::placeholder {
         font-size: 13px;
@@ -884,16 +969,19 @@ width:40%;
 @media(max-width:320px){
     .logo img{
         width:90px;
-        transform: translateX(-40px);}
+        transform: translateX(-60px);}
     .container .toggle-btn{
         transform: translateX(110px);
         font-size: 18px;
     }
     .form{
-        width:90%;
+        width:95%;
     }
     .input input{
         width:270px;
+    }
+    .appointment-form {
+        width:95%;
     }
     .grid-container{
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

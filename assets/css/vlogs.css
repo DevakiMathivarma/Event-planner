@@ -164,7 +164,7 @@ nav .container .nav-links {
 /* login_form css */
 .form {
     background-color: #000080;
-    width: 40%;
+    width: 50%;
     margin: auto;
 
     display: none;
@@ -178,6 +178,7 @@ nav .container .nav-links {
     justify-content: center;
     z-index: 1000;
     padding: 20px;
+    border-radius: 10px;
 }
 
 .form.active {
@@ -192,15 +193,18 @@ nav .container .nav-links {
     gap: 20px;
 
 }
-
+.login-form h2 {
+    color: white;
+}
 .input {
     position: relative;
 }
 
 .input i {
     position: absolute;
-    top: 12px;
-    right: 10px;
+    top: 35%;
+    left: 10px;
+    transform: translateY(-50%);
     color: grey;
 
 }
@@ -208,6 +212,7 @@ nav .container .nav-links {
 .input input {
     width: 450px;
     padding: 15px;
+    padding-left: 50px; 
     border-radius: 20px;
     border: none;
     margin-bottom: 10px;
@@ -217,7 +222,7 @@ input::placeholder {
     color: grey;
     font-size: 20px;
     font-weight: bold;
-    transform: translateX(25px);
+    transform: translateX(10px);
 }
 
 .input button {
@@ -227,6 +232,7 @@ input::placeholder {
     font-weight: bolder;
     border: none;
     padding: 20px;
+    cursor: pointer;
 }
 
 .close i {
@@ -235,6 +241,7 @@ input::placeholder {
     right: 0;
     font-size: 40px;
     color: white;
+    cursor: pointer;
 }
 
 .error {
@@ -244,7 +251,35 @@ input::placeholder {
     margin-top: 5px;
     display: block;
 }
+.input input {
+    transition: all 0.3s ease-in-out;
+}
 
+.input input:focus {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 8px rgba(255, 0, 127, 0.7);
+}
+
+
+.input button {
+    transition: all 0.3s ease-in-out;
+}
+
+.input button:hover {
+    background-color: #ff3399;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(255, 0, 127, 0.6);
+}
+
+
+.close i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.close i:hover {
+    transform: scale(1.02);
+    color: #ff3399;
+}
 .popup {
     background-color: #000080;
     border-radius: 10px;
@@ -259,6 +294,7 @@ input::placeholder {
     align-items: center;
     padding: 30px;
     z-index: 1001;
+    text-align: center;
 }
 
 .popup p {
@@ -267,6 +303,7 @@ input::placeholder {
     font-weight: bold;
     font-family: sans-serif;
     color: white;
+    text-align: center;
 }
 
 /* footer section css */
@@ -472,12 +509,13 @@ footer {
     }
 
     .form {
-        width: 60%;
+        width: 80%;
     }
 
     .input input {
-        width: 350px;
+        width: 420px;
         padding: 10px;
+        padding-left: 40px; 
     }
 
     input::placeholder {
@@ -574,7 +612,7 @@ footer {
 
     .logo img {
         width: 100px;
-        transform: translateX(-70px);
+        transform: translateX(-90px);
     }
 
     .container #togglebtn span {
@@ -582,11 +620,11 @@ footer {
     }
 
     .container #togglebtn {
-        transform: translateX(20px);
+        transform: translateX(60px);
     }
 
     .form {
-        width: 70%;
+        width: 90%;
     }
 
     .form h2 {
@@ -594,7 +632,7 @@ footer {
     }
 
     .input input {
-        width: 280px;
+        width: 350px;
     }
 
     input::placeholder {
@@ -649,12 +687,17 @@ footer {
     .column2 {
         width: 95%;
     }
+    .footer1 img {
+        width: 150px;
+        transform: translateX(-90px);
+    
+    }
 }
 
 @media(max-width:376px) {
     .logo img {
         width: 100px;
-        transform: translateX(-50px);
+        transform: translateX(-70px);
     }
 
     .container .toggle-btn {
@@ -663,11 +706,11 @@ footer {
     }
 
     .form {
-        width: 70%;
+        width: 90%;
     }
 
     .input input {
-        width: 240px;
+        width: 300px;
     }
 
 }
@@ -675,19 +718,26 @@ footer {
 @media(max-width:320px) {
     .logo img {
         width: 90px;
-        transform: translateX(-40px);
+        transform: translateX(-60px);
     }
 
     .container .toggle-btn {
         transform: translateX(110px);
         font-size: 18px;
     }
-
+    .container #togglebtn {
+        transform: translateX(40px);
+    }
     .form {
-        width: 90%;
+        width: 95%;
     }
 
     .input input {
         width: 270px;
+    }
+    .footer1 img {
+        width: 100px;
+        transform: translateX(-90px);
+    
     }
 }

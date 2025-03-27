@@ -105,7 +105,23 @@ document.getElementById("getQuoteBtn").addEventListener("click", function () {
 
 // Close button functionality
 document.getElementById("closeGetInTouch").addEventListener("click", function () {
+    let form = document.getElementById("getInTouchFormID");
     document.getElementById("getInTouchForm").classList.remove("active");
+    document.querySelectorAll(".input-box input, textarea").forEach(input => {
+        input.value = ""; // Clear input values
+        input.style.border = "1px solid #FF007F"; // Reset border color
+    });
+
+    // Remove error messages
+    document.querySelectorAll(".error-message").forEach(error => {
+        error.textContent = ""; // Remove error text
+    });
+
+    // Uncheck all checkboxes
+    document.querySelectorAll(".form2 input[type='checkbox']").forEach(checkbox => {
+        checkbox.checked = false;
+    });
+   
 });
 
 // Function to show popup
